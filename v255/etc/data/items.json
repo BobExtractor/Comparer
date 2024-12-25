@@ -1,0 +1,599 @@
+[
+    {
+        "id": "1136.img",
+        "name": "Seeker of Truth",
+        "differences": {
+            "mission_name": {
+                "old": "Complete <[Kritias] Before the Storm>",
+                "new": ""
+            }
+        }
+    },
+    {
+        "id": "1137.img",
+        "name": "I Know What Happened at the Verne Mine",
+        "differences": {
+            "mainCategory": {
+                "old": "adventure",
+                "new": "memory"
+            }
+        }
+    },
+    {
+        "id": "1159.img",
+        "name": "[Theme Dungeon] Lion King's Castle Exploration",
+        "differences": {
+            "mainCategory": {
+                "old": "adventure",
+                "new": "memory"
+            }
+        }
+    },
+    {
+        "id": "1177.img",
+        "name": "Tales of the Abyss",
+        "differences": {
+            "mainCategory": {
+                "old": "adventure",
+                "new": "memory"
+            }
+        }
+    },
+    {
+        "id": "249.img",
+        "name": "Aran's Journal",
+        "differences": {
+            "mission_name": {
+                "old": "Complete <The Puppeteer's Warning>",
+                "new": ""
+            }
+        }
+    },
+    {
+        "id": "253.img",
+        "name": "Shade's Journal",
+        "differences": {
+            "mission_name": {
+                "old": "Complete <Just For You 1>",
+                "new": ""
+            }
+        }
+    },
+    {
+        "id": "995.img",
+        "name": "[Exceptional] Disable Gravity Control Limiter",
+        "differences": {
+            "desc": {
+                "old": "Enhance Exceptional Berserked with Gravity Module",
+                "new": "Enhance Exceptional Berserked with Exceptional Hammer"
+            },
+            "mission_name": {
+                "old": "Enhance Exceptional Berserked with Gravity Module",
+                "new": "Enhance Exceptional Berserked with Exceptional Hammer"
+            }
+        }
+    },
+    {
+        "id": "996.img",
+        "name": "[Exceptional] An Inescapable Nightmare",
+        "differences": {
+            "desc": {
+                "old": "Enhance Exceptional Dreamy Belt with Nightmare Fragment",
+                "new": "Enhance Exceptional Dreamy Belt with Exceptional Hammer"
+            },
+            "mission_name": {
+                "old": "Enhance Exceptional Dreamy Belt with Nightmare Fragment",
+                "new": "Enhance Exceptional Dreamy Belt with Exceptional Hammer"
+            }
+        }
+    },
+    {
+        "id": "997.img",
+        "name": "[Exceptional] Unshackled Wolf",
+        "differences": {
+            "desc": {
+                "old": "Enhance Exceptional Magic Eyepatch with Mark of Destruction",
+                "new": "Enhance Exceptional Magic Eyepatch with Exceptional Hammer"
+            },
+            "mission_name": {
+                "old": "Enhance Exceptional Magic Eyepatch with Mark of Destruction",
+                "new": "Enhance Exceptional Magic Eyepatch with Exceptional Hammer"
+            }
+        }
+    },
+    {
+        "id": "998.img",
+        "name": "[Exceptional] I Pledge My Eternal Loyalty",
+        "differences": {
+            "desc": {
+                "old": "Enhance Exceptional Commanding Force Earring with Helmet of Loyalty",
+                "new": "Enhance Exceptional Commanding Force Earring with Exceptional Hammer"
+            },
+            "mission_name": {
+                "old": "Enhance Exceptional Commanding Force Earring with Helmet of Loyalty",
+                "new": "Enhance Exceptional Commanding Force Earring with Exceptional Hammer"
+            }
+        }
+    },
+    {
+        "id": "1001.img",
+        "new_achievement": {
+            "id": "1001.img",
+            "name": "I Knew This Might Happen, So I Equipped Whisper of the Source",
+            "desc": "Equip Whisper of the Source",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "item",
+            "subCategory": "equip",
+            "mission_name": "Equip Whisper of the Source"
+        }
+    },
+    {
+        "id": "1438.img",
+        "new_achievement": {
+            "id": "1438.img",
+            "name": "[Festival Memories] History of Memories",
+            "desc": "Complete [Festival Memories] History Guide's Path",
+            "difficulty": "normal",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Festival Memories] History of Memories"
+        }
+    },
+    {
+        "id": "1439.img",
+        "new_achievement": {
+            "id": "1439.img",
+            "name": "[Festival Memories] Diligent Researcher",
+            "desc": "Complete basic research 20 times (pass uses not included)",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Festival Memories] Diligent Researcher"
+        }
+    },
+    {
+        "id": "1440.img",
+        "new_achievement": {
+            "id": "1440.img",
+            "name": "[Festival Memories] If You Can Dodge a Spirit",
+            "desc": "Survive in Spirit's Memories or Spirit's Emotions for a total of 5,000 seconds",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Festival Memories] If You Can Dodge a Spirit"
+        }
+    },
+    {
+        "id": "1441.img",
+        "new_achievement": {
+            "id": "1441.img",
+            "name": "[Festival Memories] Monster Album",
+            "desc": "Participate in Preserving Secret Records a total of 4 times",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Festival Memories] Monster Album"
+        }
+    },
+    {
+        "id": "1442.img",
+        "new_achievement": {
+            "id": "1442.img",
+            "name": "[Festival Memories] The One Who's Touched the Sky of the Grand Athenaeum",
+            "desc": "Reach the highest point hidden in Behind the Grand Athenaeum",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Festival Memories] The One Who's Touched the Sky of the Grand Athenaeum"
+        }
+    },
+    {
+        "id": "1443.img",
+        "new_achievement": {
+            "id": "1443.img",
+            "name": "[Festival Memories] Top 5 Novel Destinations",
+            "desc": "Fulfill Thales's request in History's Origin",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Festival Memories] Top 5 Novel Destinations"
+        }
+    },
+    {
+        "id": "1444.img",
+        "new_achievement": {
+            "id": "1444.img",
+            "name": "[Festival Memories] Darkness Before the Light",
+            "desc": "Defeat the Mass of Negativity 1 time",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Festival Memories] Darkness Before the Light"
+        }
+    },
+    {
+        "id": "1445.img",
+        "new_achievement": {
+            "id": "1445.img",
+            "name": "[Extradimensional Visitors] Bigger on the Inside",
+            "desc": "Participate in the Extradimensional Visitors event",
+            "difficulty": "normal",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Extradimensional Visitors] Bigger on the Inside"
+        }
+    },
+    {
+        "id": "1446.img",
+        "new_achievement": {
+            "id": "1446.img",
+            "name": "[Extradimensional Visitors] Toad, Toad, Have a Home",
+            "desc": "Check in at Blueprints for Tirnog 20 times",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Extradimensional Visitors] Toad, Toad, Have a Home"
+        }
+    },
+    {
+        "id": "1447.img",
+        "new_achievement": {
+            "id": "1447.img",
+            "name": "[Extradimensional Visitors] Time for You to Choose",
+            "desc": "Send out a Dimensional Crack expedition 10 times",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Extradimensional Visitors] Time for You to Choose"
+        }
+    },
+    {
+        "id": "1448.img",
+        "new_achievement": {
+            "id": "1448.img",
+            "name": "[Extradimensional Visitors] Are You There Hero? It's Me, Gob.",
+            "desc": "Stay in Tyrobot Playground for at least 100 minutes then talk to Jink",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Extradimensional Visitors] Are You There Hero? It's Me, Gob."
+        }
+    },
+    {
+        "id": "1449.img",
+        "new_achievement": {
+            "id": "1449.img",
+            "name": "[Extradimensional Visitors] Ancient City Restoration",
+            "desc": "Complete all Extradimensional Visitors Story Quests",
+            "difficulty": "unique",
+            "score": "0",
+            "mainCategory": "event",
+            "subCategory": "progress",
+            "mission_name": "[Extradimensional Visitors] Ancient City Restoration"
+        }
+    },
+    {
+        "id": "1614.img",
+        "new_achievement": {
+            "id": "1614.img",
+            "name": "I Know What Happened at the Verne Mine",
+            "desc": "Complete the following Verne Mine quests",
+            "difficulty": "rare",
+            "score": "20",
+            "mainCategory": "adventure",
+            "subCategory": "quest",
+            "mission_name": "Complete <Call from the Alliance>"
+        }
+    },
+    {
+        "id": "1615.img",
+        "new_achievement": {
+            "id": "1615.img",
+            "name": "[Silent Crusade] Ending",
+            "desc": "Complete [Silent Crusade] Ending",
+            "difficulty": "rare",
+            "score": "20",
+            "mainCategory": "adventure",
+            "subCategory": "quest",
+            "mission_name": "Complete <[Silent Crusade] Ending>"
+        }
+    },
+    {
+        "id": "1616.img",
+        "new_achievement": {
+            "id": "1616.img",
+            "name": "[Theme Dungeon] Lion King's Castle Exploration",
+            "desc": "Complete [Theme Dungeon] Lion King's Castle",
+            "difficulty": "rare",
+            "score": "20",
+            "mainCategory": "adventure",
+            "subCategory": "quest",
+            "mission_name": "Complete <[Lion King's Castle] Defeat the Lion King>"
+        }
+    },
+    {
+        "id": "1617.img",
+        "new_achievement": {
+            "id": "1617.img",
+            "name": "[Epic Dungeon] The Company's Secret",
+            "desc": "Complete Epic Dungeon: Angler Company",
+            "difficulty": "unique",
+            "score": "40",
+            "mainCategory": "adventure",
+            "subCategory": "quest",
+            "mission_name": "Complete Epic Dungeon: Angler Company"
+        }
+    },
+    {
+        "id": "1618.img",
+        "new_achievement": {
+            "id": "1618.img",
+            "name": "[Epic Dungeon] Diving Newbie",
+            "desc": "Clear Angler Company Dungeon 1 time",
+            "difficulty": "rare",
+            "score": "20",
+            "mainCategory": "adventure",
+            "subCategory": "cooperation",
+            "mission_name": "Clear Epic Dungeon: Angler Company Normal Mode 1 time"
+        }
+    },
+    {
+        "id": "1619.img",
+        "new_achievement": {
+            "id": "1619.img",
+            "name": "[Epic Dungeon] Intermediate Diver",
+            "desc": "Clear Angler Company Dungeon 10 Times",
+            "difficulty": "epic",
+            "score": "30",
+            "mainCategory": "adventure",
+            "subCategory": "cooperation",
+            "mission_name": "Clear Epic Dungeon: Angler Company Normal Mode 10 times"
+        }
+    },
+    {
+        "id": "1620.img",
+        "new_achievement": {
+            "id": "1620.img",
+            "name": "[Epic Dungeon] Expert Diver",
+            "desc": "Clear Angler Company Dungeon 100 Times",
+            "difficulty": "unique",
+            "score": "40",
+            "mainCategory": "adventure",
+            "subCategory": "cooperation",
+            "mission_name": "Clear Epic Dungeon: Angler Company Normal Mode 100 times"
+        }
+    },
+    {
+        "id": "1622.img",
+        "new_achievement": {
+            "id": "1622.img",
+            "name": "신들의 무덤 위에서",
+            "desc": "탈라하트 스토리 퀘스트 완료",
+            "difficulty": "rare",
+            "score": "20",
+            "mainCategory": "adventure",
+            "subCategory": "quest",
+            "mission_name": "<[탈라하트] 다가올 싸움을 위해> 완료"
+        }
+    },
+    {
+        "id": "1623.img",
+        "new_achievement": {
+            "id": "1623.img",
+            "name": "[지역탐험] 탈라하트 지역탐험",
+            "desc": "탈라하트 모든 지역 탐험",
+            "difficulty": "rare",
+            "score": "20",
+            "mainCategory": "adventure",
+            "subCategory": "exploration",
+            "mission_name": "<신들의 무덤> 탐험"
+        }
+    },
+    {
+        "id": "3234.img",
+        "new_achievement": {
+            "id": "3234.img",
+            "name": "[Limbo] Slowpoked",
+            "desc": "Defeat Normal Limbo 1 time",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Normal Limbo 1 time"
+        }
+    },
+    {
+        "id": "3235.img",
+        "new_achievement": {
+            "id": "3235.img",
+            "name": "[Limbo] You Can't Escape, Hahaha!",
+            "desc": "Defeat Normal Limbo 10 times",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Normal Limbo 10 times"
+        }
+    },
+    {
+        "id": "3236.img",
+        "new_achievement": {
+            "id": "3236.img",
+            "name": "[Limbo] The Soultaker",
+            "desc": "Defeat Normal Limbo 100 times",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Normal Limbo 100 times"
+        }
+    },
+    {
+        "id": "3238.img",
+        "new_achievement": {
+            "id": "3238.img",
+            "name": "[Limbo] So Low",
+            "desc": "Defeat Normal Limbo by yourself",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Normal Limbo by yourself"
+        }
+    },
+    {
+        "id": "3239.img",
+        "new_achievement": {
+            "id": "3239.img",
+            "name": "[Limbo] Strength in Survival",
+            "desc": "Defeat Normal Limbo deathless with a 2-player party",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Win with a 2-player party"
+        }
+    },
+    {
+        "id": "3240.img",
+        "new_achievement": {
+            "id": "3240.img",
+            "name": "[Limbo] I Don't Take Commands From Anyone Weaker Than Me",
+            "desc": "Defeat Normal Limbo while dealing the most damage as Ark",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Normal Limbo while dealing the most damage as Ark"
+        }
+    },
+    {
+        "id": "3241.img",
+        "new_achievement": {
+            "id": "3241.img",
+            "name": "[Limbo] Is That All You've Got?",
+            "desc": "Defeat Hard Limbo 1 time",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Hard Limbo 1 time"
+        }
+    },
+    {
+        "id": "3242.img",
+        "new_achievement": {
+            "id": "3242.img",
+            "name": "[Limbo] What Doesn't Kill Me Makes Me Stronger",
+            "desc": "Defeat Hard Limbo 10 times",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Hard Limbo 10 times"
+        }
+    },
+    {
+        "id": "3243.img",
+        "new_achievement": {
+            "id": "3243.img",
+            "name": "[Limbo] How Low Can You Go?",
+            "desc": "Defeat Hard Limbo 100 times",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Hard Limbo 100 times"
+        }
+    },
+    {
+        "id": "3245.img",
+        "new_achievement": {
+            "id": "3245.img",
+            "name": "- [Limbo] Your Eyes Tell All",
+            "desc": "Defeat Hard Limbo by yourself",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Hard Limbo by yourself"
+        }
+    },
+    {
+        "id": "3246.img",
+        "new_achievement": {
+            "id": "3246.img",
+            "name": "[Limbo] 5 Kills, 0 Deaths",
+            "desc": "Defeat Hard Limbo deathless with a party of 2",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Win with a 2-player party"
+        }
+    },
+    {
+        "id": "3247.img",
+        "new_achievement": {
+            "id": "3247.img",
+            "name": "[Limbo] Darkness Won't Weaken Me",
+            "desc": "Defeat Hard Limbo with 0 erosion",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "boss",
+            "mission_name": "Defeat Hard Limbo with 0 erosion"
+        }
+    },
+    {
+        "id": "885.img",
+        "new_achievement": {
+            "id": "885.img",
+            "name": "[Limbo] Limbo Within My Grasp",
+            "desc": "Obtain Limboroid from Limbo",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "loot",
+            "mission_name": "Obtain Limboroid from Limbo"
+        }
+    },
+    {
+        "id": "886.img",
+        "new_achievement": {
+            "id": "886.img",
+            "name": "[Limbo] Whisper of the Source, You're Mine!",
+            "desc": "Obtain Whisper of the Source from Limbo",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "loot",
+            "mission_name": "Obtain Whisper of the Source from Limbo"
+        }
+    },
+    {
+        "id": "887.img",
+        "new_achievement": {
+            "id": "887.img",
+            "name": "[Limbo] Limbo's Foolish Desire",
+            "desc": "Obtain each type of Eternal equipment by using Distorted Ambitions",
+            "difficulty": "legendary",
+            "score": "100",
+            "mainCategory": "battle",
+            "subCategory": "loot",
+            "mission_name": "Obtain Eternal equipment (Shoes)"
+        }
+    }
+]
