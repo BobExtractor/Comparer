@@ -1,0 +1,4517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .img-container img {
+            max-height: 100px;
+        }
+        .card-text small { color: #6c757d; }
+        .card hr { margin: 0.5rem 0; }
+        .tab-content { margin-top: 1rem; }
+        .card { box-shadow: 0 0 10px rgba(0,0,0,0.1); border: none; }
+        .nav-tabs .nav-link { margin-right: 10px; }
+        .card-footer { font-size: 0.875rem; color: #6c757d; margin-top: 0.5rem; }
+        .translation { font-size: 0.8em; color: #555; }
+        .nota { font-size: 0.8em; color: #555; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/Comparer/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../skillvoice/index.html">Class Voices</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="logo-section">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container mt-4">
+        <h3 class="text-center">Khali</h3>
+
+        <div class="mb-4 text-center"><label for="skillDropdown" class="me-2">Select a Class:</label><select id="skillDropdown" onchange="goToSkillPage()">
+  <option value="">-- Select --</option>
+  <option value="voice_adele.html">Adele</option>
+  <option value="voice_angelicburster.html">Angelic Buster</option>
+  <option value="voice_aran.html">Aran</option>
+  <option value="voice_archmagefp.html">Arch Mage F/P</option>
+  <option value="voice_archmagetc.html">Arch Mage I/L</option>
+  <option value="voice_ark.html">Ark</option>
+  <option value="voice_battlemage.html">Battle Mage</option>
+  <option value="voice_bishop.html">Bishop</option>
+  <option value="voice_blaster.html">Blaster</option>
+  <option value="voice_bowmaster.html">Bowmaster</option>
+  <option value="voice_cadena.html">Cadena</option>
+  <option value="voice_cannonshooter.html">Cannoneer</option>
+  <option value="voice_captain.html">Corsair</option>
+  <option value="voice_darkknight.html">Dark Knight</option>
+  <option value="voice_demonavenger.html">Demon Avenger</option>
+  <option value="voice_demonslayer.html">Demon Slayer</option>
+  <option value="voice_dualblade.html">Dual Blade</option>
+  <option value="voice_eunwol.html">Shade</option>
+  <option value="voice_evan.html">Evan</option>
+  <option value="voice_flamewizard.html">Blaze Wizard</option>
+  <option value="voice_hayato.html">Hayato</option>
+  <option value="voice_hero.html">Hero</option>
+  <option value="voice_hoyoung.html">Hoyoung</option>
+  <option value="voice_illium.html">Illium</option>
+  <option value="voice_kain.html">Kain</option>
+  <option value="voice_kaiser.html">Kaiser</option>
+  <option value="voice_kanna.html">Kanna</option>
+  <option value="voice_khali.html">Khali</option>
+  <option value="voice_kinesis.html">Kinesis</option>
+  <option value="voice_lara.html">Lara</option>
+  <option value="voice_luminous.html">Luminous</option>
+  <option value="voice_lynn.html">Lynn</option>
+  <option value="voice_marksman.html">Marksman</option>
+  <option value="voice_mechanic.html">Mechanic</option>
+  <option value="voice_mercedes.html">Mercedes</option>
+  <option value="voice_mikhail.html">Mikhail</option>
+  <option value="voice_mitra.html">Mitra</option>
+  <option value="voice_nightlord.html">Nightlord</option>
+  <option value="voice_nightwalker.html">Night Walker</option>
+  <option value="voice_paladin.html">Paladin</option>
+  <option value="voice_pathfinder.html">Pathfinder</option>
+  <option value="voice_phantom.html">Phantom</option>
+  <option value="voice_pinkbean.html">Pink Bean</option>
+  <option value="voice_senya.html">Senya</option>
+  <option value="voice_shadower.html">Shadower</option>
+  <option value="voice_soulmaster.html">Dawn Warrior</option>
+  <option value="voice_striker.html">Thunder Breaker</option>
+  <option value="voice_viper.html">Buccaneer</option>
+  <option value="voice_wildhunter.html">Wild Hunter</option>
+  <option value="voice_windbreaker.html">Wind Archer</option>
+  <option value="voice_xenon.html">Xenon</option>
+  <option value="voice_zero.html">Zero</option>
+</select></div>
+        
+<div class="row">
+  <div class="col-md-6">
+     <h4>Male</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_khali_m_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_0.mp3">
+    </audio>
+    <p>Take this!</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_1.mp3">
+    </audio>
+    <p>Take this!</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_2.mp3">
+    </audio>
+    <p>This'll hurt!</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_3.mp3">
+    </audio>
+    <p>I won't miss!</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_4.mp3">
+    </audio>
+    <p>Sweep it all away!</p>
+    <div class="img-container mt-2"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_5.mp3">
+    </audio>
+    <p>So predictable!</p>
+    <div class="img-container mt-2"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_6.mp3">
+    </audio>
+    <p>So arrogant.</p>
+    <div class="img-container mt-2"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_7.mp3">
+    </audio>
+    <p>Out of the way!</p>
+    <div class="img-container mt-2"><img src="img/154121002_img.png" alt="Hex: Chakram Fury" title="Hex: Chakram Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_8.mp3">
+    </audio>
+    <p>I'm unstoppable.</p>
+    <div class="img-container mt-2"><img src="img/154121002_img.png" alt="Hex: Chakram Fury" title="Hex: Chakram Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_9.mp3">
+    </audio>
+    <p>TEAR THEM ALL APART!</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_10.mp3">
+    </audio>
+    <p>Focus!</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_11.mp3">
+    </audio>
+    <p>Can you handle this?</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_12.mp3">
+    </audio>
+    <p>Veil of Sand!</p>
+    <div class="img-container mt-2"><img src="img/154121004_img.png" alt="Desert Veil" title="Desert Veil" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_13.mp3">
+    </audio>
+    <p>Come on in.</p>
+    <div class="img-container mt-2"><img src="img/154121004_img.png" alt="Desert Veil" title="Desert Veil" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_14.mp3">
+    </audio>
+    <p>Despair rises!</p>
+    <div class="img-container mt-2"><img src="img/154121041_img.png" alt="Death Blossom" title="Death Blossom" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_15.mp3">
+    </audio>
+    <p>Flower of Despair.</p>
+    <div class="img-container mt-2"><img src="img/154121041_img.png" alt="Death Blossom" title="Death Blossom" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_16.mp3">
+    </audio>
+    <p>My final flame!</p>
+    <div class="img-container mt-2"><img src="img/154121043_img.png" alt="Oblivion" title="Oblivion" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_17.mp3">
+    </audio>
+    <p>Let's get a little reckless.</p>
+    <div class="img-container mt-2"><img src="img/154121043_img.png" alt="Oblivion" title="Oblivion" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_18.mp3">
+    </audio>
+    <p>Chaos.</p>
+    <div class="img-container mt-2"><img src="img/400041082_img.png" alt="Hex: Pandemonium" title="Hex: Pandemonium" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_19.mp3">
+    </audio>
+    <p>I'll separate your soul.</p>
+    <div class="img-container mt-2"><img src="img/400041082_img.png" alt="Hex: Pandemonium" title="Hex: Pandemonium" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_20.mp3">
+    </audio>
+    <p>Rage!</p>
+    <div class="img-container mt-2"><img src="img/400041082_img.png" alt="Hex: Pandemonium" title="Hex: Pandemonium" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_21.mp3">
+    </audio>
+    <p>With all my might!</p>
+    <div class="img-container mt-2"><img src="img/400041084_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_22.mp3">
+    </audio>
+    <p>You can't see everything.</p>
+    <div class="img-container mt-2"><img src="img/400041084_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_23.mp3">
+    </audio>
+    <p>Nothing left of you</p>
+    <div class="img-container mt-2"><img src="img/400041084_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_24.mp3">
+    </audio>
+    <p>This is your last breath!</p>
+    <div class="img-container mt-2"><img src="img/400041086_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_25.mp3">
+    </audio>
+    <p>You'll be forgotten forever!</p>
+    <div class="img-container mt-2"><img src="img/400041086_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_26.mp3">
+    </audio>
+    <p>This is the end.</p>
+    <div class="img-container mt-2"><img src="img/400041089_img.png" alt="Resonate: Ultimatum" title="Resonate: Ultimatum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_27.mp3">
+    </audio>
+    <p>I'll never lose again.</p>
+    <div class="img-container mt-2"><img src="img/400041089_img.png" alt="Resonate: Ultimatum" title="Resonate: Ultimatum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_30.mp3">
+    </audio>
+    <p>Ha Ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_39.mp3">
+    </audio>
+    <p>Ha Ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_48.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 48 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_48.mp3">
+    </audio>
+    <p>Ha Ha!</p>
+    <div class="img-container mt-2"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_48.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_48.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_101.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 101 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_101.mp3">
+    </audio>
+    <p>Ha ha ha.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_101.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_101.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_102.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 102 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_102.mp3">
+    </audio>
+    <p>Ha, ha, ha.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_102.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_102.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_103.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 103 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_103.mp3">
+    </audio>
+    <p>Ha ha ha.</p>
+    <div class="img-container mt-2"><img src="img/154101005_img.png" alt="Chakram Booster" title="Chakram Booster" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_103.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_103.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_104.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 104 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_104.mp3">
+    </audio>
+    <p>Ha ha ha ha.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_104.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_104.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_105.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 105 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_105.mp3">
+    </audio>
+    <p>Ha ha ha.</p>
+    <div class="img-container mt-2"><img src="img/154121004_img.png" alt="Desert Veil" title="Desert Veil" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_105.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_105.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_106.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 106 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_106.mp3">
+    </audio>
+    <p>Ha, ha, ha, ha, ha.</p>
+    <div class="img-container mt-2"><img src="img/154101005_img.png" alt="Chakram Booster" title="Chakram Booster" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_106.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_106.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_107.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 107 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_107.mp3">
+    </audio>
+    <p>Ha ha ha ha ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_107.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_107.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_108.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 108 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_108.mp3">
+    </audio>
+    <p>Now.</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_108.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_108.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_109.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 109 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_109.mp3">
+    </audio>
+    <p>I'll devour you!</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_109.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_109.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_110.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 110 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_110.mp3">
+    </audio>
+    <p>No more backing down!</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_110.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_110.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_111.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 111 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_111.mp3">
+    </audio>
+    <p>Wind of Vengeance!</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_111.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_111.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_113.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 113 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_113.mp3">
+    </audio>
+    <p>REST IN THE SAND!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_113.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_113.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_114.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 114 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_114.mp3">
+    </audio>
+    <p>Sleep in the sand forever!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_114.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_114.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_115.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 115 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_115.mp3">
+    </audio>
+    <p>This will be your grave!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_115.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_115.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_116.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 116 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_116.mp3">
+    </audio>
+    <p>Ha! You will not escape!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_116.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_116.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_28.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_29.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_31.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_32.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_33.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_34.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_35.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_36.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_37.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_38.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_40.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_41.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_42.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_43.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_44.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_45.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_45.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_46.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 46 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_46.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_46.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_46.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_47.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 47 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_47.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_47.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_47.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_49.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 49 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_49.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_49.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_49.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_50.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 50 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_50.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_50.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_50.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_51.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 51 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_51.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_51.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_51.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_52.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 52 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_52.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_52.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_52.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_53.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 53 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_53.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_53.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_53.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_54.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 54 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_54.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_54.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_54.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_55.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 55 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_55.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_55.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_55.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_56.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 56 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_56.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_56.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_56.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_57.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 57 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_57.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_57.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_57.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_58.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 58 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_58.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_58.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_58.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_59.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 59 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_59.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_59.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_59.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_60.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 60 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_60.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_60.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_60.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_61.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 61 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_61.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_61.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_61.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_62.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 62 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_62.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_62.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_62.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_63.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 63 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_63.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_63.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_63.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_64.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 64 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_64.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_64.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_64.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_65.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 65 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_65.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_65.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_65.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_66.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 66 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_66.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_66.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_66.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_67.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 67 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_67.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_67.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_67.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_68.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 68 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_68.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_68.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_68.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_69.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 69 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_69.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_69.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_69.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_70.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 70 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_70.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121002_img.png" alt="Hex: Chakram Fury" title="Hex: Chakram Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_70.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_70.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_71.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 71 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_71.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_71.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_71.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_72.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 72 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_72.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_72.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_72.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_73.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 73 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_73.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_73.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_73.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_74.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 74 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_74.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_74.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_74.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_75.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 75 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_75.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_75.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_75.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_76.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 76 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_76.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_76.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_76.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_77.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 77 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_77.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_77.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_77.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_78.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 78 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_78.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_78.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_78.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_79.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 79 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_79.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_79.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_79.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_80.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 80 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_80.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_80.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_80.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_81.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 81 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_81.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_81.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_81.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_82.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 82 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_82.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_82.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_82.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_83.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 83 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_83.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_83.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_83.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_84.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 84 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_84.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121002_img.png" alt="Hex: Chakram Fury" title="Hex: Chakram Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_84.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_84.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_85.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 85 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_85.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_85.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_85.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_86.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 86 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_86.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111011_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121009_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121012_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154141003_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141004_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_86.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_86.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_87.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 87 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_87.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_87.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_87.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_88.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 88 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_88.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"><img src="img/154111004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111011_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154121009_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121012_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154141003_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141004_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_88.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_88.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_89.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 89 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_89.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154111004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111011_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121009_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121012_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154141003_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141004_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_89.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_89.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_90.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 90 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_90.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_90.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_90.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_91.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 91 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_91.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_91.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_91.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_92.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 92 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_92.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111011_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121009_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121012_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154141003_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141004_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_92.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_92.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_93.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 93 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_93.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001003_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_93.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_93.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_94.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 94 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_94.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001003_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_94.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_94.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_95.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 95 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_95.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_95.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_95.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_96.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 96 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_96.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_96.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_96.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_97.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 97 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_97.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_97.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_97.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_98.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 98 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_98.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_98.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_98.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_99.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 99 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_99.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_99.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_99.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_100.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 100 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_100.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121004_img.png" alt="Desert Veil" title="Desert Veil" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_100.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_100.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_m_112.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 112 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_m_112.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_m_112.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_m_112.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+  <div class="col-md-6">
+     <h4>Female</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_khali_f_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_0.mp3">
+    </audio>
+    <p>Take this!</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_1.mp3">
+    </audio>
+    <p>Take this!</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_2.mp3">
+    </audio>
+    <p>This'll hurt.</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_3.mp3">
+    </audio>
+    <p>I won't miss!</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_4.mp3">
+    </audio>
+    <p>Sweep it all away!</p>
+    <div class="img-container mt-2"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_5.mp3">
+    </audio>
+    <p>So predictable.</p>
+    <div class="img-container mt-2"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_6.mp3">
+    </audio>
+    <p>So arrogant!</p>
+    <div class="img-container mt-2"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_7.mp3">
+    </audio>
+    <p>Out of the way!</p>
+    <div class="img-container mt-2"><img src="img/154121002_img.png" alt="Hex: Chakram Fury" title="Hex: Chakram Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_8.mp3">
+    </audio>
+    <p>I'm unstoppable!</p>
+    <div class="img-container mt-2"><img src="img/154121002_img.png" alt="Hex: Chakram Fury" title="Hex: Chakram Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_9.mp3">
+    </audio>
+    <p>Tear them all apart!</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_10.mp3">
+    </audio>
+    <p>Focus.</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_11.mp3">
+    </audio>
+    <p>Can you handle this?</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_12.mp3">
+    </audio>
+    <p>Veil of Sand</p>
+    <div class="img-container mt-2"><img src="img/154121004_img.png" alt="Desert Veil" title="Desert Veil" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_13.mp3">
+    </audio>
+    <p>Come in.</p>
+    <div class="img-container mt-2"><img src="img/154121004_img.png" alt="Desert Veil" title="Desert Veil" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_14.mp3">
+    </audio>
+    <p>Despair rises</p>
+    <div class="img-container mt-2"><img src="img/154121041_img.png" alt="Death Blossom" title="Death Blossom" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_15.mp3">
+    </audio>
+    <p>The Flower of Despair!</p>
+    <div class="img-container mt-2"><img src="img/154121041_img.png" alt="Death Blossom" title="Death Blossom" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_16.mp3">
+    </audio>
+    <p>My final flame!</p>
+    <div class="img-container mt-2"><img src="img/154121043_img.png" alt="Oblivion" title="Oblivion" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_17.mp3">
+    </audio>
+    <p>Let's get a little reckless!</p>
+    <div class="img-container mt-2"><img src="img/154121043_img.png" alt="Oblivion" title="Oblivion" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_18.mp3">
+    </audio>
+    <p>Chaos.</p>
+    <div class="img-container mt-2"><img src="img/400041082_img.png" alt="Hex: Pandemonium" title="Hex: Pandemonium" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_19.mp3">
+    </audio>
+    <p>I'll separate your soul.</p>
+    <div class="img-container mt-2"><img src="img/400041082_img.png" alt="Hex: Pandemonium" title="Hex: Pandemonium" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_20.mp3">
+    </audio>
+    <p>Rage!</p>
+    <div class="img-container mt-2"><img src="img/400041082_img.png" alt="Hex: Pandemonium" title="Hex: Pandemonium" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_21.mp3">
+    </audio>
+    <p>With all my might!</p>
+    <div class="img-container mt-2"><img src="img/400041084_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_22.mp3">
+    </audio>
+    <p>You can't see everything.</p>
+    <div class="img-container mt-2"><img src="img/400041084_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_23.mp3">
+    </audio>
+    <p>There'll be nothing left of you.</p>
+    <div class="img-container mt-2"><img src="img/400041084_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_24.mp3">
+    </audio>
+    <p>This is your last breath!</p>
+    <div class="img-container mt-2"><img src="img/400041086_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_25.mp3">
+    </audio>
+    <p>You'll be forgotten FOREVER!</p>
+    <div class="img-container mt-2"><img src="img/400041086_img.png" alt="Void Burst" title="Void Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_26.mp3">
+    </audio>
+    <p>This is the end.</p>
+    <div class="img-container mt-2"><img src="img/400041089_img.png" alt="Resonate: Ultimatum" title="Resonate: Ultimatum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_27.mp3">
+    </audio>
+    <p>I'll never lose again.</p>
+    <div class="img-container mt-2"><img src="img/400041089_img.png" alt="Resonate: Ultimatum" title="Resonate: Ultimatum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_31.mp3">
+    </audio>
+    <p>AAAAAAAAHHHHH! SHUUUAAAH!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_36.mp3">
+    </audio>
+    <p>Hup! Hup!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_39.mp3">
+    </audio>
+    <p>Hyah! Cha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_45.mp3">
+    </audio>
+    <p>HUH? HYAH!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_45.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_48.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 48 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_48.mp3">
+    </audio>
+    <p>Hup! Hup!</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_48.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_48.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_51.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 51 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_51.mp3">
+    </audio>
+    <p>Hyah! Cha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_51.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_51.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_57.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 57 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_57.mp3">
+    </audio>
+    <p>HUH? HYAH!</p>
+    <div class="img-container mt-2"><img src="img/154121002_img.png" alt="Hex: Chakram Fury" title="Hex: Chakram Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_57.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_57.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_60.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 60 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_60.mp3">
+    </audio>
+    <p>Hup! Hup!</p>
+    <div class="img-container mt-2"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_60.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_60.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_68.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 68 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_68.mp3">
+    </audio>
+    <p>Ha, ha, guh, guh, hu, ra, shu!</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_68.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_68.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_80.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 80 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_80.mp3">
+    </audio>
+    <p>Fuh! Chuh! Fuh! Fuh!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_80.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_80.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_87.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 87 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_87.mp3">
+    </audio>
+    <p>Ha, ha, guh, guh, hu, ra, shu!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_87.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_87.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_99.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 99 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_99.mp3">
+    </audio>
+    <p>Fuh! Chuh! Fuh! Fuh!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_99.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_99.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_106.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 106 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_106.mp3">
+    </audio>
+    <p>Ha, ha, guh, guh, hu, ra, shu!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_106.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_106.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_118.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 118 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_118.mp3">
+    </audio>
+    <p>Fuh! Chuh! Fuh! Fuh!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_118.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_118.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_125.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 125 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_125.mp3">
+    </audio>
+    <p>Ha, ha, guh, guh, hu, ra, shu!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_125.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_125.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_130.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 130 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_130.mp3">
+    </audio>
+    <p>Ahaha, ahaha, ahaha</p>
+    <div class="img-container mt-2"><img src="img/154101005_img.png" alt="Chakram Booster" title="Chakram Booster" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_130.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_130.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_134.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 134 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_134.mp3">
+    </audio>
+    <p>Ha ha ha ha ha ha ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_134.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_134.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_136.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 136 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_136.mp3">
+    </audio>
+    <p>Ha ha ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_136.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_136.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_138.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 138 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_138.mp3">
+    </audio>
+    <p>Ha ha ha ha ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_138.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_138.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_139.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 139 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_139.mp3">
+    </audio>
+    <p>Ha ha ha ha ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_139.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_139.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_141.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 141 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_141.mp3">
+    </audio>
+    <p>Ha ha ha ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_141.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_141.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_142.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 142 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_142.mp3">
+    </audio>
+    <p>Ahaha, ahaha, ahaha</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_142.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_142.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_143.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 143 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_143.mp3">
+    </audio>
+    <p>Now!</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_143.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_143.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_144.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 144 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_144.mp3">
+    </audio>
+    <p>I'll devour you.</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_144.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_144.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_145.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 145 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_145.mp3">
+    </audio>
+    <p>I'll eat you up.</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_145.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_145.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_146.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 146 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_146.mp3">
+    </audio>
+    <p>No more backing down!</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_146.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_146.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_147.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 147 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_147.mp3">
+    </audio>
+    <p>Wind of Vengeance!</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_147.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_147.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_149.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 149 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_149.mp3">
+    </audio>
+    <p>In the sand.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_149.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_149.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_150.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 150 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_150.mp3">
+    </audio>
+    <p>Rest forever.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_150.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_150.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_151.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 151 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_151.mp3">
+    </audio>
+    <p>Sleep forever!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_151.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_151.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_153.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 153 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_153.mp3">
+    </audio>
+    <p>You will not escape!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_153.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_153.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_154.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 154 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_154.mp3">
+    </audio>
+    <p>This will be your grave.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_154.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_154.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_28.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_29.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_30.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_32.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_33.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_34.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_35.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_37.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_38.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_40.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_41.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_42.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_43.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_44.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154121001_img.png" alt="Hex: Chakram Split" title="Hex: Chakram Split" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141009_img.png" alt="HEXA Hex: Chakram Split" title="HEXA Hex: Chakram Split" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_46.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 46 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_46.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_46.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_46.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_47.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 47 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_47.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_47.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_47.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_49.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 49 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_49.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_49.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_49.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_50.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 50 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_50.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_50.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_50.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_52.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 52 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_52.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_52.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_52.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_53.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 53 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_53.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_53.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_53.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_54.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 54 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_54.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_54.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_54.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_55.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 55 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_55.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_55.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_55.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_56.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 56 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_56.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121002_img.png" alt="Hex: Chakram Fury" title="Hex: Chakram Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_56.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_56.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_58.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 58 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_58.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_58.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_58.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_59.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 59 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_59.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154111002_img.png" alt="Arts: Triple Bash" title="Arts: Triple Bash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_59.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_59.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_61.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 61 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_61.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154111006_img.png" alt="Hex: Chakram Sweep" title="Hex: Chakram Sweep" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_61.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_61.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_62.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 62 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_62.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_62.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_62.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_63.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 63 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_63.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_63.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_63.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_64.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 64 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_64.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_64.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_64.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_65.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 65 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_65.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_65.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_65.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_66.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 66 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_66.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_66.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_66.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_67.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 67 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_67.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001000_img.png" alt="Arts: Cross Cut" title="Arts: Cross Cut" class="img-thumbnail"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_67.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_67.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_69.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 69 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_69.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_69.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_69.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_70.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 70 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_70.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_70.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_70.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_71.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 71 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_71.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_71.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_71.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_72.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 72 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_72.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_72.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_72.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_73.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 73 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_73.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_73.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_73.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_74.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 74 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_74.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_74.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_74.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_75.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 75 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_75.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_75.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_75.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_76.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 76 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_76.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_76.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_76.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_77.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 77 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_77.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_77.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_77.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_78.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 78 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_78.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_78.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_78.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_79.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 79 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_79.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121000_img.png" alt="Arts: Flurry" title="Arts: Flurry" class="img-thumbnail"><img src="img/154141000_img.png" alt="HEXA Arts: Flurry" title="HEXA Arts: Flurry" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_79.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_79.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_81.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 81 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_81.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_81.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_81.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_82.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 82 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_82.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_82.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_82.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_83.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 83 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_83.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_83.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_83.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_84.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 84 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_84.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_84.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_84.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_85.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 85 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_85.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_85.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_85.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_86.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 86 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_86.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_86.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_86.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_88.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 88 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_88.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_88.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_88.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_89.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 89 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_89.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_89.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_89.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_90.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 90 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_90.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101000_img.png" alt="Arts: Dual Edge" title="Arts: Dual Edge" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_90.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_90.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_91.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 91 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_91.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001003_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_91.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_91.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_92.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 92 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_92.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_92.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_92.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_93.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 93 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_93.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_93.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_93.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_94.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 94 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_94.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_94.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_94.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_95.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 95 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_95.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_95.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_95.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_96.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 96 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_96.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_96.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_96.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_97.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 97 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_97.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154001003_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121004_img.png" alt="Desert Veil" title="Desert Veil" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_97.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_97.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_98.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 98 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_98.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_98.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_98.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_100.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 100 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_100.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_100.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_100.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_101.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 101 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_101.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_101.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_101.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_102.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 102 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_102.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_102.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_102.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_103.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 103 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_103.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_103.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_103.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_104.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 104 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_104.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_104.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_104.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_105.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 105 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_105.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121003_img.png" alt="Void Blitz" title="Void Blitz" class="img-thumbnail"><img src="img/154141007_img.png" alt="HEXA Void Blitz" title="HEXA Void Blitz" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_105.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_105.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_107.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 107 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_107.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_107.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_107.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_108.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 108 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_108.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_108.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_108.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_109.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 109 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_109.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_109.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_109.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_110.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 110 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_110.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_110.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_110.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_111.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 111 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_111.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_111.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_111.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_112.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 112 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_112.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_112.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_112.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_113.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 113 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_113.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_113.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_113.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_114.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 114 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_114.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_114.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_114.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_115.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 115 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_115.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_115.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_115.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_116.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 116 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_116.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_116.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_116.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_117.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 117 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_117.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_117.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_117.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_119.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 119 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_119.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_119.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_119.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_120.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 120 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_120.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_120.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_120.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_121.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 121 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_121.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154111004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111011_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121009_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121012_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154141003_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141004_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_121.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_121.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_122.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 122 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_122.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_122.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_122.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_123.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 123 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_123.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111011_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121009_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121012_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154141003_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141004_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_123.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_123.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_124.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 124 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_124.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_124.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_124.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_126.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 126 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_126.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111011_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121009_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121012_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154141003_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141004_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_126.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_126.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_127.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 127 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_127.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111004_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154111011_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121009_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154121012_img.png" alt="Void Rush" title="Void Rush" class="img-thumbnail"><img src="img/154141003_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"><img src="img/154141004_img.png" alt="HEXA Void Rush" title="HEXA Void Rush" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_127.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_127.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_128.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 128 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_128.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_128.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_128.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_129.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 129 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_129.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_129.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_129.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_131.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 131 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_131.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101005_img.png" alt="Chakram Booster" title="Chakram Booster" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_131.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_131.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_132.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 132 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_132.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_132.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_132.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_133.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 133 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_133.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_133.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_133.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_135.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 135 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_135.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154121004_img.png" alt="Desert Veil" title="Desert Veil" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_135.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_135.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_137.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 137 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_137.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_137.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_137.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_140.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 140 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_140.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154101001_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154101002_img.png" alt="Arts: Crescentum" title="Arts: Crescentum" class="img-thumbnail"><img src="img/154141001_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"><img src="img/154141002_img.png" alt="HEXA Arts: Crescentum" title="HEXA Arts: Crescentum" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_140.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_140.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_148.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 148 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_148.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/154141500_img.png" alt="Hex: Sandstorm" title="Hex: Sandstorm" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_148.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_148.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_khali_f_152.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 152 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_khali_f_152.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_khali_f_152.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_khali_f_152.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+    
+    <script>
+      function goToSkillPage() {
+        const sel = document.getElementById('skillDropdown');
+        if (sel.value) {
+          window.location.href = sel.value;
+        }
+      }
+      window.onload = function() {
+        const currentPage = window.location.pathname.split("/").pop();
+        const sel = document.getElementById('skillDropdown');
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === currentPage) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      function forceDownload(url) {
+          fetch(url)
+          .then(response => response.blob())
+          .then(blob => {
+              const blobUrl = window.URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.style.display = "none";
+              a.href = blobUrl;
+              a.download = url.split("/").pop();
+              document.body.appendChild(a);
+              a.click();
+              window.URL.revokeObjectURL(blobUrl);
+          })
+          .catch(err => console.error("Erro no download: ", err));
+      }
+    </script>
+    
+            <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer"> MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon. </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a> | <a href="/Comparer/changelog.html">Change Log</a>
+            </p>
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=18055971&style=0007&nbdigits=9&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+            </a>        
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .img-container img {
+            max-height: 100px;
+        }
+        .card-text small { color: #6c757d; }
+        .card hr { margin: 0.5rem 0; }
+        .tab-content { margin-top: 1rem; }
+        .card { box-shadow: 0 0 10px rgba(0,0,0,0.1); border: none; }
+        .nav-tabs .nav-link { margin-right: 10px; }
+        .card-footer { font-size: 0.875rem; color: #6c757d; margin-top: 0.5rem; }
+        .translation { font-size: 0.8em; color: #555; }
+        .nota { font-size: 0.8em; color: #555; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/Comparer/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../skillvoice/index.html">Class Voices</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="logo-section">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container mt-4">
+        <h3 class="text-center">Cannoneer</h3>
+
+        <div class="mb-4 text-center"><label for="skillDropdown" class="me-2">Select a Class:</label><select id="skillDropdown" onchange="goToSkillPage()">
+  <option value="">-- Select --</option>
+  <option value="voice_adele.html">Adele</option>
+  <option value="voice_angelicburster.html">Angelic Buster</option>
+  <option value="voice_aran.html">Aran</option>
+  <option value="voice_archmagefp.html">Arch Mage F/P</option>
+  <option value="voice_archmagetc.html">Arch Mage I/L</option>
+  <option value="voice_ark.html">Ark</option>
+  <option value="voice_battlemage.html">Battle Mage</option>
+  <option value="voice_bishop.html">Bishop</option>
+  <option value="voice_blaster.html">Blaster</option>
+  <option value="voice_bowmaster.html">Bowmaster</option>
+  <option value="voice_cadena.html">Cadena</option>
+  <option value="voice_cannonshooter.html">Cannoneer</option>
+  <option value="voice_captain.html">Corsair</option>
+  <option value="voice_darkknight.html">Dark Knight</option>
+  <option value="voice_demonavenger.html">Demon Avenger</option>
+  <option value="voice_demonslayer.html">Demon Slayer</option>
+  <option value="voice_dualblade.html">Dual Blade</option>
+  <option value="voice_eunwol.html">Shade</option>
+  <option value="voice_evan.html">Evan</option>
+  <option value="voice_flamewizard.html">Blaze Wizard</option>
+  <option value="voice_hayato.html">Hayato</option>
+  <option value="voice_hero.html">Hero</option>
+  <option value="voice_hoyoung.html">Hoyoung</option>
+  <option value="voice_illium.html">Illium</option>
+  <option value="voice_kain.html">Kain</option>
+  <option value="voice_kaiser.html">Kaiser</option>
+  <option value="voice_kanna.html">Kanna</option>
+  <option value="voice_khali.html">Khali</option>
+  <option value="voice_kinesis.html">Kinesis</option>
+  <option value="voice_lara.html">Lara</option>
+  <option value="voice_luminous.html">Luminous</option>
+  <option value="voice_lynn.html">Lynn</option>
+  <option value="voice_marksman.html">Marksman</option>
+  <option value="voice_mechanic.html">Mechanic</option>
+  <option value="voice_mercedes.html">Mercedes</option>
+  <option value="voice_mikhail.html">Mikhail</option>
+  <option value="voice_mitra.html">Mitra</option>
+  <option value="voice_nightlord.html">Nightlord</option>
+  <option value="voice_nightwalker.html">Night Walker</option>
+  <option value="voice_paladin.html">Paladin</option>
+  <option value="voice_pathfinder.html">Pathfinder</option>
+  <option value="voice_phantom.html">Phantom</option>
+  <option value="voice_pinkbean.html">Pink Bean</option>
+  <option value="voice_senya.html">Senya</option>
+  <option value="voice_shadower.html">Shadower</option>
+  <option value="voice_soulmaster.html">Dawn Warrior</option>
+  <option value="voice_striker.html">Thunder Breaker</option>
+  <option value="voice_viper.html">Buccaneer</option>
+  <option value="voice_wildhunter.html">Wild Hunter</option>
+  <option value="voice_windbreaker.html">Wind Archer</option>
+  <option value="voice_xenon.html">Xenon</option>
+  <option value="voice_zero.html">Zero</option>
+</select></div>
+        
+<div class="row">
+  <div class="col-md-6">
+     <h4>Male</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_12.mp3">
+    </audio>
+    <p>MEH HEH HEH HA!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_17.mp3">
+    </audio>
+    <p>MEH HEH HEH HA!</p>
+    <div class="img-container mt-2"><img src="img/5011008_img.png" alt="Cannon Jump" title="Cannon Jump" class="img-thumbnail"><img src="img/5311013_img.png" alt="Monkey Mortar" title="Monkey Mortar" class="img-thumbnail"><img src="img/5321004_img.png" alt="Monkey Militia" title="Monkey Militia" class="img-thumbnail"><img src="img/5341002_img.png" alt="HEXA Monkey Mortar" title="HEXA Monkey Mortar" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_20.mp3">
+    </audio>
+    <p>I'M FLYING!</p>
+    <div class="img-container mt-2"><img src="img/5011008_img.png" alt="Cannon Jump" title="Cannon Jump" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_21.mp3">
+    </audio>
+    <p>BURN EVERYTHING!</p>
+    <div class="img-container mt-2"><img src="img/5301000_img.png" alt="Scatter Shot" title="Scatter Shot" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_22.mp3">
+    </audio>
+    <p>SO MUCH FIRE!</p>
+    <div class="img-container mt-2"><img src="img/5301000_img.png" alt="Scatter Shot" title="Scatter Shot" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_23.mp3">
+    </audio>
+    <p>Eat this!</p>
+    <div class="img-container mt-2"><img src="img/5311000_img.png" alt="Cannon Spike" title="Cannon Spike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_24.mp3">
+    </audio>
+    <p>Fire!</p>
+    <div class="img-container mt-2"><img src="img/5311000_img.png" alt="Cannon Spike" title="Cannon Spike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_25.mp3">
+    </audio>
+    <p>One, two, three, bingo!</p>
+    <div class="img-container mt-2"><img src="img/5311004_img.png" alt="Barrel Roulette" title="Barrel Roulette" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_26.mp3">
+    </audio>
+    <p>What do we get?</p>
+    <div class="img-container mt-2"><img src="img/5311004_img.png" alt="Barrel Roulette" title="Barrel Roulette" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_27.mp3">
+    </audio>
+    <p>A bouncy little bomb!</p>
+    <div class="img-container mt-2"><img src="img/5311010_img.png" alt="Monkey Fury" title="Monkey Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_28.mp3">
+    </audio>
+    <p>Hey, where are you going?</p>
+    <div class="img-container mt-2"><img src="img/5311010_img.png" alt="Monkey Fury" title="Monkey Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_29.mp3">
+    </audio>
+    <p>ANCHORS AWAY!</p>
+    <div class="img-container mt-2"><img src="img/5321003_img.png" alt="Anchors Aweigh" title="Anchors Aweigh" class="img-thumbnail"><img src="img/5341005_img.png" alt="HEXA Anchors Away" title="HEXA Anchors Away" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_30.mp3">
+    </audio>
+    <p>Trying to run?</p>
+    <div class="img-container mt-2"><img src="img/5321003_img.png" alt="Anchors Aweigh" title="Anchors Aweigh" class="img-thumbnail"><img src="img/5341005_img.png" alt="HEXA Anchors Away" title="HEXA Anchors Away" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_31.mp3">
+    </audio>
+    <p>Boom! Let's blow it up!</p>
+    <div class="img-container mt-2"><img src="img/5311013_img.png" alt="Monkey Mortar" title="Monkey Mortar" class="img-thumbnail"><img src="img/5341002_img.png" alt="HEXA Monkey Mortar" title="HEXA Monkey Mortar" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_32.mp3">
+    </audio>
+    <p>Monkey, you're up!</p>
+    <div class="img-container mt-2"><img src="img/5311013_img.png" alt="Monkey Mortar" title="Monkey Mortar" class="img-thumbnail"><img src="img/5341002_img.png" alt="HEXA Monkey Mortar" title="HEXA Monkey Mortar" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_33.mp3">
+    </audio>
+    <p>Explosion!</p>
+    <div class="img-container mt-2"><img src="img/5321000_img.png" alt="Cannon Bazooka" title="Cannon Bazooka" class="img-thumbnail"><img src="img/5341001_img.png" alt="HEXA Cannon Bazooka" title="HEXA Cannon Bazooka" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_34.mp3">
+    </audio>
+    <p>Boom! Blow it up!</p>
+    <div class="img-container mt-2"><img src="img/5321000_img.png" alt="Cannon Bazooka" title="Cannon Bazooka" class="img-thumbnail"><img src="img/5341001_img.png" alt="HEXA Cannon Bazooka" title="HEXA Cannon Bazooka" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_35.mp3">
+    </audio>
+    <p>I'll blow you away!</p>
+    <div class="img-container mt-2"><img src="img/5321012_img.png" alt="Cannon Barrage" title="Cannon Barrage" class="img-thumbnail"><img src="img/5341000_img.png" alt="HEXA Cannon Barrage" title="HEXA Cannon Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_36.mp3">
+    </audio>
+    <p>HIGH SPEED CANNON BALL FIRE!</p>
+    <div class="img-container mt-2"><img src="img/5321012_img.png" alt="Cannon Barrage" title="Cannon Barrage" class="img-thumbnail"><img src="img/5341000_img.png" alt="HEXA Cannon Barrage" title="HEXA Cannon Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_37.mp3">
+    </audio>
+    <p>ALL TOGETHER NOW!</p>
+    <div class="img-container mt-2"><img src="img/5321052_img.png" alt="Rolling Rainbow" title="Rolling Rainbow" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_38.mp3">
+    </audio>
+    <p>I love my crew!</p>
+    <div class="img-container mt-2"><img src="img/5321052_img.png" alt="Rolling Rainbow" title="Rolling Rainbow" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_39.mp3">
+    </audio>
+    <p>Cannonball!</p>
+    <div class="img-container mt-2"><img src="img/400051008_img.png" alt="Cannon of Mass Destruction" title="Cannon of Mass Destruction" class="img-thumbnail"><img src="img/500061037_img.png" alt="Lightning Cascade" title="Lightning Cascade" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_40.mp3">
+    </audio>
+    <p>Ever seen one of these?</p>
+    <div class="img-container mt-2"><img src="img/400051008_img.png" alt="Cannon of Mass Destruction" title="Cannon of Mass Destruction" class="img-thumbnail"><img src="img/500061037_img.png" alt="Lightning Cascade" title="Lightning Cascade" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_41.mp3">
+    </audio>
+    <p>Ready? Fire!</p>
+    <div class="img-container mt-2"><img src="img/400051024_img.png" alt="The Nuclear Option" title="The Nuclear Option" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_42.mp3">
+    </audio>
+    <p>And launch!</p>
+    <div class="img-container mt-2"><img src="img/400051024_img.png" alt="The Nuclear Option" title="The Nuclear Option" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_43.mp3">
+    </audio>
+    <p>Destroy everything!</p>
+    <div class="img-container mt-2"><img src="img/400051038_img.png" alt="Monkey Business" title="Monkey Business" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_44.mp3">
+    </audio>
+    <p>Champions, come out!</p>
+    <div class="img-container mt-2"><img src="img/400051038_img.png" alt="Monkey Business" title="Monkey Business" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_45.mp3">
+    </audio>
+    <p>Barrage fire!</p>
+    <div class="img-container mt-2"><img src="img/400051074_img.png" alt="Poolmaker" title="Poolmaker" class="img-thumbnail"><img src="img/500061029_img.png" alt="Poolmaker" title="Poolmaker" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_45.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_46.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 46 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_46.mp3">
+    </audio>
+    <p>WIPE HIM OUT!</p>
+    <div class="img-container mt-2"><img src="img/400051074_img.png" alt="Poolmaker" title="Poolmaker" class="img-thumbnail"><img src="img/500061029_img.png" alt="Poolmaker" title="Poolmaker" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_46.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_46.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_48.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 48 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_48.mp3">
+    </audio>
+    <p>How about a bigger bomb?</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_48.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_48.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_49.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 49 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_49.mp3">
+    </audio>
+    <p>Ha! Pick a target!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_49.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_49.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_50.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 50 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_50.mp3">
+    </audio>
+    <p>BLAST IT ALL!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_50.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_50.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_51.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 51 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_51.mp3">
+    </audio>
+    <p>Ready?</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_51.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_51.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_52.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 52 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_52.mp3">
+    </audio>
+    <p>Shoot everything!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_52.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_52.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_54.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 54 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_54.mp3">
+    </audio>
+    <p>Run all you want!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_54.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_54.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_55.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 55 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_55.mp3">
+    </audio>
+    <p>THERE IS NO ESCAPE!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_55.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_55.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_0.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_1.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5301000_img.png" alt="Scatter Shot" title="Scatter Shot" class="img-thumbnail"><img src="img/5311010_img.png" alt="Monkey Fury" title="Monkey Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_2.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5011008_img.png" alt="Cannon Jump" title="Cannon Jump" class="img-thumbnail"><img src="img/5311010_img.png" alt="Monkey Fury" title="Monkey Fury" class="img-thumbnail"><img src="img/5321004_img.png" alt="Monkey Militia" title="Monkey Militia" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_3.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_4.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5301003_img.png" alt="Monkey Magic" title="Monkey Magic" class="img-thumbnail"><img src="img/5320008_img.png" alt="Mega Monkey Magic" title="Mega Monkey Magic" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_5.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5301003_img.png" alt="Monkey Magic" title="Monkey Magic" class="img-thumbnail"><img src="img/5320008_img.png" alt="Mega Monkey Magic" title="Mega Monkey Magic" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_6.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_7.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_8.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_9.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5321001_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"><img src="img/5341006_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_10.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_11.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_13.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5011008_img.png" alt="Cannon Jump" title="Cannon Jump" class="img-thumbnail"><img src="img/5301001_img.png" alt="Barrel Bomb" title="Barrel Bomb" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_14.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5301000_img.png" alt="Scatter Shot" title="Scatter Shot" class="img-thumbnail"><img src="img/5321012_img.png" alt="Cannon Barrage" title="Cannon Barrage" class="img-thumbnail"><img src="img/5321001_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"><img src="img/5301001_img.png" alt="Barrel Bomb" title="Barrel Bomb" class="img-thumbnail"><img src="img/5341000_img.png" alt="HEXA Cannon Barrage" title="HEXA Cannon Barrage" class="img-thumbnail"><img src="img/5341006_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_15.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_16.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5311000_img.png" alt="Cannon Spike" title="Cannon Spike" class="img-thumbnail"><img src="img/5321000_img.png" alt="Cannon Bazooka" title="Cannon Bazooka" class="img-thumbnail"><img src="img/5341001_img.png" alt="HEXA Cannon Bazooka" title="HEXA Cannon Bazooka" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_18.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5311000_img.png" alt="Cannon Spike" title="Cannon Spike" class="img-thumbnail"><img src="img/5321003_img.png" alt="Anchors Aweigh" title="Anchors Aweigh" class="img-thumbnail"><img src="img/5321000_img.png" alt="Cannon Bazooka" title="Cannon Bazooka" class="img-thumbnail"><img src="img/5341001_img.png" alt="HEXA Cannon Bazooka" title="HEXA Cannon Bazooka" class="img-thumbnail"><img src="img/5341005_img.png" alt="HEXA Anchors Away" title="HEXA Anchors Away" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_19.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_47.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 47 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_47.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_47.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_47.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_m_53.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 53 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_m_53.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_m_53.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_m_53.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+  <div class="col-md-6">
+     <h4>Female</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_1.mp3">
+    </audio>
+    <p>Ha ha!</p>
+    <div class="img-container mt-2"><img src="img/5321012_img.png" alt="Cannon Barrage" title="Cannon Barrage" class="img-thumbnail"><img src="img/5301003_img.png" alt="Monkey Magic" title="Monkey Magic" class="img-thumbnail"><img src="img/5320008_img.png" alt="Mega Monkey Magic" title="Mega Monkey Magic" class="img-thumbnail"><img src="img/5341000_img.png" alt="HEXA Cannon Barrage" title="HEXA Cannon Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_5.mp3">
+    </audio>
+    <p>Ha ha ha!</p>
+    <div class="img-container mt-2"><img src="img/5321012_img.png" alt="Cannon Barrage" title="Cannon Barrage" class="img-thumbnail"><img src="img/5301001_img.png" alt="Barrel Bomb" title="Barrel Bomb" class="img-thumbnail"><img src="img/5341000_img.png" alt="HEXA Cannon Barrage" title="HEXA Cannon Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_10.mp3">
+    </audio>
+    <p>Ha ha ha ha ha ha!</p>
+    <div class="img-container mt-2"><img src="img/5321003_img.png" alt="Anchors Aweigh" title="Anchors Aweigh" class="img-thumbnail"><img src="img/5341005_img.png" alt="HEXA Anchors Away" title="HEXA Anchors Away" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_15.mp3">
+    </audio>
+    <p>I'm flying!</p>
+    <div class="img-container mt-2"><img src="img/5011008_img.png" alt="Cannon Jump" title="Cannon Jump" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_16.mp3">
+    </audio>
+    <p>I'm flying!</p>
+    <div class="img-container mt-2"><img src="img/5011008_img.png" alt="Cannon Jump" title="Cannon Jump" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_17.mp3">
+    </audio>
+    <p>Burn everything!</p>
+    <div class="img-container mt-2"><img src="img/5301000_img.png" alt="Scatter Shot" title="Scatter Shot" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_18.mp3">
+    </audio>
+    <p>SO MUCH FIRE!</p>
+    <div class="img-container mt-2"><img src="img/5301000_img.png" alt="Scatter Shot" title="Scatter Shot" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_19.mp3">
+    </audio>
+    <p>Eat this!</p>
+    <div class="img-container mt-2"><img src="img/5311000_img.png" alt="Cannon Spike" title="Cannon Spike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_20.mp3">
+    </audio>
+    <p>Fire!</p>
+    <div class="img-container mt-2"><img src="img/5311000_img.png" alt="Cannon Spike" title="Cannon Spike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_21.mp3">
+    </audio>
+    <p>One, two, three, bingo!</p>
+    <div class="img-container mt-2"><img src="img/5311004_img.png" alt="Barrel Roulette" title="Barrel Roulette" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_22.mp3">
+    </audio>
+    <p>What do we get?</p>
+    <div class="img-container mt-2"><img src="img/5311004_img.png" alt="Barrel Roulette" title="Barrel Roulette" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_23.mp3">
+    </audio>
+    <p>A bouncy little bomb.</p>
+    <div class="img-container mt-2"><img src="img/5311010_img.png" alt="Monkey Fury" title="Monkey Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_24.mp3">
+    </audio>
+    <p>Hey, where are you going?</p>
+    <div class="img-container mt-2"><img src="img/5311010_img.png" alt="Monkey Fury" title="Monkey Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_25.mp3">
+    </audio>
+    <p>Anchors away!</p>
+    <div class="img-container mt-2"><img src="img/5321003_img.png" alt="Anchors Aweigh" title="Anchors Aweigh" class="img-thumbnail"><img src="img/5341005_img.png" alt="HEXA Anchors Away" title="HEXA Anchors Away" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_26.mp3">
+    </audio>
+    <p>TRYING TO RUN?!</p>
+    <div class="img-container mt-2"><img src="img/5321003_img.png" alt="Anchors Aweigh" title="Anchors Aweigh" class="img-thumbnail"><img src="img/5341005_img.png" alt="HEXA Anchors Away" title="HEXA Anchors Away" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_27.mp3">
+    </audio>
+    <p>Boom! Let's blow it up!</p>
+    <div class="img-container mt-2"><img src="img/5311013_img.png" alt="Monkey Mortar" title="Monkey Mortar" class="img-thumbnail"><img src="img/5341002_img.png" alt="HEXA Monkey Mortar" title="HEXA Monkey Mortar" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_28.mp3">
+    </audio>
+    <p>Monkey, you're up!</p>
+    <div class="img-container mt-2"><img src="img/5311013_img.png" alt="Monkey Mortar" title="Monkey Mortar" class="img-thumbnail"><img src="img/5341002_img.png" alt="HEXA Monkey Mortar" title="HEXA Monkey Mortar" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_29.mp3">
+    </audio>
+    <p>Explosion!</p>
+    <div class="img-container mt-2"><img src="img/5321000_img.png" alt="Cannon Bazooka" title="Cannon Bazooka" class="img-thumbnail"><img src="img/5341001_img.png" alt="HEXA Cannon Bazooka" title="HEXA Cannon Bazooka" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_30.mp3">
+    </audio>
+    <p>Boom! Blow it up!</p>
+    <div class="img-container mt-2"><img src="img/5321000_img.png" alt="Cannon Bazooka" title="Cannon Bazooka" class="img-thumbnail"><img src="img/5341001_img.png" alt="HEXA Cannon Bazooka" title="HEXA Cannon Bazooka" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_31.mp3">
+    </audio>
+    <p>I'll blow you away!</p>
+    <div class="img-container mt-2"><img src="img/5321012_img.png" alt="Cannon Barrage" title="Cannon Barrage" class="img-thumbnail"><img src="img/5341000_img.png" alt="HEXA Cannon Barrage" title="HEXA Cannon Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_32.mp3">
+    </audio>
+    <p>High-speed cannonball, fire!</p>
+    <div class="img-container mt-2"><img src="img/5321012_img.png" alt="Cannon Barrage" title="Cannon Barrage" class="img-thumbnail"><img src="img/5341000_img.png" alt="HEXA Cannon Barrage" title="HEXA Cannon Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_33.mp3">
+    </audio>
+    <p>ALL TOGETHER NOW!</p>
+    <div class="img-container mt-2"><img src="img/5321052_img.png" alt="Rolling Rainbow" title="Rolling Rainbow" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_34.mp3">
+    </audio>
+    <p>I love my crew.</p>
+    <div class="img-container mt-2"><img src="img/5321052_img.png" alt="Rolling Rainbow" title="Rolling Rainbow" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_35.mp3">
+    </audio>
+    <p>Cannonball!</p>
+    <div class="img-container mt-2"><img src="img/400051008_img.png" alt="Cannon of Mass Destruction" title="Cannon of Mass Destruction" class="img-thumbnail"><img src="img/500061037_img.png" alt="Lightning Cascade" title="Lightning Cascade" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_36.mp3">
+    </audio>
+    <p>Ever seen one of these?</p>
+    <div class="img-container mt-2"><img src="img/400051008_img.png" alt="Cannon of Mass Destruction" title="Cannon of Mass Destruction" class="img-thumbnail"><img src="img/500061037_img.png" alt="Lightning Cascade" title="Lightning Cascade" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_37.mp3">
+    </audio>
+    <p>Ready? Fire!</p>
+    <div class="img-container mt-2"><img src="img/400051024_img.png" alt="The Nuclear Option" title="The Nuclear Option" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_38.mp3">
+    </audio>
+    <p>And lunch!</p>
+    <div class="img-container mt-2"><img src="img/400051024_img.png" alt="The Nuclear Option" title="The Nuclear Option" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_39.mp3">
+    </audio>
+    <p>Destroy everything!</p>
+    <div class="img-container mt-2"><img src="img/400051038_img.png" alt="Monkey Business" title="Monkey Business" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_40.mp3">
+    </audio>
+    <p>Champions, come out!</p>
+    <div class="img-container mt-2"><img src="img/400051038_img.png" alt="Monkey Business" title="Monkey Business" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_41.mp3">
+    </audio>
+    <p>Barrage, fire!</p>
+    <div class="img-container mt-2"><img src="img/400051074_img.png" alt="Poolmaker" title="Poolmaker" class="img-thumbnail"><img src="img/500061029_img.png" alt="Poolmaker" title="Poolmaker" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_42.mp3">
+    </audio>
+    <p>WIPE EM OUT!</p>
+    <div class="img-container mt-2"><img src="img/400051074_img.png" alt="Poolmaker" title="Poolmaker" class="img-thumbnail"><img src="img/500061029_img.png" alt="Poolmaker" title="Poolmaker" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_43.mp3">
+    </audio>
+    <p>Ha ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_44.mp3">
+    </audio>
+    <p>How about a bigger bomb?</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_45.mp3">
+    </audio>
+    <p>Pick a target!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_45.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_46.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 46 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_46.mp3">
+    </audio>
+    <p>BLAST EVERYTHING!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_46.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_46.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_47.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 47 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_47.mp3">
+    </audio>
+    <p>Here we go.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_47.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_47.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_48.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 48 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_48.mp3">
+    </audio>
+    <p>Shoot everything!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_48.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_48.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_50.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 50 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_50.mp3">
+    </audio>
+    <p>You can run all you want!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_50.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_50.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_51.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 51 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_51.mp3">
+    </audio>
+    <p>There is no escape!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_51.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_51.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_0.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5301000_img.png" alt="Scatter Shot" title="Scatter Shot" class="img-thumbnail"><img src="img/5301003_img.png" alt="Monkey Magic" title="Monkey Magic" class="img-thumbnail"><img src="img/5320008_img.png" alt="Mega Monkey Magic" title="Mega Monkey Magic" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_2.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5011008_img.png" alt="Cannon Jump" title="Cannon Jump" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_3.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5311004_img.png" alt="Barrel Roulette" title="Barrel Roulette" class="img-thumbnail"><img src="img/5311010_img.png" alt="Monkey Fury" title="Monkey Fury" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_4.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5311000_img.png" alt="Cannon Spike" title="Cannon Spike" class="img-thumbnail"><img src="img/5321000_img.png" alt="Cannon Bazooka" title="Cannon Bazooka" class="img-thumbnail"><img src="img/5341001_img.png" alt="HEXA Cannon Bazooka" title="HEXA Cannon Bazooka" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_6.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_7.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5301000_img.png" alt="Scatter Shot" title="Scatter Shot" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_8.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5311000_img.png" alt="Cannon Spike" title="Cannon Spike" class="img-thumbnail"><img src="img/5301001_img.png" alt="Barrel Bomb" title="Barrel Bomb" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_9.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5321000_img.png" alt="Cannon Bazooka" title="Cannon Bazooka" class="img-thumbnail"><img src="img/5321004_img.png" alt="Monkey Militia" title="Monkey Militia" class="img-thumbnail"><img src="img/5341001_img.png" alt="HEXA Cannon Bazooka" title="HEXA Cannon Bazooka" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_11.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5321001_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"><img src="img/5341006_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_12.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5011008_img.png" alt="Cannon Jump" title="Cannon Jump" class="img-thumbnail"><img src="img/5311013_img.png" alt="Monkey Mortar" title="Monkey Mortar" class="img-thumbnail"><img src="img/5321004_img.png" alt="Monkey Militia" title="Monkey Militia" class="img-thumbnail"><img src="img/5341002_img.png" alt="HEXA Monkey Mortar" title="HEXA Monkey Mortar" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_13.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_14.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5321052_img.png" alt="Rolling Rainbow" title="Rolling Rainbow" class="img-thumbnail"><img src="img/5321001_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"><img src="img/5341006_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_cannonshooter_f_49.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 49 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_cannonshooter_f_49.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_cannonshooter_f_49.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_cannonshooter_f_49.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+    
+    <script>
+      function goToSkillPage() {
+        const sel = document.getElementById('skillDropdown');
+        if (sel.value) {
+          window.location.href = sel.value;
+        }
+      }
+      window.onload = function() {
+        const currentPage = window.location.pathname.split("/").pop();
+        const sel = document.getElementById('skillDropdown');
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === currentPage) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      function forceDownload(url) {
+          fetch(url)
+          .then(response => response.blob())
+          .then(blob => {
+              const blobUrl = window.URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.style.display = "none";
+              a.href = blobUrl;
+              a.download = url.split("/").pop();
+              document.body.appendChild(a);
+              a.click();
+              window.URL.revokeObjectURL(blobUrl);
+          })
+          .catch(err => console.error("Erro no download: ", err));
+      }
+    </script>
+    
+            <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer"> MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon. </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a> | <a href="/Comparer/changelog.html">Change Log</a>
+            </p>
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=18055971&style=0007&nbdigits=9&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+            </a>        
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .img-container img {
+            max-height: 100px;
+        }
+        .card-text small { color: #6c757d; }
+        .card hr { margin: 0.5rem 0; }
+        .tab-content { margin-top: 1rem; }
+        .card { box-shadow: 0 0 10px rgba(0,0,0,0.1); border: none; }
+        .nav-tabs .nav-link { margin-right: 10px; }
+        .card-footer { font-size: 0.875rem; color: #6c757d; margin-top: 0.5rem; }
+        .translation { font-size: 0.8em; color: #555; }
+        .nota { font-size: 0.8em; color: #555; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/Comparer/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../skillvoice/index.html">Class Voices</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="logo-section">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container mt-4">
+        <h3 class="text-center">Evan</h3>
+
+        <div class="mb-4 text-center"><label for="skillDropdown" class="me-2">Select a Class:</label><select id="skillDropdown" onchange="goToSkillPage()">
+  <option value="">-- Select --</option>
+  <option value="voice_adele.html">Adele</option>
+  <option value="voice_angelicburster.html">Angelic Buster</option>
+  <option value="voice_aran.html">Aran</option>
+  <option value="voice_archmagefp.html">Arch Mage F/P</option>
+  <option value="voice_archmagetc.html">Arch Mage I/L</option>
+  <option value="voice_ark.html">Ark</option>
+  <option value="voice_battlemage.html">Battle Mage</option>
+  <option value="voice_bishop.html">Bishop</option>
+  <option value="voice_blaster.html">Blaster</option>
+  <option value="voice_bowmaster.html">Bowmaster</option>
+  <option value="voice_cadena.html">Cadena</option>
+  <option value="voice_cannonshooter.html">Cannoneer</option>
+  <option value="voice_captain.html">Corsair</option>
+  <option value="voice_darkknight.html">Dark Knight</option>
+  <option value="voice_demonavenger.html">Demon Avenger</option>
+  <option value="voice_demonslayer.html">Demon Slayer</option>
+  <option value="voice_dualblade.html">Dual Blade</option>
+  <option value="voice_eunwol.html">Shade</option>
+  <option value="voice_evan.html">Evan</option>
+  <option value="voice_flamewizard.html">Blaze Wizard</option>
+  <option value="voice_hayato.html">Hayato</option>
+  <option value="voice_hero.html">Hero</option>
+  <option value="voice_hoyoung.html">Hoyoung</option>
+  <option value="voice_illium.html">Illium</option>
+  <option value="voice_kain.html">Kain</option>
+  <option value="voice_kaiser.html">Kaiser</option>
+  <option value="voice_kanna.html">Kanna</option>
+  <option value="voice_khali.html">Khali</option>
+  <option value="voice_kinesis.html">Kinesis</option>
+  <option value="voice_lara.html">Lara</option>
+  <option value="voice_luminous.html">Luminous</option>
+  <option value="voice_lynn.html">Lynn</option>
+  <option value="voice_marksman.html">Marksman</option>
+  <option value="voice_mechanic.html">Mechanic</option>
+  <option value="voice_mercedes.html">Mercedes</option>
+  <option value="voice_mikhail.html">Mikhail</option>
+  <option value="voice_mitra.html">Mitra</option>
+  <option value="voice_nightlord.html">Nightlord</option>
+  <option value="voice_nightwalker.html">Night Walker</option>
+  <option value="voice_paladin.html">Paladin</option>
+  <option value="voice_pathfinder.html">Pathfinder</option>
+  <option value="voice_phantom.html">Phantom</option>
+  <option value="voice_pinkbean.html">Pink Bean</option>
+  <option value="voice_senya.html">Senya</option>
+  <option value="voice_shadower.html">Shadower</option>
+  <option value="voice_soulmaster.html">Dawn Warrior</option>
+  <option value="voice_striker.html">Thunder Breaker</option>
+  <option value="voice_viper.html">Buccaneer</option>
+  <option value="voice_wildhunter.html">Wild Hunter</option>
+  <option value="voice_windbreaker.html">Wind Archer</option>
+  <option value="voice_xenon.html">Xenon</option>
+  <option value="voice_zero.html">Zero</option>
+</select></div>
+        
+<div class="row">
+  <div class="col-md-6">
+     <h4>Male</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_evan_m_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_5.mp3">
+    </audio>
+    <p>Mir!</p>
+    <div class="img-container mt-2"><img src="img/22110013_img.png" alt="Return Flash" title="Return Flash" class="img-thumbnail"><img src="img/22111017_img.png" alt="Return!" title="Return!" class="img-thumbnail"><img src="img/22140013_img.png" alt="Return Dive" title="Return Dive" class="img-thumbnail"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/22170066_img.png" alt="Wind Breath" title="Wind Breath" class="img-thumbnail"><img src="img/22170067_img.png" alt="Earth Dive" title="Earth Dive" class="img-thumbnail"><img src="img/22170094_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_6.mp3">
+    </audio>
+    <p>Now is our time!</p>
+    <div class="img-container mt-2"><img src="img/22140014_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22140023_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/22170066_img.png" alt="Wind Breath" title="Wind Breath" class="img-thumbnail"><img src="img/22201004_img.png" alt="HEXA Thunder Flash" title="HEXA Thunder Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_7.mp3">
+    </audio>
+    <p>We'll show them.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_8.mp3">
+    </audio>
+    <p>Think you can handle us?</p>
+    <div class="img-container mt-2"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/22170066_img.png" alt="Wind Breath" title="Wind Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_9.mp3">
+    </audio>
+    <p>Let's go, Mir!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_10.mp3">
+    </audio>
+    <p>Take this!</p>
+    <div class="img-container mt-2"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_11.mp3">
+    </audio>
+    <p>YOU'RE FINISHED!</p>
+    <div class="img-container mt-2"><img src="img/22140014_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22140023_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/22201004_img.png" alt="HEXA Thunder Flash" title="HEXA Thunder Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_12.mp3">
+    </audio>
+    <p>Can you handle this?</p>
+    <div class="img-container mt-2"><img src="img/22171063_img.png" alt="Dragon Breath" title="Dragon Breath" class="img-thumbnail"><img src="img/22170067_img.png" alt="Earth Dive" title="Earth Dive" class="img-thumbnail"><img src="img/22170094_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_13.mp3">
+    </audio>
+    <p>YOU WON'T GET AWAY!</p>
+    <div class="img-container mt-2"><img src="img/22110014_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22110024_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22110025_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22201005_img.png" alt="HEXA Wind Flash" title="HEXA Wind Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_14.mp3">
+    </audio>
+    <p>You won't get away!</p>
+    <div class="img-container mt-2"><img src="img/22110014_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22110024_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22110025_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22201005_img.png" alt="HEXA Wind Flash" title="HEXA Wind Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_15.mp3">
+    </audio>
+    <p>We'll finish this!</p>
+    <div class="img-container mt-2"><img src="img/22170066_img.png" alt="Wind Breath" title="Wind Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_16.mp3">
+    </audio>
+    <p>Mir, come back!</p>
+    <div class="img-container mt-2"><img src="img/22110013_img.png" alt="Return Flash" title="Return Flash" class="img-thumbnail"><img src="img/22111017_img.png" alt="Return!" title="Return!" class="img-thumbnail"><img src="img/22140013_img.png" alt="Return Dive" title="Return Dive" class="img-thumbnail"><img src="img/22170064_img.png" alt="Return Flame" title="Return Flame" class="img-thumbnail"><img src="img/22170093_img.png" alt="Return Flame" title="Return Flame" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_17.mp3">
+    </audio>
+    <p>Come back, Mir!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_18.mp3">
+    </audio>
+    <p>ZAP EM MIR!</p>
+    <div class="img-container mt-2"><img src="img/22140014_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22140023_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22201004_img.png" alt="HEXA Thunder Flash" title="HEXA Thunder Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_19.mp3">
+    </audio>
+    <p>Come and get me!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_20.mp3">
+    </audio>
+    <p>Flash!</p>
+    <div class="img-container mt-2"><img src="img/22111012_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110022_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110023_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_21.mp3">
+    </audio>
+    <p>Flash!</p>
+    <div class="img-container mt-2"><img src="img/22111012_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110022_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110023_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_22.mp3">
+    </audio>
+    <p>Flash!</p>
+    <div class="img-container mt-2"><img src="img/22111012_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110022_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110023_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_23.mp3">
+    </audio>
+    <p>GET EM!</p>
+    <div class="img-container mt-2"><img src="img/22171063_img.png" alt="Dragon Breath" title="Dragon Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_24.mp3">
+    </audio>
+    <p>Dive!</p>
+    <div class="img-container mt-2"><img src="img/22141012_img.png" alt="Dragon Dive" title="Dragon Dive" class="img-thumbnail"><img src="img/22140022_img.png" alt="Dragon Dive" title="Dragon Dive" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_25.mp3">
+    </audio>
+    <p>Let him have it, Mir!</p>
+    <div class="img-container mt-2"><img src="img/22170067_img.png" alt="Earth Dive" title="Earth Dive" class="img-thumbnail"><img src="img/22170094_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/400021046_img.png" alt="Dragon Slam" title="Dragon Slam" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_26.mp3">
+    </audio>
+    <p>MIR! LIGHTNING FLASH!</p>
+    <div class="img-container mt-2"><img src="img/22140015_img.png" alt="Thunder Dive" title="Thunder Dive" class="img-thumbnail"><img src="img/22140024_img.png" alt="Thunder Dive" title="Thunder Dive" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_27.mp3">
+    </audio>
+    <p>Come  Mir!</p>
+    <div class="img-container mt-2"><img src="img/22171081_img.png" alt="Summon Onyx Dragon" title="Summon Onyx Dragon" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_28.mp3">
+    </audio>
+    <p>Blessing of the Onyx be with you!</p>
+    <div class="img-container mt-2"><img src="img/22171073_img.png" alt="Blessing of the Onyx" title="Blessing of the Onyx" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_29.mp3">
+    </audio>
+    <p>Blessing of the Onyx be with you!</p>
+    <div class="img-container mt-2"><img src="img/22171073_img.png" alt="Blessing of the Onyx" title="Blessing of the Onyx" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_30.mp3">
+    </audio>
+    <p>May the stars shine upon us!</p>
+    <div class="img-container mt-2"><img src="img/22201500_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_31.mp3">
+    </audio>
+    <p>The stars call to us!</p>
+    <div class="img-container mt-2"><img src="img/22201500_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_32.mp3">
+    </audio>
+    <p>Stars, heed my call!</p>
+    <div class="img-container mt-2"><img src="img/22201500_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_33.mp3">
+    </audio>
+    <p>The Cosmos watches over me!</p>
+    <div class="img-container mt-2"><img src="img/22201500_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_34.mp3">
+    </audio>
+    <p>By the stars!</p>
+    <div class="img-container mt-2"><img src="img/22201501_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_35.mp3">
+    </audio>
+    <p>The stars fly free!</p>
+    <div class="img-container mt-2"><img src="img/22201501_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_36.mp3">
+    </audio>
+    <p>I wield the elements!</p>
+    <div class="img-container mt-2"><img src="img/400021012_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"><img src="img/500061041_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_37.mp3">
+    </audio>
+    <p>Behold the elements!</p>
+    <div class="img-container mt-2"><img src="img/400021012_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"><img src="img/500061041_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_38.mp3">
+    </audio>
+    <p>TASTE PURE MAGIC!</p>
+    <div class="img-container mt-2"><img src="img/400021012_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"><img src="img/500061041_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_39.mp3">
+    </audio>
+    <p>This way, Mir!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_40.mp3">
+    </audio>
+    <p>Light him up, Mir!</p>
+    <div class="img-container mt-2"><img src="img/400020046_img.png" alt="Wyrmking's Breath" title="Wyrmking's Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_41.mp3">
+    </audio>
+    <p>Turn to ash!</p>
+    <div class="img-container mt-2"><img src="img/400020046_img.png" alt="Wyrmking's Breath" title="Wyrmking's Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_42.mp3">
+    </audio>
+    <p>The Constellations</p>
+    <div class="img-container mt-2"><img src="img/400021073_img.png" alt="Elemental Radiance" title="Elemental Radiance" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_43.mp3">
+    </audio>
+    <p>Glimpse the universe!</p>
+    <div class="img-container mt-2"><img src="img/400021073_img.png" alt="Elemental Radiance" title="Elemental Radiance" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_44.mp3">
+    </audio>
+    <p>Let the stars align!</p>
+    <div class="img-container mt-2"><img src="img/400021073_img.png" alt="Elemental Radiance" title="Elemental Radiance" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_45.mp3">
+    </audio>
+    <p>Liberation.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_45.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_0.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22001010_img.png" alt="Mana Burst I" title="Mana Burst I" class="img-thumbnail"><img src="img/22110010_img.png" alt="Mana Burst II" title="Mana Burst II" class="img-thumbnail"><img src="img/22111011_img.png" alt="Wind Circle" title="Wind Circle" class="img-thumbnail"><img src="img/22140010_img.png" alt="Mana Burst III" title="Mana Burst III" class="img-thumbnail"><img src="img/22141011_img.png" alt="Thunder Circle" title="Thunder Circle" class="img-thumbnail"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"><img src="img/22201002_img.png" alt="HEXA Thunder Circle" title="HEXA Thunder Circle" class="img-thumbnail"><img src="img/22201003_img.png" alt="HEXA Dragon Flash" title="HEXA Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_1.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22001010_img.png" alt="Mana Burst I" title="Mana Burst I" class="img-thumbnail"><img src="img/22110010_img.png" alt="Mana Burst II" title="Mana Burst II" class="img-thumbnail"><img src="img/22111011_img.png" alt="Wind Circle" title="Wind Circle" class="img-thumbnail"><img src="img/22140010_img.png" alt="Mana Burst III" title="Mana Burst III" class="img-thumbnail"><img src="img/22141011_img.png" alt="Thunder Circle" title="Thunder Circle" class="img-thumbnail"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"><img src="img/22201002_img.png" alt="HEXA Thunder Circle" title="HEXA Thunder Circle" class="img-thumbnail"><img src="img/22201003_img.png" alt="HEXA Dragon Flash" title="HEXA Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_2.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22110010_img.png" alt="Mana Burst II" title="Mana Burst II" class="img-thumbnail"><img src="img/22111011_img.png" alt="Wind Circle" title="Wind Circle" class="img-thumbnail"><img src="img/22140010_img.png" alt="Mana Burst III" title="Mana Burst III" class="img-thumbnail"><img src="img/22141011_img.png" alt="Thunder Circle" title="Thunder Circle" class="img-thumbnail"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"><img src="img/22201002_img.png" alt="HEXA Thunder Circle" title="HEXA Thunder Circle" class="img-thumbnail"><img src="img/22201003_img.png" alt="HEXA Dragon Flash" title="HEXA Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_3.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22140010_img.png" alt="Mana Burst III" title="Mana Burst III" class="img-thumbnail"><img src="img/22141011_img.png" alt="Thunder Circle" title="Thunder Circle" class="img-thumbnail"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"><img src="img/22201002_img.png" alt="HEXA Thunder Circle" title="HEXA Thunder Circle" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_m_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_m_4.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_m_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_m_4.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+  <div class="col-md-6">
+     <h4>Female</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_evan_f_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_5.mp3">
+    </audio>
+    <p>Mir!</p>
+    <div class="img-container mt-2"><img src="img/22110013_img.png" alt="Return Flash" title="Return Flash" class="img-thumbnail"><img src="img/22111017_img.png" alt="Return!" title="Return!" class="img-thumbnail"><img src="img/22140013_img.png" alt="Return Dive" title="Return Dive" class="img-thumbnail"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/22170066_img.png" alt="Wind Breath" title="Wind Breath" class="img-thumbnail"><img src="img/22170067_img.png" alt="Earth Dive" title="Earth Dive" class="img-thumbnail"><img src="img/22170094_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_6.mp3">
+    </audio>
+    <p>Now is our time!</p>
+    <div class="img-container mt-2"><img src="img/22140014_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22140023_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/22170066_img.png" alt="Wind Breath" title="Wind Breath" class="img-thumbnail"><img src="img/22201004_img.png" alt="HEXA Thunder Flash" title="HEXA Thunder Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_7.mp3">
+    </audio>
+    <p>We'll show them!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_8.mp3">
+    </audio>
+    <p>Think you can handle us?</p>
+    <div class="img-container mt-2"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/22170066_img.png" alt="Wind Breath" title="Wind Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_9.mp3">
+    </audio>
+    <p>Let's go, Mir!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_10.mp3">
+    </audio>
+    <p>TAKE THIS!</p>
+    <div class="img-container mt-2"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_11.mp3">
+    </audio>
+    <p>You're finished!</p>
+    <div class="img-container mt-2"><img src="img/22140014_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22140023_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22170065_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/22201004_img.png" alt="HEXA Thunder Flash" title="HEXA Thunder Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_12.mp3">
+    </audio>
+    <p>Come and get me!</p>
+    <div class="img-container mt-2"><img src="img/22171063_img.png" alt="Dragon Breath" title="Dragon Breath" class="img-thumbnail"><img src="img/22170067_img.png" alt="Earth Dive" title="Earth Dive" class="img-thumbnail"><img src="img/22170094_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_13.mp3">
+    </audio>
+    <p>You won't get away!</p>
+    <div class="img-container mt-2"><img src="img/22110014_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22110024_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22110025_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22201005_img.png" alt="HEXA Wind Flash" title="HEXA Wind Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_14.mp3">
+    </audio>
+    <p>YOU WON'T GET AWAY!</p>
+    <div class="img-container mt-2"><img src="img/22110014_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22110024_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22110025_img.png" alt="Wind Flash" title="Wind Flash" class="img-thumbnail"><img src="img/22201005_img.png" alt="HEXA Wind Flash" title="HEXA Wind Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_15.mp3">
+    </audio>
+    <p>We'll finish this!</p>
+    <div class="img-container mt-2"><img src="img/22170066_img.png" alt="Wind Breath" title="Wind Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_16.mp3">
+    </audio>
+    <p>Come back, Mir!</p>
+    <div class="img-container mt-2"><img src="img/22110013_img.png" alt="Return Flash" title="Return Flash" class="img-thumbnail"><img src="img/22111017_img.png" alt="Return!" title="Return!" class="img-thumbnail"><img src="img/22140013_img.png" alt="Return Dive" title="Return Dive" class="img-thumbnail"><img src="img/22170064_img.png" alt="Return Flame" title="Return Flame" class="img-thumbnail"><img src="img/22170093_img.png" alt="Return Flame" title="Return Flame" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_17.mp3">
+    </audio>
+    <p>Mir, come back!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_19.mp3">
+    </audio>
+    <p>Can you handle this?</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_20.mp3">
+    </audio>
+    <p>Flash!</p>
+    <div class="img-container mt-2"><img src="img/22111012_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110022_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110023_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_21.mp3">
+    </audio>
+    <p>Flash!</p>
+    <div class="img-container mt-2"><img src="img/22111012_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110022_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110023_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_22.mp3">
+    </audio>
+    <p>Flash.</p>
+    <div class="img-container mt-2"><img src="img/22111012_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110022_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"><img src="img/22110023_img.png" alt="Dragon Flash" title="Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_23.mp3">
+    </audio>
+    <p>Get him!</p>
+    <div class="img-container mt-2"><img src="img/22171063_img.png" alt="Dragon Breath" title="Dragon Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_24.mp3">
+    </audio>
+    <p>Dive!</p>
+    <div class="img-container mt-2"><img src="img/22141012_img.png" alt="Dragon Dive" title="Dragon Dive" class="img-thumbnail"><img src="img/22140022_img.png" alt="Dragon Dive" title="Dragon Dive" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_25.mp3">
+    </audio>
+    <p>LET IT HAPPEN, MIR!</p>
+    <div class="img-container mt-2"><img src="img/22170067_img.png" alt="Earth Dive" title="Earth Dive" class="img-thumbnail"><img src="img/22170094_img.png" alt="Earth Breath" title="Earth Breath" class="img-thumbnail"><img src="img/400021046_img.png" alt="Dragon Slam" title="Dragon Slam" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_26.mp3">
+    </audio>
+    <p>MIR, LIGHTNING FLASH!</p>
+    <div class="img-container mt-2"><img src="img/22140015_img.png" alt="Thunder Dive" title="Thunder Dive" class="img-thumbnail"><img src="img/22140024_img.png" alt="Thunder Dive" title="Thunder Dive" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_27.mp3">
+    </audio>
+    <p>Come, Mir!</p>
+    <div class="img-container mt-2"><img src="img/22171081_img.png" alt="Summon Onyx Dragon" title="Summon Onyx Dragon" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_28.mp3">
+    </audio>
+    <p>Blessing of the Onyx be with you!</p>
+    <div class="img-container mt-2"><img src="img/22171073_img.png" alt="Blessing of the Onyx" title="Blessing of the Onyx" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_29.mp3">
+    </audio>
+    <p>The blessing of the Onyx be with you!</p>
+    <div class="img-container mt-2"><img src="img/22171073_img.png" alt="Blessing of the Onyx" title="Blessing of the Onyx" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_30.mp3">
+    </audio>
+    <p>May the stars shine upon us!</p>
+    <div class="img-container mt-2"><img src="img/22201500_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_31.mp3">
+    </audio>
+    <p>The stars call to us.</p>
+    <div class="img-container mt-2"><img src="img/22201500_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_32.mp3">
+    </audio>
+    <p>Stars, heed my call.</p>
+    <div class="img-container mt-2"><img src="img/22201500_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_33.mp3">
+    </audio>
+    <p>The Cosmos watches over me!</p>
+    <div class="img-container mt-2"><img src="img/22201500_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_34.mp3">
+    </audio>
+    <p>By the stars!</p>
+    <div class="img-container mt-2"><img src="img/22201501_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_35.mp3">
+    </audio>
+    <p>The stars fly free!</p>
+    <div class="img-container mt-2"><img src="img/22201501_img.png" alt="Zodiac Burst" title="Zodiac Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_36.mp3">
+    </audio>
+    <p>I wield the elements!</p>
+    <div class="img-container mt-2"><img src="img/400021012_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"><img src="img/500061041_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_37.mp3">
+    </audio>
+    <p>Behold the elements!</p>
+    <div class="img-container mt-2"><img src="img/400021012_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"><img src="img/500061041_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_38.mp3">
+    </audio>
+    <p>TASTE PURE MAGIC!</p>
+    <div class="img-container mt-2"><img src="img/400021012_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"><img src="img/500061041_img.png" alt="Elemental Barrage" title="Elemental Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_39.mp3">
+    </audio>
+    <p>This way, Mir!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_40.mp3">
+    </audio>
+    <p>Light him up, Mir!</p>
+    <div class="img-container mt-2"><img src="img/400020046_img.png" alt="Wyrmking's Breath" title="Wyrmking's Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_41.mp3">
+    </audio>
+    <p>Turn to ash!</p>
+    <div class="img-container mt-2"><img src="img/400020046_img.png" alt="Wyrmking's Breath" title="Wyrmking's Breath" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_42.mp3">
+    </audio>
+    <p>Constellations.</p>
+    <div class="img-container mt-2"><img src="img/400021073_img.png" alt="Elemental Radiance" title="Elemental Radiance" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_43.mp3">
+    </audio>
+    <p>A glimpse of the universe!</p>
+    <div class="img-container mt-2"><img src="img/400021073_img.png" alt="Elemental Radiance" title="Elemental Radiance" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_44.mp3">
+    </audio>
+    <p>Let the stars align!</p>
+    <div class="img-container mt-2"><img src="img/400021073_img.png" alt="Elemental Radiance" title="Elemental Radiance" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_45.mp3">
+    </audio>
+    <p>Liberation.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_45.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_0.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22001010_img.png" alt="Mana Burst I" title="Mana Burst I" class="img-thumbnail"><img src="img/22110010_img.png" alt="Mana Burst II" title="Mana Burst II" class="img-thumbnail"><img src="img/22111011_img.png" alt="Wind Circle" title="Wind Circle" class="img-thumbnail"><img src="img/22140010_img.png" alt="Mana Burst III" title="Mana Burst III" class="img-thumbnail"><img src="img/22141011_img.png" alt="Thunder Circle" title="Thunder Circle" class="img-thumbnail"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"><img src="img/22201002_img.png" alt="HEXA Thunder Circle" title="HEXA Thunder Circle" class="img-thumbnail"><img src="img/22201003_img.png" alt="HEXA Dragon Flash" title="HEXA Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_1.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22001010_img.png" alt="Mana Burst I" title="Mana Burst I" class="img-thumbnail"><img src="img/22110010_img.png" alt="Mana Burst II" title="Mana Burst II" class="img-thumbnail"><img src="img/22111011_img.png" alt="Wind Circle" title="Wind Circle" class="img-thumbnail"><img src="img/22140010_img.png" alt="Mana Burst III" title="Mana Burst III" class="img-thumbnail"><img src="img/22141011_img.png" alt="Thunder Circle" title="Thunder Circle" class="img-thumbnail"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"><img src="img/22201002_img.png" alt="HEXA Thunder Circle" title="HEXA Thunder Circle" class="img-thumbnail"><img src="img/22201003_img.png" alt="HEXA Dragon Flash" title="HEXA Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_2.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22110010_img.png" alt="Mana Burst II" title="Mana Burst II" class="img-thumbnail"><img src="img/22111011_img.png" alt="Wind Circle" title="Wind Circle" class="img-thumbnail"><img src="img/22140010_img.png" alt="Mana Burst III" title="Mana Burst III" class="img-thumbnail"><img src="img/22141011_img.png" alt="Thunder Circle" title="Thunder Circle" class="img-thumbnail"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"><img src="img/22201002_img.png" alt="HEXA Thunder Circle" title="HEXA Thunder Circle" class="img-thumbnail"><img src="img/22201003_img.png" alt="HEXA Dragon Flash" title="HEXA Dragon Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_3.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22140010_img.png" alt="Mana Burst III" title="Mana Burst III" class="img-thumbnail"><img src="img/22141011_img.png" alt="Thunder Circle" title="Thunder Circle" class="img-thumbnail"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"><img src="img/22201002_img.png" alt="HEXA Thunder Circle" title="HEXA Thunder Circle" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_4.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22170060_img.png" alt="Mana Burst IV" title="Mana Burst IV" class="img-thumbnail"><img src="img/22171062_img.png" alt="Earth Circle" title="Earth Circle" class="img-thumbnail"><img src="img/22201000_img.png" alt="HEXA Mana Burst" title="HEXA Mana Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_evan_f_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_evan_f_18.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/22140014_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22140023_img.png" alt="Thunder Flash" title="Thunder Flash" class="img-thumbnail"><img src="img/22201004_img.png" alt="HEXA Thunder Flash" title="HEXA Thunder Flash" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_evan_f_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_evan_f_18.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+    
+    <script>
+      function goToSkillPage() {
+        const sel = document.getElementById('skillDropdown');
+        if (sel.value) {
+          window.location.href = sel.value;
+        }
+      }
+      window.onload = function() {
+        const currentPage = window.location.pathname.split("/").pop();
+        const sel = document.getElementById('skillDropdown');
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === currentPage) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      function forceDownload(url) {
+          fetch(url)
+          .then(response => response.blob())
+          .then(blob => {
+              const blobUrl = window.URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.style.display = "none";
+              a.href = blobUrl;
+              a.download = url.split("/").pop();
+              document.body.appendChild(a);
+              a.click();
+              window.URL.revokeObjectURL(blobUrl);
+          })
+          .catch(err => console.error("Erro no download: ", err));
+      }
+    </script>
+    
+            <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer"> MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon. </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a> | <a href="/Comparer/changelog.html">Change Log</a>
+            </p>
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=18055971&style=0007&nbdigits=9&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+            </a>        
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

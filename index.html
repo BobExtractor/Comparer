@@ -4,17 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bob The Extractor</title>
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="extractionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Extractions
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="extractionsDropdown">
+                <li><a class="dropdown-item" href="v255/item/item.html">v255 - The Dark Ride</a></li>
+                <li><a class="dropdown-item" href="v256/item/item.html">v256 - The Dark Ride - Limbo</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="others/skillvoice/index.html">All Class Voices</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
     <div class="logo-section">
         <img src="img/logo.png" alt="Logo" class="logo">
     </div>
 
     <div class="container content-container">
-        <!-- First Card -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title text-center">Hey There!</h5>
+                <p>
+                    Bob Extractor is a project that compares two versions of MapleStory and extracts changes. It detects and lists modifications ranging from removed elements to updated details in items, skills, maps, and more.
+                </p>
+                <p>
+                    This tool helps you keep track of the differences between versions, ensuring you never miss any update – whether it’s a subtle tweak or a major overhaul.
+                </p>
+				<div class="text-center">
+                    <div class="button-group">
+                        <a href="v255/item/item.html" class="custom-button">v255 - The Dark Ride</a>
+                        <a href="v256/item/item.html" class="custom-button">v256 - The Dark Ride - Limbo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center">The Story of Bob</h5>
@@ -26,16 +66,8 @@
                 <p>
                     Some folks think Bob is more than just a snail. Maybe he’s a legend, maybe he’s just really good at showing up when the big stuff goes down. Either way, he’s here to help.
                 </p>
-                <div class="text-center">
-                    <div class="button-group">
-                        <a href="v255/item/item.html" class="custom-button">v255 - The Dark Ride</a>
-                        <a href="v256/item/item.html" class="custom-button">v256 - The Dark Ride - Limbo</a>
-                    </div>
-                </div>
             </div>
         </div>
-
-        <!-- Second Card -->
         <div class="mt-4">
             <div class="card">
                 <div class="card-body">
@@ -50,8 +82,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Third Card -->
         <div class="mt-4 text-center">
             <div class="card">
                 <div class="card-body">
@@ -62,7 +92,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container text-center">
             <p>© 2024 Bob The Extractor - All rights reserved.</p>
@@ -71,7 +100,7 @@
                 <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a> | <a href="changelog.html">Change Log</a>
             </p>
             <a href="https://www.hitwebcounter.com" target="_blank">
-                <img src="https://hitwebcounter.com/counter/counter.php?page=18055971&style=0007&nbdigits=9&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+                <img src="https://hitwebcounter.com/counter/counter.php?page=18055971&amp;style=0007&amp;nbdigits=9&amp;type=page&amp;initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
             </a>        
         </div>
     </footer>

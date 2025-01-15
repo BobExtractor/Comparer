@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .img-container img {
+            max-height: 100px;
+        }
+        .card-text small { color: #6c757d; }
+        .card hr { margin: 0.5rem 0; }
+        .tab-content { margin-top: 1rem; }
+        .card { box-shadow: 0 0 10px rgba(0,0,0,0.1); border: none; }
+        .nav-tabs .nav-link { margin-right: 10px; }
+        .card-footer { font-size: 0.875rem; color: #6c757d; margin-top: 0.5rem; }
+        .translation { font-size: 0.8em; color: #555; }
+        .nota { font-size: 0.8em; color: #555; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/Comparer/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../skillvoice/index.html">Class Voices</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="logo-section">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container mt-4">
+        <h3 class="text-center">Mechanic</h3>
+
+        <div class="mb-4 text-center"><label for="skillDropdown" class="me-2">Select a Class:</label><select id="skillDropdown" onchange="goToSkillPage()">
+  <option value="">-- Select --</option>
+  <option value="voice_adele.html">Adele</option>
+  <option value="voice_angelicburster.html">Angelic Buster</option>
+  <option value="voice_aran.html">Aran</option>
+  <option value="voice_archmagefp.html">Arch Mage F/P</option>
+  <option value="voice_archmagetc.html">Arch Mage I/L</option>
+  <option value="voice_ark.html">Ark</option>
+  <option value="voice_battlemage.html">Battle Mage</option>
+  <option value="voice_bishop.html">Bishop</option>
+  <option value="voice_blaster.html">Blaster</option>
+  <option value="voice_bowmaster.html">Bowmaster</option>
+  <option value="voice_cadena.html">Cadena</option>
+  <option value="voice_cannonshooter.html">Cannoneer</option>
+  <option value="voice_captain.html">Corsair</option>
+  <option value="voice_darkknight.html">Dark Knight</option>
+  <option value="voice_demonavenger.html">Demon Avenger</option>
+  <option value="voice_demonslayer.html">Demon Slayer</option>
+  <option value="voice_dualblade.html">Dual Blade</option>
+  <option value="voice_eunwol.html">Shade</option>
+  <option value="voice_evan.html">Evan</option>
+  <option value="voice_flamewizard.html">Blaze Wizard</option>
+  <option value="voice_hayato.html">Hayato</option>
+  <option value="voice_hero.html">Hero</option>
+  <option value="voice_hoyoung.html">Hoyoung</option>
+  <option value="voice_illium.html">Illium</option>
+  <option value="voice_kain.html">Kain</option>
+  <option value="voice_kaiser.html">Kaiser</option>
+  <option value="voice_kanna.html">Kanna</option>
+  <option value="voice_khali.html">Khali</option>
+  <option value="voice_kinesis.html">Kinesis</option>
+  <option value="voice_lara.html">Lara</option>
+  <option value="voice_luminous.html">Luminous</option>
+  <option value="voice_lynn.html">Lynn</option>
+  <option value="voice_marksman.html">Marksman</option>
+  <option value="voice_mechanic.html">Mechanic</option>
+  <option value="voice_mercedes.html">Mercedes</option>
+  <option value="voice_mikhail.html">Mikhail</option>
+  <option value="voice_mitra.html">Mitra</option>
+  <option value="voice_nightlord.html">Nightlord</option>
+  <option value="voice_nightwalker.html">Night Walker</option>
+  <option value="voice_paladin.html">Paladin</option>
+  <option value="voice_pathfinder.html">Pathfinder</option>
+  <option value="voice_phantom.html">Phantom</option>
+  <option value="voice_pinkbean.html">Pink Bean</option>
+  <option value="voice_senya.html">Senya</option>
+  <option value="voice_shadower.html">Shadower</option>
+  <option value="voice_soulmaster.html">Dawn Warrior</option>
+  <option value="voice_striker.html">Thunder Breaker</option>
+  <option value="voice_viper.html">Buccaneer</option>
+  <option value="voice_wildhunter.html">Wild Hunter</option>
+  <option value="voice_windbreaker.html">Wind Archer</option>
+  <option value="voice_xenon.html">Xenon</option>
+  <option value="voice_zero.html">Zero</option>
+</select></div>
+        
+<div class="row">
+  <div class="col-md-6">
+     <h4>Male</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_0.mp3">
+    </audio>
+    <p>It's on!</p>
+    <div class="img-container mt-2"><img src="img/35001002_img.png" alt="Humanoid Mech" title="Humanoid Mech" class="img-thumbnail"><img src="img/35111003_img.png" alt="Tank Mech" title="Tank Mech" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_1.mp3">
+    </audio>
+    <p>All Ready!</p>
+    <div class="img-container mt-2"><img src="img/35001002_img.png" alt="Humanoid Mech" title="Humanoid Mech" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_2.mp3">
+    </audio>
+    <p>Quickly.</p>
+    <div class="img-container mt-2"><img src="img/35001004_img.png" alt="Gatling Gun" title="Gatling Gun" class="img-thumbnail"><img src="img/35101001_img.png" alt="Heavy Gatling Gun" title="Heavy Gatling Gun" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_3.mp3">
+    </audio>
+    <p>Haha! Take this!</p>
+    <div class="img-container mt-2"><img src="img/35001004_img.png" alt="Gatling Gun" title="Gatling Gun" class="img-thumbnail"><img src="img/35101001_img.png" alt="Heavy Gatling Gun" title="Heavy Gatling Gun" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_4.mp3">
+    </audio>
+    <p>Foward.</p>
+    <div class="img-container mt-2"><img src="img/35001003_img.png" alt="ME-07 Drillhands" title="ME-07 Drillhands" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_5.mp3">
+    </audio>
+    <p>Foward.</p>
+    <div class="img-container mt-2"><img src="img/35001003_img.png" alt="ME-07 Drillhands" title="ME-07 Drillhands" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_6.mp3">
+    </audio>
+    <p>BLOW HIM AWAY!</p>
+    <div class="img-container mt-2"><img src="img/35111015_img.png" alt="Punch Launcher" title="Punch Launcher" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_7.mp3">
+    </audio>
+    <p>Heavy.</p>
+    <div class="img-container mt-2"><img src="img/35111015_img.png" alt="Punch Launcher" title="Punch Launcher" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_8.mp3">
+    </audio>
+    <p>Fire!</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_9.mp3">
+    </audio>
+    <p>I'll destroy you!</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_10.mp3">
+    </audio>
+    <p>TASTE THIS!</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_11.mp3">
+    </audio>
+    <p>One shot!</p>
+    <div class="img-container mt-2"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_12.mp3">
+    </audio>
+    <p>MORE FIRE POWER!</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_13.mp3">
+    </audio>
+    <p>The Art of Explosions!</p>
+    <div class="img-container mt-2"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_14.mp3">
+    </audio>
+    <p>Engaging Robo-Launcher!</p>
+    <div class="img-container mt-2"><img src="img/35101012_img.png" alt="Robo Launcher RM7" title="Robo Launcher RM7" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_15.mp3">
+    </audio>
+    <p>FIRE THEM ALL!</p>
+    <div class="img-container mt-2"><img src="img/35101012_img.png" alt="Robo Launcher RM7" title="Robo Launcher RM7" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_16.mp3">
+    </audio>
+    <p>It's ready!</p>
+    <div class="img-container mt-2"><img src="img/35101005_img.png" alt="Open Portal: GX-9" title="Open Portal: GX-9" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_17.mp3">
+    </audio>
+    <p>That's it.</p>
+    <div class="img-container mt-2"><img src="img/35101005_img.png" alt="Open Portal: GX-9" title="Open Portal: GX-9" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_18.mp3">
+    </audio>
+    <p>Let's do this!</p>
+    <div class="img-container mt-2"><img src="img/35111003_img.png" alt="Tank Mech" title="Tank Mech" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_19.mp3">
+    </audio>
+    <p>Fire!</p>
+    <div class="img-container mt-2"><img src="img/35101002_img.png" alt="Homing Beacon" title="Homing Beacon" class="img-thumbnail"><img src="img/35110017_img.png" alt="Advanced Homing Beacon" title="Advanced Homing Beacon" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_20.mp3">
+    </audio>
+    <p>LOCK ON!</p>
+    <div class="img-container mt-2"><img src="img/35101002_img.png" alt="Homing Beacon" title="Homing Beacon" class="img-thumbnail"><img src="img/35110017_img.png" alt="Advanced Homing Beacon" title="Advanced Homing Beacon" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_21.mp3">
+    </audio>
+    <p>This'll be nice.</p>
+    <div class="img-container mt-2"><img src="img/35111002_img.png" alt="Rock 'n Shock" title="Rock 'n Shock" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_22.mp3">
+    </audio>
+    <p>Nice</p>
+    <div class="img-container mt-2"><img src="img/35111002_img.png" alt="Rock 'n Shock" title="Rock 'n Shock" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_23.mp3">
+    </audio>
+    <p>Activating Rocket 'n Shock!</p>
+    <div class="img-container mt-2"><img src="img/35111002_img.png" alt="Rock 'n Shock" title="Rock 'n Shock" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_24.mp3">
+    </audio>
+    <p>Enhanced Support Unit!</p>
+    <div class="img-container mt-2"><img src="img/35120002_img.png" alt="Enhanced Support Unit" title="Enhanced Support Unit" class="img-thumbnail"><img src="img/35111008_img.png" alt="Support Unit: H-EX" title="Support Unit: H-EX" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_25.mp3">
+    </audio>
+    <p>Starting support!</p>
+    <div class="img-container mt-2"><img src="img/35120002_img.png" alt="Enhanced Support Unit" title="Enhanced Support Unit" class="img-thumbnail"><img src="img/35111008_img.png" alt="Support Unit: H-EX" title="Support Unit: H-EX" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_26.mp3">
+    </audio>
+    <p>Just trust me.</p>
+    <div class="img-container mt-2"><img src="img/35120002_img.png" alt="Enhanced Support Unit" title="Enhanced Support Unit" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_27.mp3">
+    </audio>
+    <p>Bots 'n Tots, GO!</p>
+    <div class="img-container mt-2"><img src="img/35121009_img.png" alt="Bots 'n Tots" title="Bots 'n Tots" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_28.mp3">
+    </audio>
+    <p>Tiny but terrifying.</p>
+    <div class="img-container mt-2"><img src="img/35121009_img.png" alt="Bots 'n Tots" title="Bots 'n Tots" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_29.mp3">
+    </audio>
+    <p>Don't underestimate him.</p>
+    <div class="img-container mt-2"><img src="img/35121009_img.png" alt="Bots 'n Tots" title="Bots 'n Tots" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_30.mp3">
+    </audio>
+    <p>SG-88!</p>
+    <div class="img-container mt-2"><img src="img/35121003_img.png" alt="Giant Robot SG-88" title="Giant Robot SG-88" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_31.mp3">
+    </audio>
+    <p>HAHAHAHA! MY MASTERPIECE!</p>
+    <div class="img-container mt-2"><img src="img/35121003_img.png" alt="Giant Robot SG-88" title="Giant Robot SG-88" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_32.mp3">
+    </audio>
+    <p>Say hi to my friend!</p>
+    <div class="img-container mt-2"><img src="img/35121003_img.png" alt="Giant Robot SG-88" title="Giant Robot SG-88" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_33.mp3">
+    </audio>
+    <p>Distortion Bomb!</p>
+    <div class="img-container mt-2"><img src="img/35121052_img.png" alt="Distortion Bomb" title="Distortion Bomb" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_34.mp3">
+    </audio>
+    <p>Distorted.</p>
+    <div class="img-container mt-2"><img src="img/35121052_img.png" alt="Distortion Bomb" title="Distortion Bomb" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_35.mp3">
+    </audio>
+    <p>Warping space</p>
+    <div class="img-container mt-2"><img src="img/35121052_img.png" alt="Distortion Bomb" title="Distortion Bomb" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_36.mp3">
+    </audio>
+    <p>You ready for this?</p>
+    <div class="img-container mt-2"><img src="img/35121055_img.png" alt="Full Spread" title="Full Spread" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_37.mp3">
+    </audio>
+    <p>Bombs away!</p>
+    <div class="img-container mt-2"><img src="img/35121055_img.png" alt="Full Spread" title="Full Spread" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_38.mp3">
+    </audio>
+    <p>Welcome to missile fest</p>
+    <div class="img-container mt-2"><img src="img/35121055_img.png" alt="Full Spread" title="Full Spread" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_39.mp3">
+    </audio>
+    <p>Activating Mobile Missile Battery!</p>
+    <div class="img-container mt-2"><img src="img/400051017_img.png" alt="Mobile Missile Battery" title="Mobile Missile Battery" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_40.mp3">
+    </audio>
+    <p>Shoot them all!</p>
+    <div class="img-container mt-2"><img src="img/400051017_img.png" alt="Mobile Missile Battery" title="Mobile Missile Battery" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_41.mp3">
+    </audio>
+    <p>Enemy spotted! Fire!</p>
+    <div class="img-container mt-2"><img src="img/400051017_img.png" alt="Mobile Missile Battery" title="Mobile Missile Battery" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_42.mp3">
+    </audio>
+    <p>Doomsday device</p>
+    <div class="img-container mt-2"><img src="img/400051009_img.png" alt="Doomsday Device" title="Doomsday Device" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_43.mp3">
+    </audio>
+    <p>My masterpiece!</p>
+    <div class="img-container mt-2"><img src="img/400051009_img.png" alt="Doomsday Device" title="Doomsday Device" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_44.mp3">
+    </audio>
+    <p>Two weapons in one!</p>
+    <div class="img-container mt-2"><img src="img/400051009_img.png" alt="Doomsday Device" title="Doomsday Device" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_45.mp3">
+    </audio>
+    <p>Engine, go!</p>
+    <div class="img-container mt-2"><img src="img/400051068_img.png" alt="Mecha Carrier" title="Mecha Carrier" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_45.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_46.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 46 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_46.mp3">
+    </audio>
+    <p>Science, yeah!</p>
+    <div class="img-container mt-2"><img src="img/400051068_img.png" alt="Mecha Carrier" title="Mecha Carrier" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_46.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_46.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_47.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 47 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_47.mp3">
+    </audio>
+    <p>Mecha Carrier, go!</p>
+    <div class="img-container mt-2"><img src="img/400051068_img.png" alt="Mecha Carrier" title="Mecha Carrier" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_47.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_47.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_48.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 48 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_48.mp3">
+    </audio>
+    <p>Mech, fire all weapons!</p>
+    <div class="img-container mt-2"><img src="img/400051041_img.png" alt="Full Metal Barrage" title="Full Metal Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_48.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_48.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_49.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 49 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_49.mp3">
+    </audio>
+    <p>Full power!</p>
+    <div class="img-container mt-2"><img src="img/400051041_img.png" alt="Full Metal Barrage" title="Full Metal Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_49.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_49.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_50.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 50 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_50.mp3">
+    </audio>
+    <p>MAX FIRE POWER!</p>
+    <div class="img-container mt-2"><img src="img/400051041_img.png" alt="Full Metal Barrage" title="Full Metal Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_50.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_50.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_51.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 51 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_51.mp3">
+    </audio>
+    <p>Fire everything!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_51.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_51.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_52.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 52 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_52.mp3">
+    </audio>
+    <p>Kaboom.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_52.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_52.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_53.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 53 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_53.mp3">
+    </audio>
+    <p>All in.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_53.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_53.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_54.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 54 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_54.mp3">
+    </audio>
+    <p>Now!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_54.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_54.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_55.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 55 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_55.mp3">
+    </audio>
+    <p>Block on target!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_55.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_55.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_56.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 56 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_56.mp3">
+    </audio>
+    <p>Full barrage!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_56.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_56.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_57.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 57 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_57.mp3">
+    </audio>
+    <p>On target!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_57.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_57.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_58.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 58 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_58.mp3">
+    </audio>
+    <p>Blow him up!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_58.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_58.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_62.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 62 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_62.mp3">
+    </audio>
+    <p>Ha ha ha ha ha!</p>
+    <div class="img-container mt-2"><img src="img/400051009_img.png" alt="Doomsday Device" title="Doomsday Device" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_62.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_62.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_59.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 59 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_59.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_59.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_59.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_60.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 60 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_60.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_60.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_60.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_61.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 61 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_61.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_61.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_61.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_63.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 63 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_63.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051068_img.png" alt="Mecha Carrier" title="Mecha Carrier" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_63.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_63.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_m_64.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 64 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_m_64.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051017_img.png" alt="Mobile Missile Battery" title="Mobile Missile Battery" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_m_64.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_m_64.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+  <div class="col-md-6">
+     <h4>Female</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_0.mp3">
+    </audio>
+    <p>Let's get started!</p>
+    <div class="img-container mt-2"><img src="img/35001002_img.png" alt="Humanoid Mech" title="Humanoid Mech" class="img-thumbnail"><img src="img/35111003_img.png" alt="Tank Mech" title="Tank Mech" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_1.mp3">
+    </audio>
+    <p>All ready!</p>
+    <div class="img-container mt-2"><img src="img/35001002_img.png" alt="Humanoid Mech" title="Humanoid Mech" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_2.mp3">
+    </audio>
+    <p>Quickly!</p>
+    <div class="img-container mt-2"><img src="img/35001004_img.png" alt="Gatling Gun" title="Gatling Gun" class="img-thumbnail"><img src="img/35101001_img.png" alt="Heavy Gatling Gun" title="Heavy Gatling Gun" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_3.mp3">
+    </audio>
+    <p>Take this!</p>
+    <div class="img-container mt-2"><img src="img/35001004_img.png" alt="Gatling Gun" title="Gatling Gun" class="img-thumbnail"><img src="img/35101001_img.png" alt="Heavy Gatling Gun" title="Heavy Gatling Gun" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_4.mp3">
+    </audio>
+    <p>Foward!</p>
+    <div class="img-container mt-2"><img src="img/35001003_img.png" alt="ME-07 Drillhands" title="ME-07 Drillhands" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_5.mp3">
+    </audio>
+    <p>Move!</p>
+    <div class="img-container mt-2"><img src="img/35001003_img.png" alt="ME-07 Drillhands" title="ME-07 Drillhands" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_6.mp3">
+    </audio>
+    <p>I'll blow you away!</p>
+    <div class="img-container mt-2"><img src="img/35111015_img.png" alt="Punch Launcher" title="Punch Launcher" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_7.mp3">
+    </audio>
+    <p>Heavy.</p>
+    <div class="img-container mt-2"><img src="img/35111015_img.png" alt="Punch Launcher" title="Punch Launcher" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_8.mp3">
+    </audio>
+    <p>Fire!</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_9.mp3">
+    </audio>
+    <p>I'll destroy you!</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_10.mp3">
+    </audio>
+    <p>Taste this!</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_11.mp3">
+    </audio>
+    <p>One shot!</p>
+    <div class="img-container mt-2"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_12.mp3">
+    </audio>
+    <p>More firepower!</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_13.mp3">
+    </audio>
+    <p>The Art of Explosions!</p>
+    <div class="img-container mt-2"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_14.mp3">
+    </audio>
+    <p>Activating Robo Launcher!</p>
+    <div class="img-container mt-2"><img src="img/35101012_img.png" alt="Robo Launcher RM7" title="Robo Launcher RM7" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_15.mp3">
+    </audio>
+    <p>Fire them all!</p>
+    <div class="img-container mt-2"><img src="img/35101012_img.png" alt="Robo Launcher RM7" title="Robo Launcher RM7" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_16.mp3">
+    </audio>
+    <p>It's ready!</p>
+    <div class="img-container mt-2"><img src="img/35101005_img.png" alt="Open Portal: GX-9" title="Open Portal: GX-9" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_17.mp3">
+    </audio>
+    <p>That's it.</p>
+    <div class="img-container mt-2"><img src="img/35101005_img.png" alt="Open Portal: GX-9" title="Open Portal: GX-9" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_18.mp3">
+    </audio>
+    <p>Let's do this!</p>
+    <div class="img-container mt-2"><img src="img/35111003_img.png" alt="Tank Mech" title="Tank Mech" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_20.mp3">
+    </audio>
+    <p>Lock on!</p>
+    <div class="img-container mt-2"><img src="img/35101002_img.png" alt="Homing Beacon" title="Homing Beacon" class="img-thumbnail"><img src="img/35110017_img.png" alt="Advanced Homing Beacon" title="Advanced Homing Beacon" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_21.mp3">
+    </audio>
+    <p>This'll be fun.</p>
+    <div class="img-container mt-2"><img src="img/35111002_img.png" alt="Rock 'n Shock" title="Rock 'n Shock" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_22.mp3">
+    </audio>
+    <p>Nice!</p>
+    <div class="img-container mt-2"><img src="img/35111002_img.png" alt="Rock 'n Shock" title="Rock 'n Shock" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_23.mp3">
+    </audio>
+    <p>Activating Rock'n'Shock!</p>
+    <div class="img-container mt-2"><img src="img/35111002_img.png" alt="Rock 'n Shock" title="Rock 'n Shock" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_24.mp3">
+    </audio>
+    <p>Activating Enhanced Support Unit!</p>
+    <div class="img-container mt-2"><img src="img/35120002_img.png" alt="Enhanced Support Unit" title="Enhanced Support Unit" class="img-thumbnail"><img src="img/35111008_img.png" alt="Support Unit: H-EX" title="Support Unit: H-EX" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_25.mp3">
+    </audio>
+    <p>Starting support!</p>
+    <div class="img-container mt-2"><img src="img/35120002_img.png" alt="Enhanced Support Unit" title="Enhanced Support Unit" class="img-thumbnail"><img src="img/35111008_img.png" alt="Support Unit: H-EX" title="Support Unit: H-EX" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_26.mp3">
+    </audio>
+    <p>Just trust me.</p>
+    <div class="img-container mt-2"><img src="img/35120002_img.png" alt="Enhanced Support Unit" title="Enhanced Support Unit" class="img-thumbnail"><img src="img/35111008_img.png" alt="Support Unit: H-EX" title="Support Unit: H-EX" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_27.mp3">
+    </audio>
+    <p>Activating Bots 'n Tots!</p>
+    <div class="img-container mt-2"><img src="img/35121009_img.png" alt="Bots 'n Tots" title="Bots 'n Tots" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_28.mp3">
+    </audio>
+    <p>Tiny but terrifying.</p>
+    <div class="img-container mt-2"><img src="img/35121009_img.png" alt="Bots 'n Tots" title="Bots 'n Tots" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_29.mp3">
+    </audio>
+    <p>Don't underestimate him!</p>
+    <div class="img-container mt-2"><img src="img/35121009_img.png" alt="Bots 'n Tots" title="Bots 'n Tots" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_30.mp3">
+    </audio>
+    <p>Activating SG-88!</p>
+    <div class="img-container mt-2"><img src="img/35121003_img.png" alt="Giant Robot SG-88" title="Giant Robot SG-88" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_31.mp3">
+    </audio>
+    <p>Haha! This is my masterpiece!</p>
+    <div class="img-container mt-2"><img src="img/35121003_img.png" alt="Giant Robot SG-88" title="Giant Robot SG-88" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_32.mp3">
+    </audio>
+    <p>Say hi to my friend!</p>
+    <div class="img-container mt-2"><img src="img/35121003_img.png" alt="Giant Robot SG-88" title="Giant Robot SG-88" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_33.mp3">
+    </audio>
+    <p>Distortion Bomb!</p>
+    <div class="img-container mt-2"><img src="img/35121052_img.png" alt="Distortion Bomb" title="Distortion Bomb" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_34.mp3">
+    </audio>
+    <p>Distortion.</p>
+    <div class="img-container mt-2"><img src="img/35121052_img.png" alt="Distortion Bomb" title="Distortion Bomb" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_35.mp3">
+    </audio>
+    <p>Warping Space!</p>
+    <div class="img-container mt-2"><img src="img/35121052_img.png" alt="Distortion Bomb" title="Distortion Bomb" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_36.mp3">
+    </audio>
+    <p>You ready for this?</p>
+    <div class="img-container mt-2"><img src="img/35121055_img.png" alt="Full Spread" title="Full Spread" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_37.mp3">
+    </audio>
+    <p>Bombs away!</p>
+    <div class="img-container mt-2"><img src="img/35121055_img.png" alt="Full Spread" title="Full Spread" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_38.mp3">
+    </audio>
+    <p>Welcome to missile fest</p>
+    <div class="img-container mt-2"><img src="img/35121055_img.png" alt="Full Spread" title="Full Spread" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_39.mp3">
+    </audio>
+    <p>Activating Mbile Missile Battery!</p>
+    <div class="img-container mt-2"><img src="img/400051017_img.png" alt="Mobile Missile Battery" title="Mobile Missile Battery" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_40.mp3">
+    </audio>
+    <p>Shoot them all!</p>
+    <div class="img-container mt-2"><img src="img/400051017_img.png" alt="Mobile Missile Battery" title="Mobile Missile Battery" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_41.mp3">
+    </audio>
+    <p>Enemy spotted! Fire!</p>
+    <div class="img-container mt-2"><img src="img/400051017_img.png" alt="Mobile Missile Battery" title="Mobile Missile Battery" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_42.mp3">
+    </audio>
+    <p>Activating Doomsday Device!</p>
+    <div class="img-container mt-2"><img src="img/400051009_img.png" alt="Doomsday Device" title="Doomsday Device" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_43.mp3">
+    </audio>
+    <p>My masterpiece.</p>
+    <div class="img-container mt-2"><img src="img/400051009_img.png" alt="Doomsday Device" title="Doomsday Device" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_44.mp3">
+    </audio>
+    <p>Two weapons in one!</p>
+    <div class="img-container mt-2"><img src="img/400051009_img.png" alt="Doomsday Device" title="Doomsday Device" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_45.mp3">
+    </audio>
+    <p>Start the engine!</p>
+    <div class="img-container mt-2"><img src="img/400051068_img.png" alt="Mecha Carrier" title="Mecha Carrier" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_45.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_46.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 46 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_46.mp3">
+    </audio>
+    <p>Science, yeah!</p>
+    <div class="img-container mt-2"><img src="img/400051068_img.png" alt="Mecha Carrier" title="Mecha Carrier" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_46.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_46.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_47.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 47 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_47.mp3">
+    </audio>
+    <p>MECHA CARRIER, GO!</p>
+    <div class="img-container mt-2"><img src="img/400051068_img.png" alt="Mecha Carrier" title="Mecha Carrier" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_47.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_47.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_48.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 48 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_48.mp3">
+    </audio>
+    <p>Mech, fire all weapons!</p>
+    <div class="img-container mt-2"><img src="img/400051041_img.png" alt="Full Metal Barrage" title="Full Metal Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_48.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_48.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_49.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 49 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_49.mp3">
+    </audio>
+    <p>FULL POWER!</p>
+    <div class="img-container mt-2"><img src="img/400051041_img.png" alt="Full Metal Barrage" title="Full Metal Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_49.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_49.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_50.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 50 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_50.mp3">
+    </audio>
+    <p>MAX FIRE POWER!</p>
+    <div class="img-container mt-2"><img src="img/400051041_img.png" alt="Full Metal Barrage" title="Full Metal Barrage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_50.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_50.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_51.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 51 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_51.mp3">
+    </audio>
+    <p>FIRE EVERYTHING!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_51.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_51.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_52.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 52 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_52.mp3">
+    </audio>
+    <p>Kaboom!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_52.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_52.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_53.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 53 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_53.mp3">
+    </audio>
+    <p>All in!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_53.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_53.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_54.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 54 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_54.mp3">
+    </audio>
+    <p>Now!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_54.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_54.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_55.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 55 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_55.mp3">
+    </audio>
+    <p>Lock on target!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_55.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_55.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_56.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 56 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_56.mp3">
+    </audio>
+    <p>Fall Barrage!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_56.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_56.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_57.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 57 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_57.mp3">
+    </audio>
+    <p>On target.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_57.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_57.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_58.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 58 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_58.mp3">
+    </audio>
+    <p>Blow em up!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_58.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_58.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_19.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/35101002_img.png" alt="Homing Beacon" title="Homing Beacon" class="img-thumbnail"><img src="img/35110017_img.png" alt="Advanced Homing Beacon" title="Advanced Homing Beacon" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_59.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 59 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_59.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_59.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_59.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_60.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 60 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_60.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_60.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_60.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_61.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 61 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_61.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/35111006_img.png" alt="Heavy Salvo" title="Heavy Salvo" class="img-thumbnail"><img src="img/35111007_img.png" alt="AP Salvo" title="AP Salvo" class="img-thumbnail"><img src="img/35121015_img.png" alt="Heavy Salvo Plus" title="Heavy Salvo Plus" class="img-thumbnail"><img src="img/35121016_img.png" alt="AP Salvo Plus" title="AP Salvo Plus" class="img-thumbnail"><img src="img/35141000_img.png" alt="HEXA Heavy Salvo Plus" title="HEXA Heavy Salvo Plus" class="img-thumbnail"><img src="img/35141001_img.png" alt="HEXA AP Salvo Plus" title="HEXA AP Salvo Plus" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_61.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_61.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_62.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 62 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_62.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051017_img.png" alt="Mobile Missile Battery" title="Mobile Missile Battery" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_62.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_62.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_63.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 63 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_63.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051009_img.png" alt="Doomsday Device" title="Doomsday Device" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_63.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_63.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_mechanic_f_64.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 64 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_mechanic_f_64.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051068_img.png" alt="Mecha Carrier" title="Mecha Carrier" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_mechanic_f_64.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_mechanic_f_64.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+    
+    <script>
+      function goToSkillPage() {
+        const sel = document.getElementById('skillDropdown');
+        if (sel.value) {
+          window.location.href = sel.value;
+        }
+      }
+      window.onload = function() {
+        const currentPage = window.location.pathname.split("/").pop();
+        const sel = document.getElementById('skillDropdown');
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === currentPage) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      function forceDownload(url) {
+          fetch(url)
+          .then(response => response.blob())
+          .then(blob => {
+              const blobUrl = window.URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.style.display = "none";
+              a.href = blobUrl;
+              a.download = url.split("/").pop();
+              document.body.appendChild(a);
+              a.click();
+              window.URL.revokeObjectURL(blobUrl);
+          })
+          .catch(err => console.error("Erro no download: ", err));
+      }
+    </script>
+    
+            <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer"> MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon. </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a> | <a href="/Comparer/changelog.html">Change Log</a>
+            </p>
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=18055971&style=0007&nbdigits=9&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+            </a>        
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

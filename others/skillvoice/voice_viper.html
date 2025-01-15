@@ -1,0 +1,2373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .img-container img {
+            max-height: 100px;
+        }
+        .card-text small { color: #6c757d; }
+        .card hr { margin: 0.5rem 0; }
+        .tab-content { margin-top: 1rem; }
+        .card { box-shadow: 0 0 10px rgba(0,0,0,0.1); border: none; }
+        .nav-tabs .nav-link { margin-right: 10px; }
+        .card-footer { font-size: 0.875rem; color: #6c757d; margin-top: 0.5rem; }
+        .translation { font-size: 0.8em; color: #555; }
+        .nota { font-size: 0.8em; color: #555; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/Comparer/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../skillvoice/index.html">Class Voices</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="logo-section">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container mt-4">
+        <h3 class="text-center">Buccaneer</h3>
+
+        <div class="mb-4 text-center"><label for="skillDropdown" class="me-2">Select a Class:</label><select id="skillDropdown" onchange="goToSkillPage()">
+  <option value="">-- Select --</option>
+  <option value="voice_adele.html">Adele</option>
+  <option value="voice_angelicburster.html">Angelic Buster</option>
+  <option value="voice_aran.html">Aran</option>
+  <option value="voice_archmagefp.html">Arch Mage F/P</option>
+  <option value="voice_archmagetc.html">Arch Mage I/L</option>
+  <option value="voice_ark.html">Ark</option>
+  <option value="voice_battlemage.html">Battle Mage</option>
+  <option value="voice_bishop.html">Bishop</option>
+  <option value="voice_blaster.html">Blaster</option>
+  <option value="voice_bowmaster.html">Bowmaster</option>
+  <option value="voice_cadena.html">Cadena</option>
+  <option value="voice_cannonshooter.html">Cannoneer</option>
+  <option value="voice_captain.html">Corsair</option>
+  <option value="voice_darkknight.html">Dark Knight</option>
+  <option value="voice_demonavenger.html">Demon Avenger</option>
+  <option value="voice_demonslayer.html">Demon Slayer</option>
+  <option value="voice_dualblade.html">Dual Blade</option>
+  <option value="voice_eunwol.html">Shade</option>
+  <option value="voice_evan.html">Evan</option>
+  <option value="voice_flamewizard.html">Blaze Wizard</option>
+  <option value="voice_hayato.html">Hayato</option>
+  <option value="voice_hero.html">Hero</option>
+  <option value="voice_hoyoung.html">Hoyoung</option>
+  <option value="voice_illium.html">Illium</option>
+  <option value="voice_kain.html">Kain</option>
+  <option value="voice_kaiser.html">Kaiser</option>
+  <option value="voice_kanna.html">Kanna</option>
+  <option value="voice_khali.html">Khali</option>
+  <option value="voice_kinesis.html">Kinesis</option>
+  <option value="voice_lara.html">Lara</option>
+  <option value="voice_luminous.html">Luminous</option>
+  <option value="voice_lynn.html">Lynn</option>
+  <option value="voice_marksman.html">Marksman</option>
+  <option value="voice_mechanic.html">Mechanic</option>
+  <option value="voice_mercedes.html">Mercedes</option>
+  <option value="voice_mikhail.html">Mikhail</option>
+  <option value="voice_mitra.html">Mitra</option>
+  <option value="voice_nightlord.html">Nightlord</option>
+  <option value="voice_nightwalker.html">Night Walker</option>
+  <option value="voice_paladin.html">Paladin</option>
+  <option value="voice_pathfinder.html">Pathfinder</option>
+  <option value="voice_phantom.html">Phantom</option>
+  <option value="voice_pinkbean.html">Pink Bean</option>
+  <option value="voice_senya.html">Senya</option>
+  <option value="voice_shadower.html">Shadower</option>
+  <option value="voice_soulmaster.html">Dawn Warrior</option>
+  <option value="voice_striker.html">Thunder Breaker</option>
+  <option value="voice_viper.html">Buccaneer</option>
+  <option value="voice_wildhunter.html">Wild Hunter</option>
+  <option value="voice_windbreaker.html">Wind Archer</option>
+  <option value="voice_xenon.html">Xenon</option>
+  <option value="voice_zero.html">Zero</option>
+</select></div>
+        
+<div class="row">
+  <div class="col-md-6">
+     <h4>Male</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_viper_m_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_0.mp3">
+    </audio>
+    <p>Can't dodge this!</p>
+    <div class="img-container mt-2"><img src="img/5121025_img.png" alt="Sea Serpent's Rage" title="Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141006_img.png" alt="HEXA Sea Serpent's Rage" title="HEXA Sea Serpent's Rage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_1.mp3">
+    </audio>
+    <p>Concussion ho!</p>
+    <div class="img-container mt-2"><img src="img/5121027_img.png" alt="Raging Serpent Assault" title="Raging Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_2.mp3">
+    </audio>
+    <p>Surprise!</p>
+    <div class="img-container mt-2"><img src="img/5101012_img.png" alt="Static Thumper" title="Static Thumper" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_3.mp3">
+    </audio>
+    <p>TAKE THIS!</p>
+    <div class="img-container mt-2"><img src="img/5101012_img.png" alt="Static Thumper" title="Static Thumper" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_4.mp3">
+    </audio>
+    <p>I don't miss.</p>
+    <div class="img-container mt-2"><img src="img/5111002_img.png" alt="Turning Kick" title="Turning Kick" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_5.mp3">
+    </audio>
+    <p>Watch this!</p>
+    <div class="img-container mt-2"><img src="img/5111002_img.png" alt="Turning Kick" title="Turning Kick" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_6.mp3">
+    </audio>
+    <p>One good hit!</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_7.mp3">
+    </audio>
+    <p>Eat a fist!</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_8.mp3">
+    </audio>
+    <p>Can you take it?</p>
+    <div class="img-container mt-2"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_9.mp3">
+    </audio>
+    <p>You can't even see this!</p>
+    <div class="img-container mt-2"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_10.mp3">
+    </audio>
+    <p>Like a huge wave!</p>
+    <div class="img-container mt-2"><img src="img/5100018_img.png" alt="Sea Serpent Burst" title="Sea Serpent Burst" class="img-thumbnail"><img src="img/5111021_img.png" alt="Greater Sea Serpent I" title="Greater Sea Serpent I" class="img-thumbnail"><img src="img/5121023_img.png" alt="Sea Serpent Burst II" title="Sea Serpent Burst II" class="img-thumbnail"><img src="img/5141008_img.png" alt="HEXA Sea Serpent Burst" title="HEXA Sea Serpent Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_11.mp3">
+    </audio>
+    <p>You're all gone!</p>
+    <div class="img-container mt-2"><img src="img/5100018_img.png" alt="Sea Serpent Burst" title="Sea Serpent Burst" class="img-thumbnail"><img src="img/5111021_img.png" alt="Greater Sea Serpent I" title="Greater Sea Serpent I" class="img-thumbnail"><img src="img/5121023_img.png" alt="Sea Serpent Burst II" title="Sea Serpent Burst II" class="img-thumbnail"><img src="img/5121025_img.png" alt="Sea Serpent's Rage" title="Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141006_img.png" alt="HEXA Sea Serpent's Rage" title="HEXA Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141008_img.png" alt="HEXA Sea Serpent Burst" title="HEXA Sea Serpent Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_12.mp3">
+    </audio>
+    <p>IT'LL SWALLOW YOU WHOLE!</p>
+    <div class="img-container mt-2"><img src="img/5100018_img.png" alt="Sea Serpent Burst" title="Sea Serpent Burst" class="img-thumbnail"><img src="img/5111021_img.png" alt="Greater Sea Serpent I" title="Greater Sea Serpent I" class="img-thumbnail"><img src="img/5121023_img.png" alt="Sea Serpent Burst II" title="Sea Serpent Burst II" class="img-thumbnail"><img src="img/5121025_img.png" alt="Sea Serpent's Rage" title="Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141006_img.png" alt="HEXA Sea Serpent's Rage" title="HEXA Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141008_img.png" alt="HEXA Sea Serpent Burst" title="HEXA Sea Serpent Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_13.mp3">
+    </audio>
+    <p>Stronger.</p>
+    <div class="img-container mt-2"><img src="img/5111019_img.png" alt="Serpent Assault" title="Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_14.mp3">
+    </audio>
+    <p>Rage like a storm!</p>
+    <div class="img-container mt-2"><img src="img/5111019_img.png" alt="Serpent Assault" title="Serpent Assault" class="img-thumbnail"><img src="img/5121027_img.png" alt="Raging Serpent Assault" title="Raging Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_15.mp3">
+    </audio>
+    <p>MORE EXPLOSIONS!</p>
+    <div class="img-container mt-2"><img src="img/5111019_img.png" alt="Serpent Assault" title="Serpent Assault" class="img-thumbnail"><img src="img/5121027_img.png" alt="Raging Serpent Assault" title="Raging Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_16.mp3">
+    </audio>
+    <p>RANCH ON!</p>
+    <div class="img-container mt-2"><img src="img/5121054_img.png" alt="Stimulating Conversation" title="Stimulating Conversation" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_17.mp3">
+    </audio>
+    <p>Faster and faster!</p>
+    <div class="img-container mt-2"><img src="img/5121054_img.png" alt="Stimulating Conversation" title="Stimulating Conversation" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_18.mp3">
+    </audio>
+    <p>THIS KEEPS GETTING BETTER!</p>
+    <div class="img-container mt-2"><img src="img/5121052_img.png" alt="Serpent Spirit" title="Serpent Spirit" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_19.mp3">
+    </audio>
+    <p>Oh, you're done? I'm just getting started.</p>
+    <div class="img-container mt-2"><img src="img/5121052_img.png" alt="Serpent Spirit" title="Serpent Spirit" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_20.mp3">
+    </audio>
+    <p>Here's my real power!</p>
+    <div class="img-container mt-2"><img src="img/400051002_img.png" alt="Lightning Form" title="Lightning Form" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_21.mp3">
+    </audio>
+    <p>Time to get serious!</p>
+    <div class="img-container mt-2"><img src="img/400051002_img.png" alt="Lightning Form" title="Lightning Form" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_22.mp3">
+    </audio>
+    <p>Blow!</p>
+    <div class="img-container mt-2"><img src="img/400051015_img.png" alt="Lord of the Deep" title="Lord of the Deep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_23.mp3">
+    </audio>
+    <p>Power like a storm!</p>
+    <div class="img-container mt-2"><img src="img/400051015_img.png" alt="Lord of the Deep" title="Lord of the Deep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_24.mp3">
+    </audio>
+    <p>Out of the way!</p>
+    <div class="img-container mt-2"><img src="img/400051042_img.png" alt="Serpent Vortex" title="Serpent Vortex" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_25.mp3">
+    </audio>
+    <p>Can you block this?</p>
+    <div class="img-container mt-2"><img src="img/400051042_img.png" alt="Serpent Vortex" title="Serpent Vortex" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_26.mp3">
+    </audio>
+    <p>Ready? And... Hyah!</p>
+    <div class="img-container mt-2"><img src="img/5121027_img.png" alt="Raging Serpent Assault" title="Raging Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_27.mp3">
+    </audio>
+    <p>Ready? And... Hyah!</p>
+    <div class="img-container mt-2"><img src="img/5121025_img.png" alt="Sea Serpent's Rage" title="Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141006_img.png" alt="HEXA Sea Serpent's Rage" title="HEXA Sea Serpent's Rage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_39.mp3">
+    </audio>
+    <p>Thank you.</p>
+    <div class="img-container mt-2"><img src="img/5140004_img.png" alt="HEXA Sea Serpent" title="HEXA Sea Serpent" class="img-thumbnail"><img src="img/5101017_img.png" alt="Sea Serpent" title="Sea Serpent" class="img-thumbnail"><img src="img/5111009_img.png" alt="Corkscrew Blow" title="Corkscrew Blow" class="img-thumbnail"><img src="img/5121010_img.png" alt="Time Leap" title="Time Leap" class="img-thumbnail"><img src="img/5121015_img.png" alt="Crossbones" title="Crossbones" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_47.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 47 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_47.mp3">
+    </audio>
+    <p>Thank you.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_47.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_47.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_49.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 49 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_49.mp3">
+    </audio>
+    <p>Ready? And... Hyah!</p>
+    <div class="img-container mt-2"><img src="img/400051071_img.png" alt="Howling Fist" title="Howling Fist" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_49.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_49.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_50.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 50 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_50.mp3">
+    </audio>
+    <p>You feel lucky? Try to block this!</p>
+    <div class="img-container mt-2"><img src="img/400051071_img.png" alt="Howling Fist" title="Howling Fist" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_50.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_50.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_51.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 51 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_51.mp3">
+    </audio>
+    <p>Outlaws of the sea?</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_51.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_51.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_52.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 52 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_52.mp3">
+    </audio>
+    <p>Answer the call.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_52.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_52.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_53.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 53 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_53.mp3">
+    </audio>
+    <p>Rulers of the sea?</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_53.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_53.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_55.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 55 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_55.mp3">
+    </audio>
+    <p>INSULT THE SEA!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_55.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_55.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_56.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 56 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_56.mp3">
+    </audio>
+    <p>And anger the serpents!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_56.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_56.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_57.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 57 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_57.mp3">
+    </audio>
+    <p>I'll set you free!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_57.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_57.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_58.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 58 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_58.mp3">
+    </audio>
+    <p>GO WILD!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_58.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_58.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_59.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 59 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_59.mp3">
+    </audio>
+    <p>Unleash the rage of the sea!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_59.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_59.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_60.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 60 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_60.mp3">
+    </audio>
+    <p>I'll free the tyrants of the sea!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_60.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_60.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_61.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 61 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_61.mp3">
+    </audio>
+    <p>TRY TO GET AWAY!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_61.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_61.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_62.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 62 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_62.mp3">
+    </audio>
+    <p>Let's play hard!</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_62.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_62.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_63.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 63 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_63.mp3">
+    </audio>
+    <p>This is really gonna hurt!</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_63.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_63.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_64.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 64 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_64.mp3">
+    </audio>
+    <p>THIS ONE'S GONNA HURT!</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_64.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_64.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_65.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 65 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_65.mp3">
+    </audio>
+    <p>How's my fist taste?</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_65.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_65.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_66.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 66 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_66.mp3">
+    </audio>
+    <p>SHOW ME YOUR HEART!</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_66.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_66.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_28.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141009_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"><img src="img/400051070_img.png" alt="Howling Fist" title="Howling Fist" class="img-thumbnail"><img src="img/5121013_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_29.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141009_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"><img src="img/5121013_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_30.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051070_img.png" alt="Howling Fist" title="Howling Fist" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_31.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_32.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_33.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_34.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5101012_img.png" alt="Static Thumper" title="Static Thumper" class="img-thumbnail"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"><img src="img/5141009_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"><img src="img/5121013_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_35.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051042_img.png" alt="Serpent Vortex" title="Serpent Vortex" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_36.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5111002_img.png" alt="Turning Kick" title="Turning Kick" class="img-thumbnail"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"><img src="img/5141009_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"><img src="img/5121013_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_37.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_38.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5101012_img.png" alt="Static Thumper" title="Static Thumper" class="img-thumbnail"><img src="img/5111002_img.png" alt="Turning Kick" title="Turning Kick" class="img-thumbnail"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_40.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"><img src="img/5140004_img.png" alt="HEXA Sea Serpent" title="HEXA Sea Serpent" class="img-thumbnail"><img src="img/400051042_img.png" alt="Serpent Vortex" title="Serpent Vortex" class="img-thumbnail"><img src="img/5101017_img.png" alt="Sea Serpent" title="Sea Serpent" class="img-thumbnail"><img src="img/5111009_img.png" alt="Corkscrew Blow" title="Corkscrew Blow" class="img-thumbnail"><img src="img/5121010_img.png" alt="Time Leap" title="Time Leap" class="img-thumbnail"><img src="img/5121015_img.png" alt="Crossbones" title="Crossbones" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_41.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"><img src="img/5140004_img.png" alt="HEXA Sea Serpent" title="HEXA Sea Serpent" class="img-thumbnail"><img src="img/5101017_img.png" alt="Sea Serpent" title="Sea Serpent" class="img-thumbnail"><img src="img/5111009_img.png" alt="Corkscrew Blow" title="Corkscrew Blow" class="img-thumbnail"><img src="img/5121010_img.png" alt="Time Leap" title="Time Leap" class="img-thumbnail"><img src="img/5121015_img.png" alt="Crossbones" title="Crossbones" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_42.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_43.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_44.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_45.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_45.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_46.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 46 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_46.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_46.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_46.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_48.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 48 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_48.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_48.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_48.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_54.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 54 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_54.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_54.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_54.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_67.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 67 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_67.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_67.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_67.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_68.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 68 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_68.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_68.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_68.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_69.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 69 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_69.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_69.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_69.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_70.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 70 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_70.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_70.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_70.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_m_71.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 71 (Male)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_m_71.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_m_71.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_m_71.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+  <div class="col-md-6">
+     <h4>Female</h4>
+     
+<div class="card mb-3 voice-card" data-file="voice_viper_f_0.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 0 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_0.mp3">
+    </audio>
+    <p>Can't dodge this!</p>
+    <div class="img-container mt-2"><img src="img/5121025_img.png" alt="Sea Serpent's Rage" title="Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141006_img.png" alt="HEXA Sea Serpent's Rage" title="HEXA Sea Serpent's Rage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_0.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_0.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_1.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 1 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_1.mp3">
+    </audio>
+    <p>CONCUSSION HO!</p>
+    <div class="img-container mt-2"><img src="img/5121027_img.png" alt="Raging Serpent Assault" title="Raging Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_1.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_1.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_2.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 2 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_2.mp3">
+    </audio>
+    <p>Surprise.</p>
+    <div class="img-container mt-2"><img src="img/5101012_img.png" alt="Static Thumper" title="Static Thumper" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_2.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_2.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_3.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 3 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_3.mp3">
+    </audio>
+    <p>Take this!</p>
+    <div class="img-container mt-2"><img src="img/5101012_img.png" alt="Static Thumper" title="Static Thumper" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_3.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_3.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_4.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 4 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_4.mp3">
+    </audio>
+    <p>I don't miss.</p>
+    <div class="img-container mt-2"><img src="img/5111002_img.png" alt="Turning Kick" title="Turning Kick" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_4.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_4.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_5.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 5 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_5.mp3">
+    </audio>
+    <p>Watch this.</p>
+    <div class="img-container mt-2"><img src="img/5111002_img.png" alt="Turning Kick" title="Turning Kick" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_5.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_5.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_6.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 6 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_6.mp3">
+    </audio>
+    <p>One good hit!</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_6.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_6.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_7.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 7 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_7.mp3">
+    </audio>
+    <p>Eat a fist.</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_7.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_7.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_8.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 8 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_8.mp3">
+    </audio>
+    <p>Can you take it?</p>
+    <div class="img-container mt-2"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_8.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_8.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_9.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 9 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_9.mp3">
+    </audio>
+    <p>You can't even see this.</p>
+    <div class="img-container mt-2"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_9.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_9.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_10.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 10 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_10.mp3">
+    </audio>
+    <p>Like a huge wave!</p>
+    <div class="img-container mt-2"><img src="img/5100018_img.png" alt="Sea Serpent Burst" title="Sea Serpent Burst" class="img-thumbnail"><img src="img/5111021_img.png" alt="Greater Sea Serpent I" title="Greater Sea Serpent I" class="img-thumbnail"><img src="img/5121023_img.png" alt="Sea Serpent Burst II" title="Sea Serpent Burst II" class="img-thumbnail"><img src="img/5141008_img.png" alt="HEXA Sea Serpent Burst" title="HEXA Sea Serpent Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_10.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_10.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_11.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 11 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_11.mp3">
+    </audio>
+    <p>You're all gone!</p>
+    <div class="img-container mt-2"><img src="img/5100018_img.png" alt="Sea Serpent Burst" title="Sea Serpent Burst" class="img-thumbnail"><img src="img/5111021_img.png" alt="Greater Sea Serpent I" title="Greater Sea Serpent I" class="img-thumbnail"><img src="img/5121023_img.png" alt="Sea Serpent Burst II" title="Sea Serpent Burst II" class="img-thumbnail"><img src="img/5121025_img.png" alt="Sea Serpent's Rage" title="Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141006_img.png" alt="HEXA Sea Serpent's Rage" title="HEXA Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141008_img.png" alt="HEXA Sea Serpent Burst" title="HEXA Sea Serpent Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_11.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_11.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_12.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 12 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_12.mp3">
+    </audio>
+    <p>It'll swallow you whole!</p>
+    <div class="img-container mt-2"><img src="img/5100018_img.png" alt="Sea Serpent Burst" title="Sea Serpent Burst" class="img-thumbnail"><img src="img/5111021_img.png" alt="Greater Sea Serpent I" title="Greater Sea Serpent I" class="img-thumbnail"><img src="img/5121023_img.png" alt="Sea Serpent Burst II" title="Sea Serpent Burst II" class="img-thumbnail"><img src="img/5121025_img.png" alt="Sea Serpent's Rage" title="Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141006_img.png" alt="HEXA Sea Serpent's Rage" title="HEXA Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141008_img.png" alt="HEXA Sea Serpent Burst" title="HEXA Sea Serpent Burst" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_12.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_12.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_13.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 13 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_13.mp3">
+    </audio>
+    <p>Stronger.</p>
+    <div class="img-container mt-2"><img src="img/5111019_img.png" alt="Serpent Assault" title="Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_13.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_13.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_14.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 14 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_14.mp3">
+    </audio>
+    <p>Rage like a storm!</p>
+    <div class="img-container mt-2"><img src="img/5111019_img.png" alt="Serpent Assault" title="Serpent Assault" class="img-thumbnail"><img src="img/5121027_img.png" alt="Raging Serpent Assault" title="Raging Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_14.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_14.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_15.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 15 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_15.mp3">
+    </audio>
+    <p>MORE EXPLOSIONS!</p>
+    <div class="img-container mt-2"><img src="img/5111019_img.png" alt="Serpent Assault" title="Serpent Assault" class="img-thumbnail"><img src="img/5121027_img.png" alt="Raging Serpent Assault" title="Raging Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_15.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_15.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_16.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 16 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_16.mp3">
+    </audio>
+    <p>Rage on!</p>
+    <div class="img-container mt-2"><img src="img/5121054_img.png" alt="Stimulating Conversation" title="Stimulating Conversation" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_16.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_16.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_17.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 17 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_17.mp3">
+    </audio>
+    <p>Faster and faster!</p>
+    <div class="img-container mt-2"><img src="img/5121054_img.png" alt="Stimulating Conversation" title="Stimulating Conversation" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_17.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_17.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_18.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 18 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_18.mp3">
+    </audio>
+    <p>This keeps getting better.</p>
+    <div class="img-container mt-2"><img src="img/5121052_img.png" alt="Serpent Spirit" title="Serpent Spirit" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_18.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_18.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_19.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 19 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_19.mp3">
+    </audio>
+    <p>You done? I'm just getting started.</p>
+    <div class="img-container mt-2"><img src="img/5121052_img.png" alt="Serpent Spirit" title="Serpent Spirit" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_19.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_19.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_20.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 20 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_20.mp3">
+    </audio>
+    <p>Here's my real power!</p>
+    <div class="img-container mt-2"><img src="img/400051002_img.png" alt="Lightning Form" title="Lightning Form" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_20.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_20.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_21.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 21 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_21.mp3">
+    </audio>
+    <p>Time to get serious.</p>
+    <div class="img-container mt-2"><img src="img/400051002_img.png" alt="Lightning Form" title="Lightning Form" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_21.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_21.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_23.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 23 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_23.mp3">
+    </audio>
+    <p>Power like a storm!</p>
+    <div class="img-container mt-2"><img src="img/400051015_img.png" alt="Lord of the Deep" title="Lord of the Deep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_23.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_23.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_24.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 24 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_24.mp3">
+    </audio>
+    <p>Out of the way!</p>
+    <div class="img-container mt-2"><img src="img/400051042_img.png" alt="Serpent Vortex" title="Serpent Vortex" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_24.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_24.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_25.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 25 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_25.mp3">
+    </audio>
+    <p>Can you block this?</p>
+    <div class="img-container mt-2"><img src="img/400051042_img.png" alt="Serpent Vortex" title="Serpent Vortex" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_25.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_25.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_26.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 26 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_26.mp3">
+    </audio>
+    <p>Ready, and... Yeah!</p>
+    <div class="img-container mt-2"><img src="img/5121027_img.png" alt="Raging Serpent Assault" title="Raging Serpent Assault" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_26.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_26.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_27.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 27 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_27.mp3">
+    </audio>
+    <p>You feel lucky, try to block this!</p>
+    <div class="img-container mt-2"><img src="img/5121025_img.png" alt="Sea Serpent's Rage" title="Sea Serpent's Rage" class="img-thumbnail"><img src="img/5141006_img.png" alt="HEXA Sea Serpent's Rage" title="HEXA Sea Serpent's Rage" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_27.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_27.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_32.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 32 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_32.mp3">
+    </audio>
+    <p>Ha ha ha ha ha!</p>
+    <div class="img-container mt-2"><img src="img/5141009_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"><img src="img/5121013_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_32.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_32.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_42.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 42 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_42.mp3">
+    </audio>
+    <p>Ha ha ha ha ha!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_42.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_42.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_44.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 44 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_44.mp3">
+    </audio>
+    <p>Ready, and... Yeah!</p>
+    <div class="img-container mt-2"><img src="img/400051071_img.png" alt="Howling Fist" title="Howling Fist" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_44.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_44.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_45.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 45 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_45.mp3">
+    </audio>
+    <p>You feel lucky, try to block this!</p>
+    <div class="img-container mt-2"><img src="img/400051071_img.png" alt="Howling Fist" title="Howling Fist" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_45.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_45.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_46.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 46 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_46.mp3">
+    </audio>
+    <p>Outlaws of the sea!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_46.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_46.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_47.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 47 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_47.mp3">
+    </audio>
+    <p>Answer the call!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_47.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_47.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_48.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 48 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_48.mp3">
+    </audio>
+    <p>Rulers of the sea!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_48.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_48.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_49.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 49 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_49.mp3">
+    </audio>
+    <p>Awaken!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_49.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_49.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_50.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 50 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_50.mp3">
+    </audio>
+    <p>INSULT THE SEA!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_50.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_50.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_51.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 51 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_51.mp3">
+    </audio>
+    <p>And anger the serpents!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_51.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_51.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_52.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 52 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_52.mp3">
+    </audio>
+    <p>I'll set you free.</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_52.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_52.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_53.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 53 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_53.mp3">
+    </audio>
+    <p>Go wild!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_53.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_53.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_54.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 54 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_54.mp3">
+    </audio>
+    <p>Unleash the rage of the sea!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_54.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_54.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_55.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 55 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_55.mp3">
+    </audio>
+    <p>I'll free the tyrants of the sea!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_55.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_55.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_56.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 56 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_56.mp3">
+    </audio>
+    <p>TRY TO GET AWAY!</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_56.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_56.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_57.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 57 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_57.mp3">
+    </audio>
+    <p>Time to play hard!</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_57.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_57.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_58.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 58 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_58.mp3">
+    </audio>
+    <p>This is really gonna hurt.</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_58.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_58.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_59.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 59 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_59.mp3">
+    </audio>
+    <p>THIS ONE'S GONNA HURT!</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_59.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_59.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_60.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 60 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_60.mp3">
+    </audio>
+    <p>How's my fist taste?</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_60.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_60.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_61.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 61 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_61.mp3">
+    </audio>
+    <p>SHOW YOUR HEART!</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_61.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_61.mp3')">Download</button>
+  </div>
+</div>
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_22.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 22 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_22.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051015_img.png" alt="Lord of the Deep" title="Lord of the Deep" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_22.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_22.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_28.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 28 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_28.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141009_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"><img src="img/400051070_img.png" alt="Howling Fist" title="Howling Fist" class="img-thumbnail"><img src="img/5121013_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_28.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_28.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_29.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 29 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_29.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141009_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"><img src="img/400051070_img.png" alt="Howling Fist" title="Howling Fist" class="img-thumbnail"><img src="img/5121013_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_29.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_29.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_30.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 30 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_30.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5101012_img.png" alt="Static Thumper" title="Static Thumper" class="img-thumbnail"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"><img src="img/5141009_img.png" alt="HEXA Nautilus Strike" title="HEXA Nautilus Strike" class="img-thumbnail"><img src="img/5121013_img.png" alt="Nautilus Strike" title="Nautilus Strike" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_30.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_30.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_31.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 31 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_31.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_31.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_31.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_33.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 33 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_33.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5111002_img.png" alt="Turning Kick" title="Turning Kick" class="img-thumbnail"><img src="img/400051042_img.png" alt="Serpent Vortex" title="Serpent Vortex" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_33.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_33.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_34.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 34 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_34.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5111002_img.png" alt="Turning Kick" title="Turning Kick" class="img-thumbnail"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_34.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_34.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_35.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 35 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_35.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_35.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_35.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_36.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 36 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_36.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_36.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_36.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_37.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 37 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_37.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"><img src="img/5140004_img.png" alt="HEXA Sea Serpent" title="HEXA Sea Serpent" class="img-thumbnail"><img src="img/5101017_img.png" alt="Sea Serpent" title="Sea Serpent" class="img-thumbnail"><img src="img/5111009_img.png" alt="Corkscrew Blow" title="Corkscrew Blow" class="img-thumbnail"><img src="img/5121010_img.png" alt="Time Leap" title="Time Leap" class="img-thumbnail"><img src="img/5121015_img.png" alt="Crossbones" title="Crossbones" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_37.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_37.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_38.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 38 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_38.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"><img src="img/5140004_img.png" alt="HEXA Sea Serpent" title="HEXA Sea Serpent" class="img-thumbnail"><img src="img/5101017_img.png" alt="Sea Serpent" title="Sea Serpent" class="img-thumbnail"><img src="img/5111009_img.png" alt="Corkscrew Blow" title="Corkscrew Blow" class="img-thumbnail"><img src="img/5121010_img.png" alt="Time Leap" title="Time Leap" class="img-thumbnail"><img src="img/5121015_img.png" alt="Crossbones" title="Crossbones" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_38.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_38.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_39.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 39 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_39.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/400051042_img.png" alt="Serpent Vortex" title="Serpent Vortex" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_39.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_39.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_40.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 40 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_40.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121007_img.png" alt="Octopunch" title="Octopunch" class="img-thumbnail"><img src="img/5141000_img.png" alt="HEXA Octopunch" title="HEXA Octopunch" class="img-thumbnail"><img src="img/5140004_img.png" alt="HEXA Sea Serpent" title="HEXA Sea Serpent" class="img-thumbnail"><img src="img/5101017_img.png" alt="Sea Serpent" title="Sea Serpent" class="img-thumbnail"><img src="img/5111009_img.png" alt="Corkscrew Blow" title="Corkscrew Blow" class="img-thumbnail"><img src="img/5121010_img.png" alt="Time Leap" title="Time Leap" class="img-thumbnail"><img src="img/5121015_img.png" alt="Crossbones" title="Crossbones" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_40.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_40.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_41.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 41 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_41.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5121016_img.png" alt="Hook Bomber" title="Hook Bomber" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_41.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_41.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_43.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 43 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_43.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5101012_img.png" alt="Static Thumper" title="Static Thumper" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_43.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_43.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_62.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 62 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_62.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_62.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_62.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_63.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 63 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_63.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_63.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_63.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_64.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 64 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_64.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_64.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_64.mp3')">Download</button>
+  </div>
+</div>
+
+
+<div class="card mb-3 voice-card" data-file="voice_viper_f_65.mp3">
+  <div class="card-body">
+    <h5 class="card-title">Line 65 (Female)</h5>
+    <audio controls class="w-100 mb-2">
+      <source src="skillvoice/voice_viper_f_65.mp3">
+    </audio>
+    <p>Nonsensical sound</p>
+    <div class="img-container mt-2"><img src="img/5141002_img.png" alt="Super Octopunch" title="Super Octopunch" class="img-thumbnail"></div>
+  </div>
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small>File: voice_viper_f_65.mp3</small>
+    <button class="btn btn-secondary btn-sm" onclick="forceDownload('skillvoice/voice_viper_f_65.mp3')">Download</button>
+  </div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+    
+    <script>
+      function goToSkillPage() {
+        const sel = document.getElementById('skillDropdown');
+        if (sel.value) {
+          window.location.href = sel.value;
+        }
+      }
+      window.onload = function() {
+        const currentPage = window.location.pathname.split("/").pop();
+        const sel = document.getElementById('skillDropdown');
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === currentPage) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      function forceDownload(url) {
+          fetch(url)
+          .then(response => response.blob())
+          .then(blob => {
+              const blobUrl = window.URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.style.display = "none";
+              a.href = blobUrl;
+              a.download = url.split("/").pop();
+              document.body.appendChild(a);
+              a.click();
+              window.URL.revokeObjectURL(blobUrl);
+          })
+          .catch(err => console.error("Erro no download: ", err));
+      }
+    </script>
+    
+            <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer"> MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon. </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a> | <a href="/Comparer/changelog.html">Change Log</a>
+            </p>
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=18055971&style=0007&nbdigits=9&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+            </a>        
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
