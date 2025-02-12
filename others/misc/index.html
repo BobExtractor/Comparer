@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Seu arquivo de estilo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- Botão para expandir no mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Links do menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="extractionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Extractions
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="extractionsDropdown">
+                <li><a class="dropdown-item" href="v255/item/item.html">v255 - The Dark Ride</a></li>
+                <li><a class="dropdown-item" href="v256/item/item.html">v256 - The Dark Ride - Limbo</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="others/skillvoice/index.html">All Class Voices</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /Navbar -->
+    
+    <!-- Seção da logo -->
+    <div class="logo-section">
+        <img src="img/logo.png" alt="Logo" class="logo">
+    </div>
+    
+    <!-- Container principal -->
+    <div class="container content-container">
+        <!-- Início das Abas -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <!-- Aba 1: Useful Links -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="links-tab" data-bs-toggle="tab" data-bs-target="#links-tab-pane" type="button" role="tab" aria-controls="links-tab-pane" aria-selected="true">
+                    Useful Links
+                </button>
+            </li>
+            <!-- Aba 2: Discord Servers -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="discord-tab" data-bs-toggle="tab" data-bs-target="#discord-tab-pane" type="button" role="tab" aria-controls="discord-tab-pane" aria-selected="false">
+                    Discord Servers
+                </button>
+            </li>
+            <!-- Aba 3: Classes Infographics -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="infographics-tab" data-bs-toggle="tab" data-bs-target="#infographics-tab-pane" type="button" role="tab" aria-controls="infographics-tab-pane" aria-selected="false">
+                    Classes Infographics
+                </button>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Conteúdo da Aba 1: Useful Links -->
+            <div class="tab-pane fade show active p-3" id="links-tab-pane" role="tabpanel" aria-labelledby="links-tab" tabindex="0">
+                <h5>Useful Links</h5>
+                <p>Here you can find some useful links for MapleStory players or Bob's tool enthusiasts!</p>
+                <ul>
+                    <li><a href="https://www.maplestory.com/" target="_blank">Official MapleStory Website</a></li>
+                    <li><a href="https://forums.maplestory.nexon.net/" target="_blank">Official MapleStory Forum</a></li>
+                    <li><a href="https://discord.gg/maplestory" target="_blank">MapleStory Discord</a></li>
+                    <!-- Adicione mais links úteis aqui -->
+                </ul>
+            </div>
+
+            <!-- Conteúdo da Aba 2: Discord Servers -->
+            <div class="tab-pane fade p-3" id="discord-tab-pane" role="tabpanel" aria-labelledby="discord-tab" tabindex="0">
+                <h5>Discord Servers</h5>
+                <p>Check out these Discord communities related to MapleStory!</p>
+                <ul>
+                    <li><a href="https://discord.gg/maplestory" target="_blank">Official MapleStory Discord</a></li>
+                    <!-- Adicione mais servidores aqui -->
+                </ul>
+            </div>
+
+            <!-- Conteúdo da Aba 3: Classes Infographics -->
+            <div class="tab-pane fade p-3" id="infographics-tab-pane" role="tabpanel" aria-labelledby="infographics-tab" tabindex="0">
+                <h5>Classes Infographics</h5>
+                <p>Helpful infographics about MapleStory classes and their characteristics.</p>
+                <ul>
+                    <li><a href="#" target="_blank">Example Infographic 1</a></li>
+                    <li><a href="#" target="_blank">Example Infographic 2</a></li>
+                    <!-- Adicione mais infográficos aqui -->
+                </ul>
+            </div>
+        </div>
+        <!-- /Fim das Abas -->
+    </div>
+    <!-- /Container principal -->
+
+    <!-- Rodapé -->
+    <footer class="mt-4">
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer">
+                MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon.
+            </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a> | 
+                <a href="changelog.html">Change Log</a>
+            </p>
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=18055971&amp;style=0007&amp;nbdigits=9&amp;type=page&amp;initCount=0" 
+                     title="Counter Widget" 
+                     alt="Visit counter For Websites" 
+                     border="0" />
+            </a>
+        </div>
+    </footer>
+    <!-- /Rodapé -->
+
+    <!-- Bootstrap JS (inclui Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
