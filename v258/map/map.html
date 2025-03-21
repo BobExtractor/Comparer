@@ -1,0 +1,2996 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Bob The Extractor - Map Changes</title>
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
+            .card-text small { color: #6c757d; }
+            .card hr { margin: 0.5rem 0; }
+            .tab-content { margin-top: 1rem; }
+            .card { box-shadow: 0 0 10px rgba(0,0,0,0.1); border: none; }
+            .nav-tabs .nav-link { margin-right: 10px; }
+            .card-body img { display: block; margin-top: 0.5rem; }
+            .card-footer { font-size: 0.875rem; color: #6c757d; margin-top: 0.5rem; }
+            .subtabs .nav-link { background-color: #f8f9fa; border: 1px solid #dee2e6; margin-right: 5px; border-radius: 0.25rem; }
+            .subtabs .nav-link.active { background-color: #e9ecef; }
+            @media (max-width: 576px) { .card-body .d-flex.flex-column { flex-direction: column; } }
+
+            .tooltip {
+                background-color: transparent !important;
+                color: inherit !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .tooltip-inner {
+                background-color: transparent !important;
+                color: inherit !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .bs-tooltip-top .arrow::before,
+            .bs-tooltip-bottom .arrow::before,
+            .bs-tooltip-start .arrow::before,
+            .bs-tooltip-end .arrow::before {
+                border: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/Comparer/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../item/item.html">Item</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../character/character.html">Character</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../map/map.html">Map</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../mob/mob.html">Mob</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../npc/npc.html">Npc</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../skill/skill.html">Skill</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../etc/etc.html">Etc</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="logo-section text-center my-4">
+            <img src="../img/logo.png" alt="Logo" class="logo">
+        </div>
+
+        <div class="container mt-4">
+            <h1 class="text-center mb-4">Map Changes</h1>
+            <ul class="nav nav-tabs" id="mainTabs" role="tablist">
+    
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="All-tab" data-bs-toggle="tab" data-bs-target="#All" type="button" role="tab" aria-controls="All" aria-selected="true">All</button>
+                </li>
+        
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link " id="New-tab" data-bs-toggle="tab" data-bs-target="#New" type="button" role="tab" aria-controls="New" aria-selected="false">New</button>
+                </li>
+        
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link " id="Removed-tab" data-bs-toggle="tab" data-bs-target="#Removed" type="button" role="tab" aria-controls="Removed" aria-selected="false">Removed</button>
+                </li>
+        
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link " id="Modified-tab" data-bs-toggle="tab" data-bs-target="#Modified" type="button" role="tab" aria-controls="Modified" aria-selected="false">Modified</button>
+                </li>
+        
+            </ul>
+            <div class="tab-content" id="mainTabsContent">
+    
+                    <div class="tab-pane fade show active" id="All" role="tabpanel" aria-labelledby="All-tab">
+                        <div class='row gy-4'>
+        
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Mansion</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257000_img.png" alt="Nameless Mansion"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401963_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Kanao Tsuyuri
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401960_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Nezuko Kamado
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9402025_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Resistance Security Guard
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401961_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Zenitsu Agatsuma
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401962_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Inosuke Hashibira
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 993257000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Demon Slayer Corps Training Test Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257001_img.png" alt="Demon Slayer Corps Training Test Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401964_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Kanao Tsuyuri
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 993257001<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Mansion</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257010_img.png" alt="Nameless Mansion"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257010<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Ellin Forest</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257011_img.png" alt="Ellin Forest"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm15/ElinForest</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257011<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Somewhere in Ellin Forest</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257012_img.png" alt="Somewhere in Ellin Forest"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm00/Nightmare</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257012<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Temple of Time Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257013_img.png" alt="Temple of Time Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm16/TimeTemple</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257013<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Three Doors</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257014_img.png" alt="Three Doors"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm16/TimeTemple</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257014<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Town</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257015_img.png" alt="Nameless Town"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/Lake Of Oblivion</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257015<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Somewhere in the Weathered Land of Happiness</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257016_img.png" alt="Somewhere in the Weathered Land of Happiness"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/Lake Of Oblivion</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257016<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Mansion</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257017_img.png" alt="Nameless Mansion"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257017<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Mansion</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257018_img.png" alt="Nameless Mansion"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257018<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257019_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257019<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257020_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/Cave Of Rest</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257020<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257021_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/Lake Of Oblivion</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257021<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257022_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/LachelntheIllusionCity</p>
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9400496_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Spoon 'n' Pantry
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9010022_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Giant Ice Block
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401706_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003262_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Octopus Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003225_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Rabbit Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003287_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003228_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Beauty Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003226_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Cat Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003105_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Kanto
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003202_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Protective Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401686_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Terry
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9010100_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Yellow Bull
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003263_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Stylish Gentleman Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003290_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003229_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Classy Cat Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401705_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9010106_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Frankenbalrog
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401707_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9000123_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Big Headward
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401708_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003227_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Flutist Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003285_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9010109_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Frankenbalrog
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003215_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Shrimp Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003288_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9000124_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Plastic Roy
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401704_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003106_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Dimo
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003286_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003146_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Spiegelmann
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9400495_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Gourdon Ritzy
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401687_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9000398_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Kemdi
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9001138_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Daddy Moon Bunny
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9001139_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Mommy Moon Bunny
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003289_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 993257022<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257023_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm16/TimeTemple</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257023<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257024_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257024<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257025_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> BgmEvent3/Dancing_Sea_Otter</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257025<br>Modified<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257026_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm00/FloralLife</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257026<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Unknown Maple Tree Hill</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Road</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257099_img.png" alt="Unknown Maple Tree Hill"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm58/The Beginnig of The Adventure</p>
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9402024_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Cygnus Water Warrior
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 993257099<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Demon Slayer Corps Training Test</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257100_img.png" alt="Demon Slayer Corps Training Test"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/minigame_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257100<br>Modified<br>Mini Map unavailable
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Henesys</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Henesys</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/100000000_img.png" alt="Henesys"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>A town located on the southern plains of Victoria Island. A gathering place for Explorers who want to become Bowmen.</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Removed:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9063321_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Tirnog
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 100000000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Cernium Square</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Cernium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/410000500_img.png" alt="Cernium Square"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Removed:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9063321_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Tirnog
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 410000500<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Town</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Lake of Oblivion</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/450001000_img.png" alt="Nameless Town"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Removed:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9063321_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Tirnog
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 450001000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Event Hall</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Unknown</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/820000000_img.png" alt="Event Hall"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201632_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - 미스 송
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 820000000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Free Market Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Hidden Street</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/910000000_img.png" alt="Free Market Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201660_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Oswell
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 910000000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Ardentmill</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Hidden Street</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/910001000_img.png" alt="Ardentmill"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201656_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Testran
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201657_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Plenty
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201658_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Angel
+                </span>
+            </p>
+        
+                <hr><p class='text-muted'>vanishHaku: <b>Old:</b> None &rarr; <b>New:</b> 1</p>
+                <div class="card-footer">
+                    Map ID: 910001000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Main Stadium</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Victoria Cup</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993244300_img.png" alt="Main Stadium"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993244300<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Main Stadium</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Victoria Cup</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993244301_img.png" alt="Main Stadium"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993244301<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Somewhere in the Beginner Hunting Grounds</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Squirrel Scatter</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245000_img.png" alt="Somewhere in the Beginner Hunting Grounds"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Beginner Hunting Grounds Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Squirrel Scatter</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245001_img.png" alt="Beginner Hunting Grounds Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245001<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Beginner Hunting Grounds Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Squirrel Scatter</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245002_img.png" alt="Beginner Hunting Grounds Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245002<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Beginner Hunting Grounds</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Squirrel Scatter</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245100_img.png" alt="Beginner Hunting Grounds"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245100<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Handy Harbor</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245200_img.png" alt="Handy Harbor"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245200<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Somewhere in Handy Harbor</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993246000_img.png" alt="Somewhere in Handy Harbor"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993246000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Handy Harbor Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993246001_img.png" alt="Handy Harbor Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993246001<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Handy Harbor Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993246002_img.png" alt="Handy Harbor Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993246002<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Handy Harbor</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993246100_img.png" alt="Handy Harbor"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993246100<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Maple Soccer Online - Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Soccer Online</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247399_img.png" alt="Maple Soccer Online - Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247399<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Maple Soccer Online - Arena</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Soccer Online</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247400_img.png" alt="Maple Soccer Online - Arena"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247400<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Maple Soccer Online - Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Soccer Online</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247500_img.png" alt="Maple Soccer Online - Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247500<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Secluded Corner of the Arena</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Soccer Online</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247501_img.png" alt="Secluded Corner of the Arena"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247501<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Snack Pickup Line</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Snack Break</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247502_img.png" alt="Snack Pickup Line"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247502<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Snack Pickup Location</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Snack Break</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247503_img.png" alt="Snack Pickup Location"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247503<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Road to the Balloon Pop Challenge</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248003_img.png" alt="Road to the Balloon Pop Challenge"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248003<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Balloon Pop Challenge Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248004_img.png" alt="Balloon Pop Challenge Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248004<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Balloon Pop Challenge</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248005_img.png" alt="Balloon Pop Challenge"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248005<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Balloon Pop Challenge Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248100_img.png" alt="Balloon Pop Challenge Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248100<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Balloon Pop Challenge Event Hall</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248200_img.png" alt="Balloon Pop Challenge Event Hall"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248200<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    </div></div>
+                    <div class="tab-pane fade " id="New" role="tabpanel" aria-labelledby="New-tab">
+                        <div class='row gy-4'>
+        
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Mansion</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257000_img.png" alt="Nameless Mansion"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401963_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Kanao Tsuyuri
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401960_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Nezuko Kamado
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9402025_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Resistance Security Guard
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401961_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Zenitsu Agatsuma
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401962_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Inosuke Hashibira
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 993257000<br>New
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Demon Slayer Corps Training Test Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257001_img.png" alt="Demon Slayer Corps Training Test Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401964_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Kanao Tsuyuri
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 993257001<br>New
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Mansion</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257010_img.png" alt="Nameless Mansion"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257010<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Ellin Forest</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257011_img.png" alt="Ellin Forest"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm15/ElinForest</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257011<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Somewhere in Ellin Forest</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257012_img.png" alt="Somewhere in Ellin Forest"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm00/Nightmare</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257012<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Temple of Time Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257013_img.png" alt="Temple of Time Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm16/TimeTemple</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257013<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Three Doors</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257014_img.png" alt="Three Doors"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm16/TimeTemple</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257014<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Town</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257015_img.png" alt="Nameless Town"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/Lake Of Oblivion</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257015<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Somewhere in the Weathered Land of Happiness</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257016_img.png" alt="Somewhere in the Weathered Land of Happiness"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/Lake Of Oblivion</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257016<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Mansion</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257017_img.png" alt="Nameless Mansion"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257017<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Mansion</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257018_img.png" alt="Nameless Mansion"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257018<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257019_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257019<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257020_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/Cave Of Rest</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257020<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257021_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/Lake Of Oblivion</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257021<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257022_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm46/LachelntheIllusionCity</p>
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9400496_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Spoon 'n' Pantry
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9010022_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Giant Ice Block
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401706_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003262_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Octopus Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003225_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Rabbit Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003287_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003228_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Beauty Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003226_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Cat Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003105_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Kanto
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003202_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Protective Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401686_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Terry
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9010100_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Yellow Bull
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003263_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Stylish Gentleman Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003290_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003229_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Classy Cat Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401705_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9010106_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Frankenbalrog
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401707_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9000123_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Big Headward
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401708_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003227_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Flutist Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003285_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9010109_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Frankenbalrog
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003215_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Shrimp Mask
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003288_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9000124_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Plastic Roy
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401704_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003106_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Dimo
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003286_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003146_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Spiegelmann
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9400495_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Gourdon Ritzy
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9401687_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Starlight Concentrator
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9000398_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Kemdi
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9001138_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Daddy Moon Bunny
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9001139_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Mommy Moon Bunny
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/3003289_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Subconscious Crack
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 993257022<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257023_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm16/TimeTemple</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257023<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257024_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/eventmap_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257024<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257025_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> BgmEvent3/Dancing_Sea_Otter</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257025<br>New<br>Mini Map unavailable<br>Standalone Map
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2"></h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257026_img.png" alt=""
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm00/FloralLife</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257026<br>New
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Unknown Maple Tree Hill</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Road</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257099_img.png" alt="Unknown Maple Tree Hill"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> Bgm58/The Beginnig of The Adventure</p>
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9402024_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Mob - Cygnus Water Warrior
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 993257099<br>New
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Demon Slayer Corps Training Test</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Demon Slayer: Kimetsu no Yaiba</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993257100_img.png" alt="Demon Slayer Corps Training Test"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                
+                <hr><p><b>BGM:</b> SoundEff_collabo/minigame_loop</p>
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993257100<br>New<br>Mini Map unavailable
+                </div>
+            </div>
+        </div>
+    </div>
+    </div></div>
+                    <div class="tab-pane fade " id="Removed" role="tabpanel" aria-labelledby="Removed-tab">
+                        <div class='row gy-4'>
+        </div></div>
+                    <div class="tab-pane fade " id="Modified" role="tabpanel" aria-labelledby="Modified-tab">
+                        <div class='row gy-4'>
+        
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Henesys</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Henesys</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/100000000_img.png" alt="Henesys"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>A town located on the southern plains of Victoria Island. A gathering place for Explorers who want to become Bowmen.</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Removed:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9063321_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Tirnog
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 100000000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Cernium Square</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Cernium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/410000500_img.png" alt="Cernium Square"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Removed:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9063321_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Tirnog
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 410000500<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Nameless Town</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Lake of Oblivion</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/450001000_img.png" alt="Nameless Town"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Removed:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9063321_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Tirnog
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 450001000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Event Hall</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Unknown</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/820000000_img.png" alt="Event Hall"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201632_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - 미스 송
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 820000000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Free Market Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Hidden Street</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/910000000_img.png" alt="Free Market Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201660_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Oswell
+                </span>
+            </p>
+        
+                
+                <div class="card-footer">
+                    Map ID: 910000000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Ardentmill</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Hidden Street</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/910001000_img.png" alt="Ardentmill"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='mb-0'><b>Map Life:</b></p><p><b>Added:</b></p>
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201656_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Testran
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201657_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Plenty
+                </span>
+            </p>
+        
+            <p class='mb-0'>
+                <span class="text-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<img src=&#39;life/9201658_img.png&#39; onerror=&#39;this.src=&quot;life/placeholder.png&quot;;&#39; style=&#39;max-width:200px; max-height:200px;&#39;>">
+                    Npc - Angel
+                </span>
+            </p>
+        
+                <hr><p class='text-muted'>vanishHaku: <b>Old:</b> None &rarr; <b>New:</b> 1</p>
+                <div class="card-footer">
+                    Map ID: 910001000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Main Stadium</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Victoria Cup</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993244300_img.png" alt="Main Stadium"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993244300<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Main Stadium</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Victoria Cup</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993244301_img.png" alt="Main Stadium"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993244301<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Somewhere in the Beginner Hunting Grounds</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Squirrel Scatter</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245000_img.png" alt="Somewhere in the Beginner Hunting Grounds"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Beginner Hunting Grounds Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Squirrel Scatter</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245001_img.png" alt="Beginner Hunting Grounds Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245001<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Beginner Hunting Grounds Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Squirrel Scatter</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245002_img.png" alt="Beginner Hunting Grounds Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245002<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Beginner Hunting Grounds</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Squirrel Scatter</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245100_img.png" alt="Beginner Hunting Grounds"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245100<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Handy Harbor</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993245200_img.png" alt="Handy Harbor"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993245200<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Somewhere in Handy Harbor</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993246000_img.png" alt="Somewhere in Handy Harbor"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993246000<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Handy Harbor Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993246001_img.png" alt="Handy Harbor Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993246001<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Handy Harbor Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993246002_img.png" alt="Handy Harbor Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993246002<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Handy Harbor</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Racing</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993246100_img.png" alt="Handy Harbor"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993246100<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Maple Soccer Online - Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Soccer Online</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247399_img.png" alt="Maple Soccer Online - Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247399<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Maple Soccer Online - Arena</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Soccer Online</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247400_img.png" alt="Maple Soccer Online - Arena"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247400<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Maple Soccer Online - Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Soccer Online</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247500_img.png" alt="Maple Soccer Online - Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247500<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Secluded Corner of the Arena</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maple Soccer Online</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247501_img.png" alt="Secluded Corner of the Arena"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247501<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Snack Pickup Line</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Snack Break</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247502_img.png" alt="Snack Pickup Line"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247502<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Snack Pickup Location</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Snack Break</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993247503_img.png" alt="Snack Pickup Location"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993247503<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Road to the Balloon Pop Challenge</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248003_img.png" alt="Road to the Balloon Pop Challenge"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248003<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Balloon Pop Challenge Exit</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248004_img.png" alt="Balloon Pop Challenge Exit"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248004<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Balloon Pop Challenge</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248005_img.png" alt="Balloon Pop Challenge"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248005<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Balloon Pop Challenge Entrance</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248100_img.png" alt="Balloon Pop Challenge Entrance"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248100<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-start">
+                
+        <div class="d-flex flex-column">
+            <h5 class="card-title mb-2">Balloon Pop Challenge Event Hall</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Main Stadium</h6>
+        </div>
+    
+                <img src="miniMap/miniMap/993248200_img.png" alt="Balloon Pop Challenge Event Hall"
+                     style="max-width: 100%; height: auto;" class="mb-2"
+                     onerror="this.src='miniMap/placeholder.png';">
+                <p>Unknown</p>
+                
+                <hr><p class='text-danger mb-0'><b>This map doesn't have spawn life.</b></p>
+                
+                <div class="card-footer">
+                    Map ID: 993248200<br>Modified
+                </div>
+            </div>
+        </div>
+    </div>
+    </div></div>
+            </div>
+        </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer">
+                MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon.
+            </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a>
+                | <a href="/Comparer/changelog.html">Change Log</a>
+            </p>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        </script>
+    </body>
+    </html>
+    

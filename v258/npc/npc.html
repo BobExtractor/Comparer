@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor - Npc Changes</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .card-text small { color: #6c757d; }
+        .card hr { margin: 0.5rem 0; }
+        .tab-content { margin-top: 1rem; }
+        .card { box-shadow: 0 0 10px rgba(0,0,0,0.1); border: none; }
+        .nav-tabs .nav-link { margin-right: 10px; }
+        .card-body img { display: block; margin-top: 0.5rem; }
+        .card-footer { font-size: 0.875rem; color: #6c757d; margin-top: 0.5rem; }
+        .card-footer small {
+            display: block;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/Comparer/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../item/item.html">Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../character/character.html">Character</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../map/map.html">Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../mob/mob.html">Mob</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../npc.html">Npc</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../skill/skill.html">Skill</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../etc/etc.html">Etc</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="logo-section text-center my-4">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">NPC Changes</h1>
+        <ul id="tabs" class="nav nav-tabs justify-content-center" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="added-tab" data-bs-toggle="tab"
+                        data-bs-target="#Added" type="button" role="tab"
+                        aria-controls="Added" aria-selected="true">
+                    Added
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="modified-tab" data-bs-toggle="tab"
+                        data-bs-target="#Modified" type="button" role="tab"
+                        aria-controls="Modified" aria-selected="false">
+                    Modified
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="removed-tab" data-bs-toggle="tab"
+                        data-bs-target="#Removed" type="button" role="tab"
+                        aria-controls="Removed" aria-selected="false">
+                    Removed
+                </button>
+            </li>
+        </ul>
+        <div class="tab-content" id="tabsContent">
+
+            <div class="tab-pane fade show active" id="Added" role="tabpanel" aria-labelledby="added-tab">
+              <div class="row mt-3">
+                
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">미스 송</h5>
+                <img src="npc/9201632_img.png" alt="미스 송" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Is it weird to carry both a pillow and coffee? ...But I need both!<br>- This is the last coffee...? No... I still have my pillow, too...<br>- Yawn... This heap of papers... is scarier than the monsters...
+                <div class="card-footer"><small>ID: 9201632</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Testran</h5>
+                <img src="npc/9201656_img.png" alt="Testran" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Profession Technician<br>- I'm all about efficiency, you know. My research will lead to further upgrades.
+                <div class="card-footer"><small>ID: 9201656</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Plenty</h5>
+                <img src="npc/9201657_img.png" alt="Plenty" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Peep?
+                <div class="card-footer"><small>ID: 9201657</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Angel</h5>
+                <img src="npc/9201658_img.png" alt="Angel" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Profession Credit Shop
+                <div class="card-footer"><small>ID: 9201658</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Angel</h5>
+                <img src="npc/9201658_img.png" alt="Angel" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Profession Credit Shop
+                <div class="card-footer"><small>ID: 9201659<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Oswell</h5>
+                <img src="npc/9201660_img.png" alt="Oswell" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Steam Market Broker
+                <div class="card-footer"><small>ID: 9201660</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Tanjiro Kamado</h5>
+                <img src="npc/9401959_img.png" alt="Tanjiro Kamado" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Tanjiro's Journal<br>- I'm Tanjiro.<br>- Have you ever heard of the Hinokami Kagura?
+                <div class="card-footer"><small>ID: 9401959<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Nezuko Kamado</h5>
+                <img src="npc/9401960_img.png" alt="Nezuko Kamado" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Demon Slayer Corps Training Journal<br>- Woo!<br>- Woo!
+                <div class="card-footer"><small>ID: 9401960<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Zenitsu Agatsuma</h5>
+                <img src="npc/9401961_img.png" alt="Zenitsu Agatsuma" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Maple Expedition<br>- I'll protect you... Nezuko!<br>- I'll protect you... Nezuko!
+                <div class="card-footer"><small>ID: 9401961<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Inosuke Hashibira</h5>
+                <img src="npc/9401962_img.png" alt="Inosuke Hashibira" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Maple Expedition<br>- Comin' through! Comin' through!<br>- Comin' through! Comin' through!
+                <div class="card-footer"><small>ID: 9401962<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kanao Tsuyuri</h5>
+                <img src="npc/9401963_img.png" alt="Kanao Tsuyuri" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Demon Slayer Corps Training Test<br>- ...<br>- ...
+                <div class="card-footer"><small>ID: 9401963<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kanao Tsuyuri</h5>
+                <img src="npc/9401963_img.png" alt="Kanao Tsuyuri" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Demon Slayer Corps Training Test
+                <div class="card-footer"><small>ID: 9401964<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Tanjiro Kamado</h5>
+                <img src="npc/9401959_img.png" alt="Tanjiro Kamado" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401965<br>Info:<br>forceMove: 1<br>hideName: 1<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Nezuko Kamado</h5>
+                <img src="npc/9401960_img.png" alt="Nezuko Kamado" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401966<br>Info:<br>hideName: 1<br>forceMove: 1<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Zenitsu Agatsuma</h5>
+                <img src="npc/9401961_img.png" alt="Zenitsu Agatsuma" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401967<br>Info:<br>hideName: 1<br>forceMove: 1<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Inosuke Hashibira</h5>
+                <img src="npc/9401962_img.png" alt="Inosuke Hashibira" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401968<br>Info:<br>hideName: 1<br>forceMove: 1<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kanao Tsuyuri</h5>
+                <img src="npc/9401963_img.png" alt="Kanao Tsuyuri" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401969<br>Info:<br>hideName: 1<br>forceMove: 1<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Beginner Adventurer</h5>
+                <img src="npc/9401971_img.png" alt="Beginner Adventurer" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401971<br>Info:<br>forceMove: 1<br>hideName: 1<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Maple Administrator</h5>
+                <img src="npc/0002007_img.png" alt="Maple Administrator" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - I'm here to help you start your new journey, #h0#.<br>- Here's to a fresh start!<br>- Here's to a fresh start!<br>- Hello. I'm the Maple Administrator.<br>- Do you have a moment to talk about your new journey?<br>- Here's to a fresh start!
+                <div class="card-footer"><small>ID: 9402024</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Parchment</h5>
+                <img src="npc/9402025_img.png" alt="Parchment" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Maple Expedition Journal
+                <div class="card-footer"><small>ID: 9402025<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="Modified" role="tabpanel" aria-labelledby="modified-tab">
+              <div class="row mt-3">
+                
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Wal-Sook</h5>
+                <img src="npc/9063218_img.png" alt="Wal-Sook" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 안녕하세요. 어떻게 오셨나요?<br>- <b>New:</b> Hello there. What brings you here?<br><b>Function changed:</b><br>- <b>Old:</b> 다람쥐소탕임무<br>- <b>New:</b> Squirrel Scatter<br>- <b>Old:</b> 헌 물건은 안 맡아줘.. 헷갈린단 말이야<br>- <b>New:</b> I don't bother with second-hand goods... I get them confused too easily.<br>- <b>Old:</b> 몰려오는 다람쥐들을 어서 퇴치해 주세요.<br>- <b>New:</b> You'll get rid of those pesky squirrels, won't you?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063218<br>Name changed:<br>- <b>Old:</b> 왈숙네<br>- <b>New:</b> Wal-Sook<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Wal-Sook</h5>
+                <img src="npc/9063218_img.png" alt="Wal-Sook" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 안녕하세요. 어떻게 오셨나요?<br>- <b>New:</b> Hello there. What brings you here?<br><b>Function changed:</b><br>- <b>Old:</b> 다람쥐소탕임무<br>- <b>New:</b> Squirrel Scatter<br>- <b>Old:</b> 헌 물건은 안 맡아줘.. 헷갈린단 말이야<br>- <b>New:</b> I don't bother with second-hand goods... I get them confused too easily.<br>- <b>Old:</b> 몰려오는 다람쥐들을 어서 퇴치해 주세요.<br>- <b>New:</b> You'll get rid of those pesky squirrels, won't you?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063219<br>Name changed:<br>- <b>Old:</b> 왈숙네<br>- <b>New:</b> Wal-Sook<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Wal-Sook</h5>
+                <img src="npc/9063218_img.png" alt="Wal-Sook" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 안녕하세요. 어떻게 오셨나요?<br>- <b>New:</b> Hello there. What brings you here?<br><b>Function changed:</b><br>- <b>Old:</b> 다람쥐소탕임무<br>- <b>New:</b> Squirrel Scatter<br>- <b>Old:</b> 헌 물건은 안 맡아줘.. 헷갈린단 말이야<br>- <b>New:</b> I don't bother with second-hand goods... I get them confused too easily.<br>- <b>Old:</b> 몰려오는 다람쥐들을 어서 퇴치해 주세요.<br>- <b>New:</b> You'll get rid of those pesky squirrels, won't you?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063220<br>Name changed:<br>- <b>Old:</b> 왈숙네<br>- <b>New:</b> Wal-Sook<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Wal-Sook</h5>
+                <img src="npc/9063218_img.png" alt="Wal-Sook" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 안녕하세요. 어떻게 오셨나요?<br>- <b>New:</b> Hello there. What brings you here?<br><b>Function changed:</b><br>- <b>Old:</b> 다람쥐소탕임무<br>- <b>New:</b> Squirrel Scatter<br>- <b>Old:</b> 헌 물건은 안 맡아줘.. 헷갈린단 말이야<br>- <b>New:</b> I don't bother with second-hand goods... I get them confused too easily.<br>- <b>Old:</b> 몰려오는 다람쥐들을 어서 퇴치해 주세요.<br>- <b>New:</b> You'll get rid of those pesky squirrels, won't you?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063221<br>Name changed:<br>- <b>Old:</b> 왈숙네<br>- <b>New:</b> Wal-Sook<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Village Shrine Granny</h5>
+                <img src="npc/9063222_img.png" alt="Village Shrine Granny" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 소중함을 그렇게 가르쳤거늘..<br>- <b>New:</b> Don't forget what I've taught you.<br><b>Function changed:</b><br>- <b>Old:</b> 다람쥐소탕임무<br>- <b>New:</b> Squirrel Scatter<br>- <b>Old:</b> 영은 생을 얻을지어니...<br>- <b>New:</b> The spirit will live on...<br>- <b>Old:</b> 예의를 지켜도 살려줄까 말까인데..<br>- <b>New:</b> Mind your manners, or you may not live to regret it...
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063222<br>Name changed:<br>- <b>Old:</b> 성황당 할머니<br>- <b>New:</b> Village Shrine Granny<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kickall</h5>
+                <img src="npc/9063229_img.png" alt="Kickall" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Do you know your way around soccer balls?<br>- <b>Old:</b> 메이플 사커 온라인에 온 걸 환영해!<br>- <b>New:</b> Welcome to Maple Soccer Online!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 사커 온라인<br>- <b>New:</b> Maple Soccer Online
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063229<br>Name changed:<br>- <b>Old:</b> 몽땅차<br>- <b>New:</b> Kickall</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Electronic Display</h5>
+                <img src="npc/9063230_img.png" alt="Electronic Display" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function changed:</b><br>- <b>Old:</b> 빅토리아 응원전<br>- <b>New:</b> Victoria Pep Rally
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063230<br>Name changed:<br>- <b>Old:</b> 전광판<br>- <b>New:</b> Electronic Display</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Roca</h5>
+                <img src="npc/9063231_img.png" alt="Roca" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 전 절대 수상한 사람 아닙니다!<br>- <b>New:</b> I'm NOT a suspicious individual!<br>- <b>Old:</b> 전 절대 수상한 사람 아닙니다!<br>- <b>New:</b> I'm NOT a suspicious individual!<br><b>Function changed:</b><br>- <b>Old:</b> 스탬프 교환소<br>- <b>New:</b> Stamp Exchange<br>- <b>Old:</b> 받아 간 스탬프는 꼼꼼히 장부에 작성 중이니 걱정 마세요.<br>- <b>New:</b> I mark down all the stamps in this ledger here so I won't forget.<br>- <b>Old:</b> 받아 간 스탬프는 꼼꼼히 장부에 작성 중이니 걱정 마세요.<br>- <b>New:</b> I mark down all the stamps in this ledger here so I won't forget.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063231<br>Name changed:<br>- <b>Old:</b> 로카<br>- <b>New:</b> Roca<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Roca</h5>
+                <img src="npc/9063231_img.png" alt="Roca" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 전 절대 수상한 사람 아닙니다!<br>- <b>New:</b> I'm NOT a suspicious individual!<br>- <b>Old:</b> 전 절대 수상한 사람 아닙니다!<br>- <b>New:</b> I'm NOT a suspicious individual!<br><b>Function changed:</b><br>- <b>Old:</b> 스탬프 교환소<br>- <b>New:</b> Stamp Exchange<br>- <b>Old:</b> 받아 간 스탬프는 꼼꼼히 장부에 작성 중이니 걱정 마세요.<br>- <b>New:</b> I mark down all the stamps in this ledger here so I won't forget.<br>- <b>Old:</b> 받아 간 스탬프는 꼼꼼히 장부에 작성 중이니 걱정 마세요.<br>- <b>New:</b> I mark down all the stamps in this ledger here so I won't forget.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063232<br>Name changed:<br>- <b>Old:</b> 로카<br>- <b>New:</b> Roca</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Hersha</h5>
+                <img src="npc/9063233_img.png" alt="Hersha" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 빅토리아컵으로의 파견 임무를 수행 중이야.<br>- <b>New:</b> I've been dispatched here to Victoria Cup.<br>- <b>Old:</b> 초청 미니게임을 참여하고 뱃지를 모아봐!<br>- <b>New:</b> Participate in collab mini-games and collect Badges--unless you're a SPY!<br><b>Function changed:</b><br>- <b>Old:</b> 뱃지 교환소<br>- <b>New:</b> Badge Exchange<br>- <b>Old:</b> 빅토리아컵으로의 파견 임무를 수행 중이야.<br>- <b>New:</b> I've been dispatched here to Victoria Cup.<br>- <b>Old:</b> 초청 미니게임을 참여하고 뱃지를 모아봐!<br>- <b>New:</b> Participate in collab mini-games and collect Badges--unless you're a SPY!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063233<br>Name changed:<br>- <b>Old:</b> 헤르샤<br>- <b>New:</b> Hersha<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Hersha</h5>
+                <img src="npc/9063233_img.png" alt="Hersha" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 빅토리아컵으로의 파견 임무를 수행 중이야.<br>- <b>New:</b> I've been dispatched here to Victoria Cup.<br>- <b>Old:</b> 초청 미니게임을 참여하고 뱃지를 모아봐!<br>- <b>New:</b> Participate in collab mini-games and collect Badges--unless you're a SPY!<br><b>Function changed:</b><br>- <b>Old:</b> 뱃지 교환소<br>- <b>New:</b> Badge Exchange<br>- <b>Old:</b> 빅토리아컵으로의 파견 임무를 수행 중이야.<br>- <b>New:</b> I've been dispatched here to Victoria Cup.<br>- <b>Old:</b> 초청 미니게임을 참여하고 뱃지를 모아봐!<br>- <b>New:</b> Participate in collab mini-games and collect Badges--unless you're a SPY!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063234<br>Name changed:<br>- <b>Old:</b> 헤르샤<br>- <b>New:</b> Hersha</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">10 Boogies</h5>
+                <img src="npc/9063235_img.png" alt="10 Boogies" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 이곳에서도 열심히 정보를 수집하고 있답니다!<br>- <b>New:</b> I'm here to collect info... It's hard work, I swear!<br>- <b>Old:</b> 트로피는 충분히 모으셨나요?<br>- <b>New:</b> Got enough trophies yet?<br><b>Function changed:</b><br>- <b>Old:</b> 트로피 교환소<br>- <b>New:</b> Trophy Exchange<br>- <b>Old:</b> 이곳에서도 열심히 정보를 수집하고 있답니다!<br>- <b>New:</b> I'm here to collect info... It's hard work, I swear!<br>- <b>Old:</b> 트로피는 충분히 모으셨나요?<br>- <b>New:</b> Got enough trophies yet?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063235<br>Name changed:<br>- <b>Old:</b> 열 마리의 부기<br>- <b>New:</b> 10 Boogies<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">10 Boogies</h5>
+                <img src="npc/9063235_img.png" alt="10 Boogies" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 이곳에서도 열심히 정보를 수집하고 있답니다!<br>- <b>New:</b> I'm here to collect info... It's hard work, I swear!<br>- <b>Old:</b> 트로피는 충분히 모으셨나요?<br>- <b>New:</b> Got enough trophies yet?<br><b>Function changed:</b><br>- <b>Old:</b> 트로피 교환소<br>- <b>New:</b> Trophy Exchange<br>- <b>Old:</b> 이곳에서도 열심히 정보를 수집하고 있답니다!<br>- <b>New:</b> I'm here to collect info... It's hard work, I swear!<br>- <b>Old:</b> 트로피는 충분히 모으셨나요?<br>- <b>New:</b> Got enough trophies yet?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063236<br>Name changed:<br>- <b>Old:</b> 열 마리의 부기<br>- <b>New:</b> 10 Boogies</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Matthias</h5>
+                <img src="npc/9063237_img.png" alt="Matthias" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 특별한 아이템을 찾고 계신다면 제게 오시면 됩니다.<br>- <b>New:</b> If you're looking for a special item, I'm you man... unfortunately.<br>- <b>Old:</b> 여기라면 더 많은 정보를 얻을 수 있겠어.<br>- <b>New:</b> *yawn* I'll find that info later...<br><b>Function changed:</b><br>- <b>Old:</b> 메소샵<br>- <b>New:</b> Meso Shop<br>- <b>Old:</b> 특별한 아이템을 찾고 계신다면 제게 오시면 됩니다.<br>- <b>New:</b> If you're looking for a special item, I'm you man... unfortunately.<br>- <b>Old:</b> 여기라면 더 많은 정보를 얻을 수 있겠어.<br>- <b>New:</b> *yawn* I'll find that info later...
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063237<br>Name changed:<br>- <b>Old:</b> 마티어스<br>- <b>New:</b> Matthias<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Matthias</h5>
+                <img src="npc/9063237_img.png" alt="Matthias" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 특별한 아이템을 찾고 계신다면 제게 오시면 됩니다.<br>- <b>New:</b> If you're looking for a special item, I'm you man... unfortunately.<br>- <b>Old:</b> 여기라면 더 많은 정보를 얻을 수 있겠어.<br>- <b>New:</b> *yawn* I'll find that info later...<br><b>Function changed:</b><br>- <b>Old:</b> 메소샵<br>- <b>New:</b> Meso Shop<br>- <b>Old:</b> 특별한 아이템을 찾고 계신다면 제게 오시면 됩니다.<br>- <b>New:</b> If you're looking for a special item, I'm you man... unfortunately.<br>- <b>Old:</b> 여기라면 더 많은 정보를 얻을 수 있겠어.<br>- <b>New:</b> *yawn* I'll find that info later...
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063238<br>Name changed:<br>- <b>Old:</b> 마티어스<br>- <b>New:</b> Matthias</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Athena Pierce</h5>
+                <img src="npc/9063239_img.png" alt="Athena Pierce" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 빅토리아컵이 마침내 시작됐습니다!<br>- <b>New:</b> The Victoria Cup has begun!<br>- <b>Old:</b> 스탬프 북과 컬렉션 북은 받으셨나요?<br>- <b>New:</b> Have you received your Stamp Book and Collection Book yet?<br><b>Function changed:</b><br>- <b>Old:</b> 빅토리아컵<br>- <b>New:</b> Victoria Cup<br>- <b>Old:</b> 빅토리아컵이 마침내 시작됐습니다!<br>- <b>New:</b> The Victoria Cup has begun!<br>- <b>Old:</b> 스탬프 북과 컬렉션 북은 받으셨나요?<br>- <b>New:</b> Have you received your Stamp Book and Collection Book yet?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063239<br>Name changed:<br>- <b>Old:</b> 헬레나<br>- <b>New:</b> Athena Pierce</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Grendel the Really Old</h5>
+                <img src="npc/9063240_img.png" alt="Grendel the Really Old" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 마법의 힘이 깃든 간식을 받아 가게나.<br>- <b>New:</b> Few things are as magical as a snack.<br><b>Function changed:</b><br>- <b>Old:</b> 스낵 브레이크 타임<br>- <b>New:</b> Snack Break<br>- <b>Old:</b> 마법의 힘이 깃든 간식을 받아 가게나.<br>- <b>New:</b> Few things are as magical as a snack.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063240<br>Name changed:<br>- <b>Old:</b> 하인즈<br>- <b>New:</b> Grendel the Really Old</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Grendel the Really Old</h5>
+                <img src="npc/9063240_img.png" alt="Grendel the Really Old" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 마법의 힘이 깃든 간식을 받아 가게나.<br>- <b>New:</b> Few things are as magical as a snack.<br><b>Function changed:</b><br>- <b>Old:</b> 스낵 브레이크 타임<br>- <b>New:</b> Snack Break<br>- <b>Old:</b> 마법의 힘이 깃든 간식을 받아 가게나.<br>- <b>New:</b> Few things are as magical as a snack.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063241<br>Name changed:<br>- <b>Old:</b> 하인즈<br>- <b>New:</b> Grendel the Really Old</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Grendel the Really Old</h5>
+                <img src="npc/9063240_img.png" alt="Grendel the Really Old" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 간식은 마음에 드는가?<br>- <b>New:</b> How do you fancy the snacks?<br><b>Function changed:</b><br>- <b>Old:</b> 스낵 브레이크 타임<br>- <b>New:</b> Snack Break<br>- <b>Old:</b> 간식은 마음에 드는가?<br>- <b>New:</b> How do you fancy the snacks?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063242<br>Name changed:<br>- <b>Old:</b> 하인즈<br>- <b>New:</b> Grendel the Really Old</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dark Lord</h5>
+                <img src="npc/9063243_img.png" alt="Dark Lord" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 그림자는 은밀하고 소리도 없지...<br>- <b>New:</b> Leap from the shadows...<br>- <b>Old:</b> 의뢰를 받고 싶은 자는 나에게...<br>- <b>New:</b> If you desire a task, come see me...<br><b>Function changed:</b><br>- <b>Old:</b> 그림자 멀리뛰기<br>- <b>New:</b> Shadow Long Jump<br>- <b>Old:</b> 그림자는 은밀하고 소리도 없지...<br>- <b>New:</b> Leap from the shadows...<br>- <b>Old:</b> 의뢰를 받고 싶은 자는 나에게...<br>- <b>New:</b> If you desire a task, come see me...
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063243<br>Name changed:<br>- <b>Old:</b> 다크로드<br>- <b>New:</b> Dark Lord</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dark Lord</h5>
+                <img src="npc/9063244_img.png" alt="Dark Lord" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063244<br>Name changed:<br>- <b>Old:</b> 다크로드<br>- <b>New:</b> Dark Lord</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Spiegelmann</h5>
+                <img src="npc/9063245_img.png" alt="Spiegelmann" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 다같이 힘을 합치면 더 강력해지는 법이지.<br>- <b>New:</b> Unity is strength!<br><b>Function changed:</b><br>- <b>Old:</b> 궁극의 콜라보<br>- <b>New:</b> Ultimate Collab<br>- <b>Old:</b> 승리는 준비된 자에게만 찾아온다네!<br>- <b>New:</b> The key to victory is preparation!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063245<br>Name changed:<br>- <b>Old:</b> 슈피겔만<br>- <b>New:</b> Spiegelmann</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Cassandra</h5>
+                <img src="npc/9063246_img.png" alt="Cassandra" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 너라면 할 수 있어.<br>- <b>New:</b> Do. You. Even. Run?! It's time to start!<br>- <b>Old:</b> 건강해지는 미래를 보여줄게.<br>- <b>New:</b> Let's get heart-healthy, everybody!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 장거리 달리기: FEVER<br>- <b>New:</b> Maple Long Distance Running: FEVER<br>- <b>Old:</b> 너라면 할 수 있어.<br>- <b>New:</b> Do. You. Even. Run?! It's time to start!<br>- <b>Old:</b> 건강해지는 미래를 보여줄게.<br>- <b>New:</b> Let's get heart-healthy, everybody!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063246<br>Name changed:<br>- <b>Old:</b> 카산드라<br>- <b>New:</b> Cassandra</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Cassandra</h5>
+                <img src="npc/9063246_img.png" alt="Cassandra" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 너의 끈기를 보여줘.<br>- <b>New:</b> No pain, no gain!<br>- <b>Old:</b> 꾸준한 도전이 나의 비결이야.<br>- <b>New:</b> You've gotta stay at it! It's hard, but you can do it!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 장거리 달리기<br>- <b>New:</b> Maple Long Distance Running<br>- <b>Old:</b> 너의 끈기를 보여줘.<br>- <b>New:</b> No pain, no gain!<br>- <b>Old:</b> 꾸준한 도전이 나의 비결이야.<br>- <b>New:</b> You've gotta stay at it! It's hard, but you can do it!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063247<br>Name changed:<br>- <b>Old:</b> 카산드라<br>- <b>New:</b> Cassandra<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Cassandra</h5>
+                <img src="npc/9063246_img.png" alt="Cassandra" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 너라면 할 수 있어.<br>- <b>New:</b> Do. You. Even. Run?! It's time to start!<br>- <b>Old:</b> 건강해지는 미래를 보여줄게.<br>- <b>New:</b> Let's get heart-healthy, everybody!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 장거리 달리기: FEVER<br>- <b>New:</b> Maple Long Distance Running: FEVER<br>- <b>Old:</b> 너라면 할 수 있어.<br>- <b>New:</b> Do. You. Even. Run?! It's time to start!<br>- <b>Old:</b> 건강해지는 미래를 보여줄게.<br>- <b>New:</b> Let's get heart-healthy, everybody!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063248<br>Name changed:<br>- <b>Old:</b> 카산드라<br>- <b>New:</b> Cassandra<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dances with Balrog</h5>
+                <img src="npc/9063249_img.png" alt="Dances with Balrog" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 빅토리아컵을 함께 응원해주게.<br>- <b>New:</b> Come and raise your voices for the Victoria Cup.<br>- <b>Old:</b> 훈련을 게을리 하고 있지 않은가? 꾸준히 스스로를 단련시켜야하네.<br>- <b>New:</b> Never neglect your goals. They are what drive you toward your future.<br><b>Function changed:</b><br>- <b>Old:</b> 빅토리아 응원전<br>- <b>New:</b> Victoria Pep Rally<br>- <b>Old:</b> 빅토리아컵을 함께 응원해주게.<br>- <b>New:</b> Come and raise your voices for the Victoria Cup.<br>- <b>Old:</b> 훈련을 게을리 하고 있지 않은가? 꾸준히 스스로를 단련시켜야하네.<br>- <b>New:</b> Never neglect your goals. They are what drive you toward your future.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063249<br>Name changed:<br>- <b>Old:</b> 주먹펴고 일어서<br>- <b>New:</b> Dances with Balrog</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Item Storage</h5>
+                <img src="npc/9063250_img.png" alt="Item Storage" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function changed:</b><br>- <b>Old:</b> 창고지기<br>- <b>New:</b> Storage Keeper
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063250<br>Name changed:<br>- <b>Old:</b> 물품보관함<br>- <b>New:</b> Item Storage<br>Info:<br>trunkPut: 0</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Spiegelmann</h5>
+                <img src="npc/9063245_img.png" alt="Spiegelmann" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063251<br>Name changed:<br>- <b>Old:</b> 슈피겔만<br>- <b>New:</b> Spiegelmann<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dances with Balrog</h5>
+                <img src="npc/9063249_img.png" alt="Dances with Balrog" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063252<br>Name changed:<br>- <b>Old:</b> 주먹펴고 일어서<br>- <b>New:</b> Dances with Balrog<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Grendel the Really Old</h5>
+                <img src="npc/9063240_img.png" alt="Grendel the Really Old" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063253<br>Name changed:<br>- <b>Old:</b> 하인즈<br>- <b>New:</b> Grendel the Really Old<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Athena Pierce</h5>
+                <img src="npc/9063239_img.png" alt="Athena Pierce" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063254<br>Name changed:<br>- <b>Old:</b> 헬레나<br>- <b>New:</b> Athena Pierce<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dark Lord</h5>
+                <img src="npc/9063243_img.png" alt="Dark Lord" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063255<br>Name changed:<br>- <b>Old:</b> 다크로드<br>- <b>New:</b> Dark Lord<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kyrin</h5>
+                <img src="npc/9063256_img.png" alt="Kyrin" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063256<br>Name changed:<br>- <b>Old:</b> 카이린<br>- <b>New:</b> Kyrin<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Instructor Irvin</h5>
+                <img src="npc/1082101_img.png" alt="Instructor Irvin" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 마법의 종이비행기를 타고 스타디움의 하늘을 아름답게 꾸며주게.<br>- <b>New:</b> Hop aboard and fill the sky with colors.<br><b>Function changed:</b><br>- <b>Old:</b> 마법의 종이비행기<br>- <b>New:</b> Magical Paper Plane<br>- <b>Old:</b> 마법으로 만든 종이비행기라니 정말 대단하지 않나? 물론 나와 몇 년을 함께한 이 비행기가 가장 훌륭하지만.<br>- <b>New:</b> Giant paper planes stuffed with magic... What'll they think of next?
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063257<br>Name changed:<br>- <b>Old:</b> 교관 어빈<br>- <b>New:</b> Instructor Irvin</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kyrin</h5>
+                <img src="npc/9063256_img.png" alt="Kyrin" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 유니온 팝 챌린지에 도전해 볼래?<br>- <b>New:</b> Do you have the grit to take on the Legion Pop Challenge?<br>- <b>Old:</b> 다 같이 터뜨려 볼까?<br>- <b>New:</b> Blow those puppies out of the water!<br><b>Function changed:</b><br>- <b>Old:</b> 유니온 팝 챌린지<br>- <b>New:</b> Legion Pop Challenge<br>- <b>Old:</b> 유니온 팝 챌린지에 도전해 볼래?<br>- <b>New:</b> Do you have the grit to take on the Legion Pop Challenge?<br>- <b>Old:</b> 다 같이 터뜨려 볼까?<br>- <b>New:</b> Blow those puppies out of the water!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063258<br>Name changed:<br>- <b>Old:</b> 카이린<br>- <b>New:</b> Kyrin</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Balloon 1</h5>
+                <img src="npc/9063259_img.png" alt="Balloon 1" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063259<br>Name changed:<br>- <b>Old:</b> 풍선 1<br>- <b>New:</b> Balloon 1<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Balloon 2</h5>
+                <img src="npc/9063260_img.png" alt="Balloon 2" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063260<br>Name changed:<br>- <b>Old:</b> 풍선 2<br>- <b>New:</b> Balloon 2<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Balloon 3</h5>
+                <img src="npc/9063261_img.png" alt="Balloon 3" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063261<br>Name changed:<br>- <b>Old:</b> 풍선 3<br>- <b>New:</b> Balloon 3<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Balloon 4</h5>
+                <img src="npc/9063262_img.png" alt="Balloon 4" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063262<br>Name changed:<br>- <b>Old:</b> 풍선 4<br>- <b>New:</b> Balloon 4<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Balloon 5</h5>
+                <img src="npc/9063263_img.png" alt="Balloon 5" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063263<br>Name changed:<br>- <b>Old:</b> 풍선 5<br>- <b>New:</b> Balloon 5<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kickall</h5>
+                <img src="npc/9063229_img.png" alt="Kickall" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 공 좀 찰 줄 알아?<br>- <b>New:</b> How's your footwork?<br>- <b>Old:</b> 메이플 사커 온라인에 온 걸 환영해!<br>- <b>New:</b> Welcome to Maple Soccer Online!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 사커 온라인<br>- <b>New:</b> Maple Soccer Online
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063265<br>Name changed:<br>- <b>Old:</b> 몽땅차<br>- <b>New:</b> Kickall</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kickall</h5>
+                <img src="npc/9063228_img.png" alt="Kickall" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 공 좀 찰 줄 알아?<br>- <b>New:</b> How's your footwork?<br>- <b>Old:</b> 메이플 사커 온라인에 온 걸 환영해!<br>- <b>New:</b> Welcome to Maple Soccer Online!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 사커 온라인<br>- <b>New:</b> Maple Soccer Online
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063266<br>Name changed:<br>- <b>Old:</b> 몽땅차<br>- <b>New:</b> Kickall</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Electronic Display</h5>
+                <img src="npc/9063267_img.png" alt="Electronic Display" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063267<br>Name changed:<br>- <b>Old:</b> 전광판<br>- <b>New:</b> Electronic Display<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Brodi</h5>
+                <img src="npc/9063268_img.png" alt="Brodi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 완벽한 카트를 타고 맘껏 달려봐!<br>- <b>New:</b> Get in the right kart for you and race, race, race!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 레이싱<br>- <b>New:</b> Maple Racing<br>- <b>Old:</b> 냐하하하~ 완벽한 카트 완성이다!<br>- <b>New:</b> Check it out! The perfect kart!<br>- <b>Old:</b> 냐하, 오늘은 어떤 카트를 만들어 볼까~!<br>- <b>New:</b> I wonder what kind of kart I should make next.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063268<br>Name changed:<br>- <b>Old:</b> 브로디<br>- <b>New:</b> Brodi<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Brodi</h5>
+                <img src="npc/9063268_img.png" alt="Brodi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 완벽한 카트를 타고 맘껏 달려봐!<br>- <b>New:</b> Get in the right kart for you and race, race, race!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 레이싱<br>- <b>New:</b> Maple Racing<br>- <b>Old:</b> 냐하하하~ 완벽한 카트 완성이다!<br>- <b>New:</b> Check it out! The perfect kart!<br>- <b>Old:</b> 냐하, 오늘은 어떤 카트를 만들어 볼까~!<br>- <b>New:</b> I wonder what kind of kart I should make next.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063269<br>Name changed:<br>- <b>Old:</b> 브로디<br>- <b>New:</b> Brodi<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Brodi</h5>
+                <img src="npc/9063268_img.png" alt="Brodi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 완벽한 카트를 타고 맘껏 달려봐!<br>- <b>New:</b> Get in the right kart for you and race, race, race!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 레이싱<br>- <b>New:</b> Maple Racing<br>- <b>Old:</b> 냐하하하~ 완벽한 카트 완성이다!<br>- <b>New:</b> Check it out! The perfect kart!<br>- <b>Old:</b> 냐하, 오늘은 어떤 카트를 만들어 볼까~!<br>- <b>New:</b> I wonder what kind of kart I should make next.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063270<br>Name changed:<br>- <b>Old:</b> 브로디<br>- <b>New:</b> Brodi<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Brodi</h5>
+                <img src="npc/9063268_img.png" alt="Brodi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 완벽한 카트를 타고 맘껏 달려봐!<br>- <b>New:</b> Get in the right kart for you and race, race, race!<br><b>Function changed:</b><br>- <b>Old:</b> 메이플 레이싱<br>- <b>New:</b> Maple Racing<br>- <b>Old:</b> 냐하하하~ 완벽한 카트 완성이다!<br>- <b>New:</b> Check it out! The perfect kart!<br>- <b>Old:</b> 냐하, 오늘은 어떤 카트를 만들어 볼까~!<br>- <b>New:</b> I wonder what kind of kart I should make next.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063271<br>Name changed:<br>- <b>Old:</b> 브로디<br>- <b>New:</b> Brodi<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Seria</h5>
+                <img src="npc/9063272_img.png" alt="Seria" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 제 도움이 필요하세요?<br>- <b>New:</b> Is there anything I can help you with?<br><b>Function changed:</b><br>- <b>Old:</b> 싸워라! 전설의 귀환<br>- <b>New:</b> The Legends Return!<br>- <b>Old:</b> 안녕하세요? 세리아 키르민이라고 해요.<br>- <b>New:</b> Hello. I'm Seria Kirmin.<br>- <b>Old:</b> 저는 항상 기다리고 있어요.<br>- <b>New:</b> I'll be waiting. Always and forever.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063272<br>Name changed:<br>- <b>Old:</b> 세리아<br>- <b>New:</b> Seria<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Seria</h5>
+                <img src="npc/9063272_img.png" alt="Seria" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 제 도움이 필요하세요?<br>- <b>New:</b> Is there anything I can help you with?<br><b>Function changed:</b><br>- <b>Old:</b> 싸워라! 전설의 귀환<br>- <b>New:</b> The Legends Return!<br>- <b>Old:</b> 안녕하세요? 세리아 키르민이라고 해요.<br>- <b>New:</b> Hello. I'm Seria Kirmin.<br>- <b>Old:</b> 저는 항상 기다리고 있어요.<br>- <b>New:</b> I'll be waiting. Always and forever.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063273<br>Name changed:<br>- <b>Old:</b> 세리아<br>- <b>New:</b> Seria<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Seria</h5>
+                <img src="npc/9063272_img.png" alt="Seria" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 제 도움이 필요하세요?<br>- <b>New:</b> Is there anything I can help you with?<br><b>Function changed:</b><br>- <b>Old:</b> 싸워라! 전설의 귀환<br>- <b>New:</b> The Legends Return!<br>- <b>Old:</b> 안녕하세요? 세리아 키르민이라고 해요.<br>- <b>New:</b> Hello. I'm Seria Kirmin.<br>- <b>Old:</b> 저는 항상 기다리고 있어요.<br>- <b>New:</b> I'll be waiting. Always and forever.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063274<br>Name changed:<br>- <b>Old:</b> 세리아<br>- <b>New:</b> Seria<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Leona</h5>
+                <img src="npc/9063275_img.png" alt="Leona" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 빅토리아컵 화이팅! 화이팅!<br>- <b>New:</b> Let's go Victoria Cup! Gimme a V! Gimme a C!<br>- <b>Old:</b> 안녕하세요? 응원단장 레오나에요!<br>- <b>New:</b> I'm Cheerleader Leona! We're glad to have you!<br><b>Function changed:</b><br>- <b>Old:</b> 굿바이! 빅토리아컵<br>- <b>New:</b> Goodbye, Victoria Cup!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063275<br>Name changed:<br>- <b>Old:</b> 레오나<br>- <b>New:</b> Leona</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Mike</h5>
+                <img src="npc/9063276_img.png" alt="Mike" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 즐거운 시간이 되길 바라네.<br>- <b>New:</b> Have fun out there!<br><b>Function:</b> MC
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063276<br>Name changed:<br>- <b>Old:</b> 마이크<br>- <b>New:</b> Mike</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Mike</h5>
+                <img src="npc/9063277_img.png" alt="Mike" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 자네의 생각이 궁금하군.<br>- <b>New:</b> How are you enjoying the festivities?<br><b>Function:</b> MC
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063277<br>Name changed:<br>- <b>Old:</b> 마이크<br>- <b>New:</b> Mike</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Mike</h5>
+                <img src="npc/9063278_img.png" alt="Mike" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 자네의 생각이 궁금하군.<br>- <b>New:</b> How are you enjoying the festivities?<br><b>Function:</b> MC
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063278<br>Name changed:<br>- <b>Old:</b> 마이크<br>- <b>New:</b> Mike</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Mike</h5>
+                <img src="npc/9063279_img.png" alt="Mike" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 자네의 생각이 궁금하군.<br>- <b>New:</b> How are you enjoying the festivities?<br><b>Function:</b> MC
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063279<br>Name changed:<br>- <b>Old:</b> 마이크<br>- <b>New:</b> Mike</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Sung</h5>
+                <img src="npc/9063280_img.png" alt="Sung" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> 안녕하세요!<br>- <b>New:</b> Hello!<br><b>Function:</b> MC
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063280<br>Name changed:<br>- <b>Old:</b> 성캐<br>- <b>New:</b> Sung</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Storage</h5>
+                <img src="npc/9070110_img.png" alt="Storage" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9070110<br>Name changed:<br>- <b>Old:</b> 창고<br>- <b>New:</b> Storage<br>Info:<br>trunkPut: 0</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Gate</h5>
+                <img src="npc/9091000_img.png" alt="Gate" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9091038<br>Name changed:<br>- <b>Old:</b> 게이트<br>- <b>New:</b> Gate<br>Info:<br>hideName: 1<br>talkMouseOnly: 1<br>scriptDelay: 3</small></div>
+            </div>
+        </div>
+    </div>
+    
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="Removed" role="tabpanel" aria-labelledby="removed-tab">
+              <div class="row mt-3">
+                <p class='text-muted'>No NPCs here.</p>
+              </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer">
+                MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon.
+            </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a>
+                | <a href="/Comparer/changelog.html">Change Log</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize all tooltips in the page (in case you use them)
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+        });
+    </script>
+</body>
+</html>
