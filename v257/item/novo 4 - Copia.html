@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor - Item Updates</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6262fd;
+            --primary-light: #8080ff;
+            --primary-dark: #4848cc;
+            --secondary: #ff9442;
+            --secondary-light: #ffa866;
+            --secondary-dark: #e67321;
+            --success: #4cd964;
+            --danger: #ff3b30;
+            --warning: #ffcc00;
+            --info: #34aadc;
+            --light: #f5f5f5;
+            --dark: #212529;
+            --gray-light: #f8f9fa;
+            --gray: #e9ecef;
+            --gray-dark: #6c757d;
+            
+            --pet: #7c4dff;
+            --cash: #ff4d8c;
+            --consume: #33cc99;
+            --etc: #ffb74d;
+            --equipment: #29b6f6;
+            --special: #ff5252;
+            
+            --new: #4cd964;
+            --modified: #ffb74d;
+            --removed: #ff3b30;
+            
+            --border-radius: 12px;
+            --card-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            --transition: all 0.25s ease;
+        }
+        
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--gray-light);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-light);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 0.75rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+        }
+        
+        .navbar .nav-link {
+            font-weight: 500;
+            padding: 0.75rem 1.25rem;
+            color: var(--dark);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .navbar .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .navbar .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .navbar .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px 3px 0 0;
+        }
+        
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0 0 L100 100 L0 100 Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-stats {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .hero-stat {
+            text-align: center;
+            padding: 0.5rem;
+        }
+        
+        .hero-stat-number {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .hero-stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        /* Filters */
+        .filters-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: -2rem;
+            position: relative;
+            z-index: 10;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .search-container {
+            position: relative;
+        }
+        
+        .search-input {
+            padding-left: 3rem;
+            height: 3rem;
+            border-radius: 1.5rem;
+            border: 2px solid var(--gray);
+            transition: var(--transition);
+        }
+        
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(98, 98, 253, 0.25);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-dark);
+            font-size: 1.25rem;
+        }
+        
+        .filter-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .filter-pill {
+            padding: 0.5rem 1rem;
+            border-radius: 1.5rem;
+            background-color: var(--gray-light);
+            border: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-pill:hover {
+            background-color: var(--gray);
+        }
+        
+        .filter-pill.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .filter-pill .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .filter-pill .indicator.new {
+            background-color: var(--new);
+        }
+        
+        .filter-pill .indicator.modified {
+            background-color: var(--modified);
+        }
+        
+        .filter-pill .indicator.removed {
+            background-color: var(--removed);
+        }
+        
+        .filter-pill .indicator.pet {
+            background-color: var(--pet);
+        }
+        
+        .filter-pill .indicator.cash {
+            background-color: var(--cash);
+        }
+        
+        .filter-pill .indicator.consume {
+            background-color: var(--consume);
+        }
+        
+        .filter-pill .indicator.etc {
+            background-color: var(--etc);
+        }
+        
+        .filter-pill .indicator.equipment {
+            background-color: var(--equipment);
+        }
+        
+        .filter-pill .indicator.special {
+            background-color: var(--special);
+        }
+        
+        /* Item Grid */
+        .items-grid {
+            margin-top: 2rem;
+        }
+        
+        .items-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .items-title {
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .view-toggle {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .view-toggle-btn {
+            background-color: var(--gray-light);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-dark);
+            transition: var(--transition);
+        }
+        
+        .view-toggle-btn:hover {
+            background-color: var(--gray);
+        }
+        
+        .view-toggle-btn.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Item Cards */
+        .item-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+        
+        .item-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border-radius: 1rem;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+        
+        .item-status.new {
+            background-color: var(--new);
+            color: white;
+        }
+        
+        .item-status.modified {
+            background-color: var(--modified);
+            color: white;
+        }
+        
+        .item-status.removed {
+            background-color: var(--removed);
+            color: white;
+        }
+        
+        .item-image {
+            position: relative;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--gray-light);
+        }
+        
+        .item-image img {
+            max-width: 80px;
+            max-height: 80px;
+            transition: var(--transition);
+        }
+        
+        .item-card:hover .item-image img {
+            transform: scale(1.1);
+        }
+        
+        .item-type-indicator {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+        
+        .item-type-indicator.pet {
+            background-color: var(--pet);
+        }
+        
+        .item-type-indicator.cash {
+            background-color: var(--cash);
+        }
+        
+        .item-type-indicator.consume {
+            background-color: var(--consume);
+        }
+        
+        .item-type-indicator.etc {
+            background-color: var(--etc);
+        }
+        
+        .item-type-indicator.equipment {
+            background-color: var(--equipment);
+        }
+        
+        .item-type-indicator.special {
+            background-color: var(--special);
+        }
+        
+        .item-type-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            border-radius: 1rem;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .item-type-badge.pet {
+            background-color: var(--pet);
+            color: white;
+        }
+        
+        .item-type-badge.cash {
+            background-color: var(--cash);
+            color: white;
+        }
+        
+        .item-type-badge.consume {
+            background-color: var(--consume);
+            color: white;
+        }
+        
+        .item-type-badge.etc {
+            background-color: var(--etc);
+            color: white;
+        }
+        
+        .item-type-badge.equipment {
+            background-color: var(--equipment);
+            color: white;
+        }
+        
+        .item-type-badge.special {
+            background-color: var(--special);
+            color: white;
+        }
+        
+        .item-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        
+        .item-description {
+            color: var(--gray-dark);
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+        
+        .item-highlight {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        .item-attributes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .item-attribute {
+            background-color: var(--gray-light);
+            padding: 0.4rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            color: var(--gray-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .item-attribute i {
+            font-size: 0.75rem;
+        }
+        
+        .item-footer {
+            border-top: 1px solid var(--gray);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .item-id {
+            font-size: 0.85rem;
+            color: var(--gray-dark);
+        }
+        
+        .item-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .item-button {
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+            border: none;
+        }
+        
+        .item-button.preview {
+            background-color: var(--primary);
+        }
+        
+        .item-button.preview:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .item-button.compare {
+            background-color: var(--secondary);
+        }
+        
+        .item-button.compare:hover {
+            background-color: var(--secondary-dark);
+        }
+        
+        /* Changes Visualization */
+        .changes-visualization {
+            margin-top: 1rem;
+            background-color: rgba(0,0,0,0.02);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+        }
+        
+        .change-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+        }
+        
+        .change-item i.added {
+            color: var(--new);
+            margin-right: 0.5rem;
+        }
+        
+        .change-item i.removed {
+            color: var(--removed);
+            margin-right: 0.5rem;
+        }
+        
+        .change-item i.modified {
+            color: var(--modified);
+            margin-right: 0.5rem;
+        }
+        
+        .change-property {
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+        
+        .change-old-value {
+            text-decoration: line-through;
+            color: var(--removed);
+            margin-right: 0.5rem;
+        }
+        
+        .change-new-value {
+            color: var(--new);
+        }
+        
+        /* List View */
+        .item-list-view {
+            display: none;
+        }
+        
+        .item-row {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .item-row:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .item-row-image {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            background-color: var(--gray-light);
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+        
+        .item-row-image img {
+            max-width: 40px;
+            max-height: 40px;
+        }
+        
+        .item-row-content {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .item-row-title {
+            font-weight: 500;
+            margin-right: 1rem;
+            flex: 1;
+        }
+        
+        .item-row-badges {
+            display: flex;
+            gap: 0.5rem;
+            margin-right: 1rem;
+        }
+        
+        .item-row-badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .item-row-badge.pet {
+            background-color: var(--pet);
+            color: white;
+        }
+        
+        .item-row-badge.cash {
+            background-color: var(--cash);
+            color: white;
+        }
+        
+        .item-row-badge.new {
+            background-color: var(--new);
+            color: white;
+        }
+        
+        .item-row-badge.modified {
+            background-color: var(--modified);
+            color: white;
+        }
+        
+        .item-row-id {
+            color: var(--gray-dark);
+            font-size: 0.85rem;
+            width: 100px;
+            text-align: right;
+        }
+        
+        .item-row-actions {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0 1rem;
+        }
+        
+        .item-row-action {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+            border: none;
+        }
+        
+        .item-row-action.preview {
+            background-color: var(--primary);
+        }
+        
+        .item-row-action.preview:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .item-row-action.compare {
+            background-color: var(--secondary);
+        }
+        
+        .item-row-action.compare:hover {
+            background-color: var(--secondary-dark);
+        }
+        
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+        
+        .empty-state-icon {
+            font-size: 3rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .empty-state-text {
+            color: var(--gray-dark);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid var(--gray);
+        }
+        
+        .footer-logo {
+            max-height: 40px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-link {
+            color: var(--gray-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: var(--primary);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .footer-social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: var(--gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-dark);
+            transition: var(--transition);
+        }
+        
+        .footer-social-icon:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .footer-copyright {
+            color: var(--gray-dark);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        
+        /* Tooltip */
+        .tooltip-inner {
+            max-width: 300px;
+            padding: 0.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            background-color: white;
+            color: var(--dark);
+            border-radius: var(--border-radius);
+        }
+        
+        .tooltip-img {
+            max-width: 100%;
+            border-radius: calc(var(--border-radius) - 5px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 767.98px) {
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .hero-stats {
+                margin-top: 1rem;
+            }
+            
+            .filters-section {
+                margin-top: -1rem;
+                padding: 1rem;
+            }
+            
+            .filter-pills {
+                margin-top: 1rem;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 0.5rem;
+            }
+            
+            .filter-pill {
+                white-space: nowrap;
+            }
+            
+            .items-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .view-toggle {
+                align-self: flex-end;
+            }
+            
+            .item-content {
+                padding: 1rem;
+            }
+            
+            .item-footer {
+                padding: 0.75rem 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .item-buttons {
+                align-self: flex-end;
+            }
+            
+            .item-row-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .item-row-badges {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .item-row-id {
+                text-align: left;
+                width: auto;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        /* Modal */
+        .modal-content {
+            border-radius: var(--border-radius);
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid var(--gray);
+            padding: 1.25rem 1.5rem;
+        }
+        
+        .modal-title {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        .modal-footer {
+            border-top: 1px solid var(--gray);
+            padding: 1.25rem 1.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        /* Comparison view */
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .comparison-table th {
+            background-color: var(--gray-light);
+            font-weight: 600;
+            color: var(--dark);
+            text-align: left;
+        }
+        
+        .comparison-removed {
+            background-color: rgba(255, 59, 48, 0.1);
+            color: var(--removed);
+            text-decoration: line-through;
+        }
+        
+        .comparison-added {
+            background-color: rgba(76, 217, 100, 0.1);
+            color: var(--new);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/Comparer/index.html">
+                <img src="../img/logo-small.png" alt="Bob The Extractor">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Comparer/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../item/item.html">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../character/character.html">Characters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../map/map.html">Maps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../mob/mob.html">Mobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../npc/npc.html">NPCs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../skill/skill.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../etc/etc.html">Etc</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Item Updates</h1>
+                <p class="lead">Track all item changes from the latest game patch</p>
+                
+                <div class="hero-stats">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="hero-stat">
+                                <span class="hero-stat-number">15</span>
+                                <span class="hero-stat-label">New Items</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="hero-stat">
+                                <span class="hero-stat-number">8</span>
+                                <span class="hero-stat-label">Modified Items</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="hero-stat">
+                                <span class="hero-stat-number">3</span>
+                                <span class="hero-stat-label">Removed Items</span>
+                            </div>
+                        </div>

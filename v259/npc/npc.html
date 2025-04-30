@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob The Extractor - Npc Changes</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .card-text small { color: #6c757d; }
+        .card hr { margin: 0.5rem 0; }
+        .tab-content { margin-top: 1rem; }
+        .card { box-shadow: 0 0 10px rgba(0,0,0,0.1); border: none; }
+        .nav-tabs .nav-link { margin-right: 10px; }
+        .card-body img { display: block; margin-top: 0.5rem; }
+        .card-footer { font-size: 0.875rem; color: #6c757d; margin-top: 0.5rem; }
+        .card-footer small {
+            display: block;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/Comparer/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../item/item.html">Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../character/character.html">Character</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../map/map.html">Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../mob/mob.html">Mob</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../npc.html">Npc</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../skill/skill.html">Skill</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../etc/etc.html">Etc</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="logo-section text-center my-4">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">NPC Changes</h1>
+        <ul id="tabs" class="nav nav-tabs justify-content-center" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="added-tab" data-bs-toggle="tab"
+                        data-bs-target="#Added" type="button" role="tab"
+                        aria-controls="Added" aria-selected="true">
+                    Added
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="modified-tab" data-bs-toggle="tab"
+                        data-bs-target="#Modified" type="button" role="tab"
+                        aria-controls="Modified" aria-selected="false">
+                    Modified
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="removed-tab" data-bs-toggle="tab"
+                        data-bs-target="#Removed" type="button" role="tab"
+                        aria-controls="Removed" aria-selected="false">
+                    Removed
+                </button>
+            </li>
+        </ul>
+        <div class="tab-content" id="tabsContent">
+
+            <div class="tab-pane fade show active" id="Added" role="tabpanel" aria-labelledby="added-tab">
+              <div class="row mt-3">
+                
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">마왕 발록</h5>
+                <img src="npc/9270307_img.png" alt="마왕 발록" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - 챌린지에 성공한다면, 더 많은 선물을 뿌리겠다!<br>- 챌린지에 성공한다면, 더 많은 선물을 뿌리겠다!<br>- 빅토리아 아일랜드의 몬스터들을 대표해서 여기에 왔다.<br>- 축하한다! 축하 선물을 받아라!!!
+                <div class="card-footer"><small>ID: 9270307<br>Info:<br>hide: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Shumi</h5>
+                <img src="npc/9270310_img.png" alt="Shumi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Victoria Soccer<br>- We've gotta toughen them up.<br>- Soccer's all about guts, y'know.
+                <div class="card-footer"><small>ID: 9270310</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Shumi</h5>
+                <img src="npc/9270310_img.png" alt="Shumi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Victoria Soccer<br>- We've gotta toughen them up.<br>- Soccer's all about guts, y'know.
+                <div class="card-footer"><small>ID: 9270311</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Camila</h5>
+                <img src="npc/9270312_img.png" alt="Camila" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Victoria Soccer<br>- Utah's going to be so happy when we win!<br>- Let's keep everything civil, okay?
+                <div class="card-footer"><small>ID: 9270312</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Camila</h5>
+                <img src="npc/9270312_img.png" alt="Camila" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Victoria Soccer<br>- Utah's going to be so happy when we win!<br>- Let's keep everything civil, okay?
+                <div class="card-footer"><small>ID: 9270313</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Valerie</h5>
+                <img src="npc/9270314_img.png" alt="Valerie" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Victoria Boat Racing<br>- Become the ruler of the waves!<br>- Who's the best sailor on the high seas?<br>- Sail well and maybe the Nautilus will scout you! Haha.
+                <div class="card-footer"><small>ID: 9270314</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Valerie</h5>
+                <img src="npc/9270314_img.png" alt="Valerie" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Victoria Boat Racing<br>- Become the ruler of the waves!<br>- Who's the best sailor on the high seas?<br>- Sail well and maybe the Nautilus will scout you! Haha.
+                <div class="card-footer"><small>ID: 9270315</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Valerie</h5>
+                <img src="npc/9270314_img.png" alt="Valerie" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Victoria Boat Racing<br>- Become the ruler of the waves!<br>- Who's the best sailor on the high seas?<br>- Sail well and maybe the Nautilus will scout you! Haha.
+                <div class="card-footer"><small>ID: 9270316</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Valerie</h5>
+                <img src="npc/9270314_img.png" alt="Valerie" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Victoria Boat Racing<br>- Become the ruler of the waves!<br>- Who's the best sailor on the high seas?<br>- Sail well and maybe the Nautilus will scout you! Haha.
+                <div class="card-footer"><small>ID: 9270317</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">조종사 어빈</h5>
+                <img src="npc/1082101_img.png" alt="조종사 어빈" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - 빅토리아 아일랜드 어디라도 지금 당장 갈 수 있어.<br>- 빅토리아 아일랜드 어디라도 지금 당장 갈 수 있어.
+                <div class="card-footer"><small>ID: 9270318</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dalair</h5>
+                <img src="npc/9270321_img.png" alt="Dalair" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> The Legends Return!<br>- Can I be of assistance?<br>- Hello. I am Dalair.<br>- I've been waiting for a person like you.
+                <div class="card-footer"><small>ID: 9270321<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dalair</h5>
+                <img src="npc/9270321_img.png" alt="Dalair" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> The Legends Return!<br>- Can I be of assistance?<br>- Hello. I am Dalair.<br>- I've been waiting for a person like you.
+                <div class="card-footer"><small>ID: 9270322<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dalair</h5>
+                <img src="npc/9270321_img.png" alt="Dalair" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> The Legends Return!<br>- Can I be of assistance?<br>- Hello. I am Dalair.<br>- I've been waiting for a person like you.
+                <div class="card-footer"><small>ID: 9270323<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kyrin</h5>
+                <img src="npc/9063256_img.png" alt="Kyrin" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Legion Pop Challenge<br>- Want to try Legion Pop Challenge?<br>- Shall we pop them together?<br>- Want to try Legion Pop Challenge?<br>- Shall we pop them together?
+                <div class="card-footer"><small>ID: 9270324</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Mo Xuan</h5>
+                <img src="npc/9401275_img.png" alt="Mo Xuan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401275<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Mo Xuan</h5>
+                <img src="npc/9401276_img.png" alt="Mo Xuan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401276<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401277<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401278<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Wu</h5>
+                <img src="npc/9401279_img.png" alt="Yun Wu" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401279<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Wu</h5>
+                <img src="npc/9401280_img.png" alt="Yun Wu" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401280<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Fiendish Matron</h5>
+                <img src="npc/9401281_img.png" alt="Fiendish Matron" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401281<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Shang Xuan</h5>
+                <img src="npc/9401282_img.png" alt="Shang Xuan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Master
+                <div class="card-footer"><small>ID: 9401282<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Lan Yi</h5>
+                <img src="npc/9401283_img.png" alt="Lan Yi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Beggar Guild Informant
+                <div class="card-footer"><small>ID: 9401283<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Lindaer</h5>
+                <img src="npc/9401284_img.png" alt="Lindaer" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Xuanshan Gatekeeper<br>- Squee!<br>- Squee? Squee!
+                <div class="card-footer"><small>ID: 9401284<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Jing</h5>
+                <img src="npc/9401285_img.png" alt="Yun Jing" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401285<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Hao</h5>
+                <img src="npc/9401286_img.png" alt="Yun Hao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401286<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Liu Yan</h5>
+                <img src="npc/9401287_img.png" alt="Liu Yan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401287<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Liu Hu</h5>
+                <img src="npc/9401288_img.png" alt="Liu Hu" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401288<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401289_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401289<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401290_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401290<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401291_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401291<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Lindaer</h5>
+                <img src="npc/9401284_img.png" alt="Lindaer" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401292<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Monk Yuan Tan</h5>
+                <img src="npc/9401293_img.png" alt="Monk Yuan Tan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401293<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiang Xiang</h5>
+                <img src="npc/9401294_img.png" alt="Xiang Xiang" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Tavern Keeper<br>- Come put your feet up! What's been going on? Tell me a story!<br>- Did you hear that the fishmonger got into a fistfight with another merchant?<br>- You can order more when you pay off your tab, Feng!<br>- Oh, Hero! Come have some noodles!
+                <div class="card-footer"><small>ID: 9401294<br>Info:<br>shop: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Ju Ji</h5>
+                <img src="npc/9401295_img.png" alt="Ju Ji" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Merchant<br>- From potions to pet food--you want it we've got it!<br>- Our fruit is so fresh it's still wet with this morning's dew!
+                <div class="card-footer"><small>ID: 9401295<br>Info:<br>shop: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Zai Ying</h5>
+                <img src="npc/9401296_img.png" alt="Zai Ying" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Storage Keeper
+                <div class="card-footer"><small>ID: 9401296<br>Info:<br>trunkPut: 0</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Shi Zheng</h5>
+                <img src="npc/9401297_img.png" alt="Shi Zheng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Doctor<br>- Let's see... Now, where does it hurt?<br>- Let's see... Now, where does it hurt?<br>- Let's see... Now, where does it hurt?
+                <div class="card-footer"><small>ID: 9401297</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Hejin Local</h5>
+                <img src="npc/9401298_img.png" alt="Hejin Local" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401298<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Beggar Guild Grunt</h5>
+                <img src="npc/9401299_img.png" alt="Beggar Guild Grunt" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401299<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401300_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401300<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Shang Xuan</h5>
+                <img src="npc/9401301_img.png" alt="Shang Xuan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Master
+                <div class="card-footer"><small>ID: 9401301<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Beggar Guild Grunt</h5>
+                <img src="npc/9401302_img.png" alt="Beggar Guild Grunt" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401302<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401303_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401303<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401304_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401304<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401305_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401305<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Junior Disciple</h5>
+                <img src="npc/9401306_img.png" alt="Junior Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Xiao Xiao's shouts always make me jump!<br>- Please, teach me!
+                <div class="card-footer"><small>ID: 9401306<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - You've gotten even stronger?! Let's spar!<br>- I WILL catch up! Just you wait!
+                <div class="card-footer"><small>ID: 9401307<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - My first mission! I'm so excited!
+                <div class="card-footer"><small>ID: 9401308<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Look out, Hejin! We're here!<br>- What to do first...?
+                <div class="card-footer"><small>ID: 9401309<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - There's more than I expected...<br>- What to do first...?
+                <div class="card-footer"><small>ID: 9401310<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Let's do it for the townspeople! Come on!
+                <div class="card-footer"><small>ID: 9401311<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Ha! Don't fret, even Feng knows when it's time to step up.
+                <div class="card-footer"><small>ID: 9401312<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - The students of Xuanshan don't turn away anyone in need!
+                <div class="card-footer"><small>ID: 9401313<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - There's an unconscious Lindaer here.
+                <div class="card-footer"><small>ID: 9401314<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - We're almost there! Hang in there!
+                <div class="card-footer"><small>ID: 9401315<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - ......
+                <div class="card-footer"><small>ID: 9401316</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401300_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Ah, you're here.<br>- ...Don't mistake an easy manner for a lack of care.
+                <div class="card-footer"><small>ID: 9401317<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Hejin Local</h5>
+                <img src="npc/9401298_img.png" alt="Hejin Local" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401318</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Shang Xuan</h5>
+                <img src="npc/9401282_img.png" alt="Shang Xuan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Master<br>- Good work, Xuan. Welcome home.<br>- I am pleased to see you safely returned.
+                <div class="card-footer"><small>ID: 9401319<br>Info:<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Wise Elder</h5>
+                <img src="npc/9401320_img.png" alt="Wise Elder" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401320<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Stern Elder</h5>
+                <img src="npc/9401321_img.png" alt="Stern Elder" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401321</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Calm Elder</h5>
+                <img src="npc/9401322_img.png" alt="Calm Elder" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401322</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - I hope the Lindaer is okay...
+                <div class="card-footer"><small>ID: 9401323<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401324<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Liu Yan</h5>
+                <img src="npc/9401287_img.png" alt="Liu Yan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Greetings, Master!<br>- Greetings, Master!
+                <div class="card-footer"><small>ID: 9401325<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Liu Hu</h5>
+                <img src="npc/9401288_img.png" alt="Liu Hu" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Don't worry, we're training hard!<br>- Don't worry, we're training hard!
+                <div class="card-footer"><small>ID: 9401326<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Beggar Guild Grunt</h5>
+                <img src="npc/9401299_img.png" alt="Beggar Guild Grunt" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - W-Warriors in black! Warriors in black have appeared!!!
+                <div class="card-footer"><small>ID: 9401327<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Beggar Guild Grunt</h5>
+                <img src="npc/9401299_img.png" alt="Beggar Guild Grunt" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401328<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Beggar Guild Branch Chief<br>- Well now... if it isn't Mo Xuan the hero!
+                <div class="card-footer"><small>ID: 9401329<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Jing</h5>
+                <img src="npc/9401285_img.png" alt="Yun Jing" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Training Instructor<br>- They learn almost as fast as you did, Xuan.
+                <div class="card-footer"><small>ID: 9401332<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Hao</h5>
+                <img src="npc/9401286_img.png" alt="Yun Hao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Zai Jing Pavilion Master
+                <div class="card-footer"><small>ID: 9401333<br>Info:<br>hide: 1<br>trunkPut: 0</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - If you're ready, we should get this boulder rolling.
+                <div class="card-footer"><small>ID: 9401334<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Ahh, nothing like a fresh ocean breeze... It's a comfort that the sea is the same, wherever our feet take us.<br>- If I find anything out, I'll send a little birdy to Lan Yi... Good luck, Xuan, and good health.
+                <div class="card-footer"><small>ID: 9401335<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Lan Yi</h5>
+                <img src="npc/9401283_img.png" alt="Lan Yi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - I'm Lan Yi of the Beggar Guild and I'm here to inform you!<br>- I'm Lan Yi of the Beggar Guild and I'm here to inform you!
+                <div class="card-footer"><small>ID: 9401336<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Araun</h5>
+                <img src="npc/9401337_img.png" alt="Araun" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Oh, wow...! What kind of magic is that?
+                <div class="card-footer"><small>ID: 9401337<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Freete</h5>
+                <img src="npc/9401338_img.png" alt="Freete" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Ahhh! Get away! I'm a brave warrior!
+                <div class="card-footer"><small>ID: 9401338<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Araun</h5>
+                <img src="npc/9401339_img.png" alt="Araun" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Master, it's me! Greetings! 
+                <div class="card-footer"><small>ID: 9401339<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Freete</h5>
+                <img src="npc/9401340_img.png" alt="Freete" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> General Store<br>- You've done a lot for me. I won't forget it.<br>- You've done a lot for me. I won't forget it.
+                <div class="card-footer"><small>ID: 9401340<br>Info:<br>hide: 1<br>shop: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Lan Yi</h5>
+                <img src="npc/9401283_img.png" alt="Lan Yi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - W-why have you c-come somewhere so c-c-cold?
+                <div class="card-footer"><small>ID: 9401341<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Lan Yi</h5>
+                <img src="npc/9401283_img.png" alt="Lan Yi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Did you hear that?! I think a kid screamed!
+                <div class="card-footer"><small>ID: 9401342<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Well now... if it isn't Mo Xuan the hero!
+                <div class="card-footer"><small>ID: 9401343<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Lan Yi</h5>
+                <img src="npc/9401283_img.png" alt="Lan Yi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Over here, Hero! Here!
+                <div class="card-footer"><small>ID: 9401344<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Whew... These old bones of mine...<br>- You'd think our enemies need rest as much as we do. And yet...
+                <div class="card-footer"><small>ID: 9401345<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Lan Yi</h5>
+                <img src="npc/9401283_img.png" alt="Lan Yi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401346<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - And the hero arrives in the nick of time. Hey there, Xuan.
+                <div class="card-footer"><small>ID: 9401347<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Whew... These old bones of mine...<br>- Whew... These old bones of mine...
+                <div class="card-footer"><small>ID: 9401348<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Monk</h5>
+                <img src="npc/9401293_img.png" alt="Monk" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - You may call me Yuan Tan.<br>- You may call me Yuan Tan.
+                <div class="card-footer"><small>ID: 9401349</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - ...Remember, your safety is more important that gettin' revenge.
+                <div class="card-footer"><small>ID: 9401350<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Wu</h5>
+                <img src="npc/9401280_img.png" alt="Yun Wu" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Haha... I really... thought I could beat you... this time...
+                <div class="card-footer"><small>ID: 9401351<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Fiendish Matron</h5>
+                <img src="npc/9401281_img.png" alt="Fiendish Matron" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Wu Shen!
+                <div class="card-footer"><small>ID: 9401352<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401303_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401353<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401304_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401354<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401305_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401355<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/9401306_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401356<br>Info:<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Collapsed Lindaer</h5>
+                <img src="npc/9401357_img.png" alt="Collapsed Lindaer" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401357<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Henchman</h5>
+                <img src="npc/9401358_img.png" alt="Henchman" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401358<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Oarsman</h5>
+                <img src="npc/9401298_img.png" alt="Oarsman" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401359</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Iron Gate</h5>
+                <img src="npc/9401360_img.png" alt="Iron Gate" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401360<br>Info:<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Wu</h5>
+                <img src="npc/9401280_img.png" alt="Yun Wu" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - We are beyond words. Now stand ready--I will not warn you again.
+                <div class="card-footer"><small>ID: 9401361<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Monk Yuan Tan</h5>
+                <img src="npc/9401293_img.png" alt="Monk Yuan Tan" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Ah, Mo Xuan.<br>- Ah, Mo Xuan.
+                <div class="card-footer"><small>ID: 9401362<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Feng</h5>
+                <img src="npc/9401278_img.png" alt="Feng" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Nothin' like fresh air and the sound of water. <br>- Nothin' like fresh air and the sound of water. 
+                <div class="card-footer"><small>ID: 9401363<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">El Nath Child</h5>
+                <img src="npc/0010300_img.png" alt="El Nath Child" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401364<br>Info:<br>forceMove: 1<br>componentNPC: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xuanshan Disciple</h5>
+                <img src="npc/0010300_img.png" alt="Xuanshan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401365<br>Info:<br>forceMove: 1<br>componentNPC: 1<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Training Dummy</h5>
+                <img src="npc/9401366_img.png" alt="Training Dummy" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401366<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Yun Wu</h5>
+                <img src="npc/9401279_img.png" alt="Yun Wu" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401367<br>Info:<br>hide: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Spotted Shanbeast</h5>
+                <img src="npc/9401368_img.png" alt="Spotted Shanbeast" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401368<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Jianghu Child</h5>
+                <img src="npc/0010300_img.png" alt="Jianghu Child" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401369<br>Info:<br>forceMove: 1<br>componentNPC: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Jianghu Child</h5>
+                <img src="npc/0010300_img.png" alt="Jianghu Child" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401370<br>Info:<br>forceMove: 1<br>componentNPC: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Jianghu Child</h5>
+                <img src="npc/0010300_img.png" alt="Jianghu Child" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401371<br>Info:<br>forceMove: 1<br>componentNPC: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Jianghu Child</h5>
+                <img src="npc/0010300_img.png" alt="Jianghu Child" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401372<br>Info:<br>forceMove: 1<br>componentNPC: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Jianghu Child</h5>
+                <img src="npc/0010300_img.png" alt="Jianghu Child" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401373<br>Info:<br>forceMove: 1<br>componentNPC: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Jianghu Child</h5>
+                <img src="npc/0010300_img.png" alt="Jianghu Child" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401374<br>Info:<br>forceMove: 1<br>componentNPC: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Devil Clan Disciple</h5>
+                <img src="npc/9401375_img.png" alt="Devil Clan Disciple" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401375<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Bloodsword Slayer</h5>
+                <img src="npc/9401376_img.png" alt="Bloodsword Slayer" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401376<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Stump Spook</h5>
+                <img src="npc/9401377_img.png" alt="Stump Spook" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401377<br>Info:<br>forceMove: 1<br>hideName: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Red Wyvern</h5>
+                <img src="npc/9000324_img.png" alt="Red Wyvern" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings.</p>
+                <div class="card-footer"><small>ID: 9401378<br>Info:<br>hideName: 1<br>forceMove: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Xiao Xiao</h5>
+                <img src="npc/9401277_img.png" alt="Xiao Xiao" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Level-Up Support Event
+                <div class="card-footer"><small>ID: 9401381</small></div>
+            </div>
+        </div>
+    </div>
+    
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="Modified" role="tabpanel" aria-labelledby="modified-tab">
+              <div class="row mt-3">
+                
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dame Appropriation</h5>
+                <img src="npc/9010106_img.png" alt="Dame Appropriation" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Challenge the Maple Punch King with your Legion!<br><b>Function:</b> Legion Relay<br>- Challenge the Maple Punch King with your Legion!
+                <hr>
+                
+        <p><b>Outlink changed:</b><br>
+           - <b>Old:</b> Npc/_Canvas/9063226.img/stand/0<br>
+           - <b>New:</b> Npc/_Canvas/9010106.img/stand/0
+        </p>
+        
+                <div class="card-footer"><small>ID: 9063226</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kickall</h5>
+                <img src="npc/9063228_img.png" alt="Kickall" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Do you know your way around soccer balls?<br>- <b>Old:</b> Welcome to Maple Soccer Online!<br>- <b>New:</b> Welcome to Victoria Soccer!<br><b>Function changed:</b><br>- <b>Old:</b> Maple Soccer Online<br>- <b>New:</b> Victoria Soccer
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063228</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kickall</h5>
+                <img src="npc/9063229_img.png" alt="Kickall" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Do you know your way around soccer balls?<br>- <b>Old:</b> Welcome to Maple Soccer Online!<br>- <b>New:</b> Welcome to Victoria Soccer!<br><b>Function changed:</b><br>- <b>Old:</b> Maple Soccer Online<br>- <b>New:</b> Victoria Soccer
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063229</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Matthias</h5>
+                <img src="npc/9063237_img.png" alt="Matthias" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> If you're looking for a special item, I'm you man... unfortunately.<br>- <b>New:</b> If you're looking for a special item, I'm your man... unfortunately.<br>- *yawn* I'll find that info later...<br><b>Function:</b> Meso Shop<br>- <b>Old:</b> If you're looking for a special item, I'm you man... unfortunately.<br>- <b>New:</b> If you're looking for a special item, I'm your man... unfortunately.<br>- *yawn* I'll find that info later...
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063237<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Matthias</h5>
+                <img src="npc/9063237_img.png" alt="Matthias" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> If you're looking for a special item, I'm you man... unfortunately.<br>- <b>New:</b> If you're looking for a special item, I'm your man... unfortunately.<br>- *yawn* I'll find that info later...<br><b>Function:</b> Meso Shop<br>- <b>Old:</b> If you're looking for a special item, I'm you man... unfortunately.<br>- <b>New:</b> If you're looking for a special item, I'm your man... unfortunately.<br>- *yawn* I'll find that info later...
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063238</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dark Lord</h5>
+                <img src="npc/9063243_img.png" alt="Dark Lord" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Leap from the shadows...<br>- If you desire a task, come see me...<br><b>Function changed:</b><br>- <b>Old:</b> Shadow Long Jump<br>- <b>New:</b> Shadow Hurdle Race<br>- Leap from the shadows...<br>- If you desire a task, come see me...
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063243</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dances with Balrog</h5>
+                <img src="npc/9063249_img.png" alt="Dances with Balrog" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Come and raise your voices for the Victoria Cup.<br>- Never neglect your goals. They are what drive you toward your future.<br><b>Function changed:</b><br>- <b>Old:</b> Victoria Pep Rally<br>- <b>New:</b> Victoria Cup<br>- Come and raise your voices for the Victoria Cup.<br>- Never neglect your goals. They are what drive you toward your future.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063249</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kyrin</h5>
+                <img src="npc/9063256_img.png" alt="Kyrin" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - <b>Old:</b> Do you have the grit to take on the Legion Pop Challenge?<br>- <b>New:</b> Do you have the grit to take on the Balloon Pop Challenge?<br>- Blow those puppies out of the water!<br><b>Function changed:</b><br>- <b>Old:</b> Legion Pop Challenge<br>- <b>New:</b> Balloon Pop Challenge<br>- <b>Old:</b> Do you have the grit to take on the Legion Pop Challenge?<br>- <b>New:</b> Do you have the grit to take on the Balloon Pop Challenge?<br>- Blow those puppies out of the water!
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063258</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kickall</h5>
+                <img src="npc/9063229_img.png" alt="Kickall" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - How's your footwork?<br>- <b>Old:</b> Welcome to Maple Soccer Online!<br>- <b>New:</b> Welcome to Victoria Soccer!<br><b>Function changed:</b><br>- <b>Old:</b> Maple Soccer Online<br>- <b>New:</b> Victoria Soccer
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063265</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Kickall</h5>
+                <img src="npc/9063228_img.png" alt="Kickall" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - How's your footwork?<br>- <b>Old:</b> Welcome to Maple Soccer Online!<br>- <b>New:</b> Welcome to Victoria Soccer!<br><b>Function changed:</b><br>- <b>Old:</b> Maple Soccer Online<br>- <b>New:</b> Victoria Soccer
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063266</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Brodi</h5>
+                <img src="npc/9063268_img.png" alt="Brodi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Get in the right kart for you and race, race, race!<br><b>Function changed:</b><br>- <b>Old:</b> Maple Racing<br>- <b>New:</b> Victoria Boat Racing<br>- Check it out! The perfect kart!<br>- I wonder what kind of kart I should make next.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063268<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Brodi</h5>
+                <img src="npc/9063268_img.png" alt="Brodi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Get in the right kart for you and race, race, race!<br><b>Function changed:</b><br>- <b>Old:</b> Maple Racing<br>- <b>New:</b> Victoria Boat Racing<br>- Check it out! The perfect kart!<br>- I wonder what kind of kart I should make next.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063269<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Brodi</h5>
+                <img src="npc/9063268_img.png" alt="Brodi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Get in the right kart for you and race, race, race!<br><b>Function changed:</b><br>- <b>Old:</b> Maple Racing<br>- <b>New:</b> Victoria Boat Racing<br>- Check it out! The perfect kart!<br>- I wonder what kind of kart I should make next.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063270<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Brodi</h5>
+                <img src="npc/9063268_img.png" alt="Brodi" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Get in the right kart for you and race, race, race!<br><b>Function changed:</b><br>- <b>Old:</b> Maple Racing<br>- <b>New:</b> Victoria Boat Racing<br>- Check it out! The perfect kart!<br>- I wonder what kind of kart I should make next.
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9063271<br>Info:<br>collabo: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Ms. Appropriation</h5>
+                <img src="npc/9063324_img.png" alt="Ms. Appropriation" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+        <p><b>Outlink changed:</b><br>
+           - <b>Old:</b> Npc/_Canvas/9010106.img/stand/0<br>
+           - <b>New:</b> Npc/_Canvas/9063324.img/stand/0
+        </p>
+        
+                <div class="card-footer"><small>ID: 9063324<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Ms. Appropriation</h5>
+                <img src="npc/9063324_img.png" alt="Ms. Appropriation" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+        <p><b>Outlink changed:</b><br>
+           - <b>Old:</b> Npc/_Canvas/9010106.img/stand/0<br>
+           - <b>New:</b> Npc/_Canvas/9063324.img/stand/0
+        </p>
+        
+                <div class="card-footer"><small>ID: 9063325<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Ms. Appropriation</h5>
+                <img src="npc/9063324_img.png" alt="Ms. Appropriation" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+        <p><b>Outlink changed:</b><br>
+           - <b>Old:</b> Npc/_Canvas/9010106.img/stand/0<br>
+           - <b>New:</b> Npc/_Canvas/9063324.img/stand/0
+        </p>
+        
+                <div class="card-footer"><small>ID: 9063326<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Squire Pancho Sanza</h5>
+                <img src="npc/9063329_img.png" alt="Squire Pancho Sanza" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+        <p><b>Outlink changed:</b><br>
+           - <b>Old:</b> Npc/_Canvas/9010107.img/stand/0<br>
+           - <b>New:</b> Npc/_Canvas/9063329.img/stand/0
+        </p>
+        
+                <div class="card-footer"><small>ID: 9063329<br>Info:<br>shop: 1<br>scriptNpcShop: 1<br>noDiscountPrice: 1<br>notRecommend: 1</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Dame Appropriation</h5>
+                <img src="npc/9063324_img.png" alt="Dame Appropriation" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+        <p><b>Outlink changed:</b><br>
+           - <b>Old:</b> Npc/_Canvas/9010106.img/stand/0<br>
+           - <b>New:</b> Npc/_Canvas/9063324.img/stand/0
+        </p>
+        
+                <div class="card-footer"><small>ID: 9063331</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Squire Pancho Sanza</h5>
+                <img src="npc/9063329_img.png" alt="Squire Pancho Sanza" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <p class='text-muted'>No Strings changes.</p>
+                <hr>
+                
+        <p><b>Outlink changed:</b><br>
+           - <b>Old:</b> Npc/_Canvas/9010107.img/stand/0<br>
+           - <b>New:</b> Npc/_Canvas/9063329.img/stand/0
+        </p>
+        
+                <div class="card-footer"><small>ID: 9063332</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Squire Pancho Sanza</h5>
+                <img src="npc/9063329_img.png" alt="Squire Pancho Sanza" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                <b>Function:</b> Challenge Coin Shop
+                <hr>
+                
+        <p><b>Outlink changed:</b><br>
+           - <b>Old:</b> Npc/_Canvas/9010107.img/stand/0<br>
+           - <b>New:</b> Npc/_Canvas/9063329.img/stand/0
+        </p>
+        
+                <div class="card-footer"><small>ID: 9063393</small></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-start">
+                <h5 class="card-title mb-2">Ms. Song</h5>
+                <img src="npc/9201632_img.png" alt="Ms. Song" class="img-fluid" style="max-height: 200px;" onerror="this.src='icon/placeholder.png';">
+                <hr>
+                - Is it weird to carry both a pillow and coffee? ...But I need both!<br>- This is the last coffee...? No... I still have my pillow, too...<br>- Yawn... This heap of papers... is scarier than the monsters...
+                <hr>
+                
+                <div class="card-footer"><small>ID: 9201632<br>Name changed:<br>- <b>Old:</b> 미스 송<br>- <b>New:</b> Ms. Song</small></div>
+            </div>
+        </div>
+    </div>
+    
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="Removed" role="tabpanel" aria-labelledby="removed-tab">
+              <div class="row mt-3">
+                <p class='text-muted'>No NPCs here.</p>
+              </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2024 Bob The Extractor - All rights reserved.</p>
+            <p class="disclaimer">
+                MapleStory is a trademark of Nexon. This site is a fan project and is not affiliated with or endorsed by Nexon.
+            </p>
+            <p class="disclaimer">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=AY3P9YBCGK2Q2" target="_blank">Donation via PayPal</a>
+                | <a href="/Comparer/changelog.html">Change Log</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize all tooltips in the page (in case you use them)
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+        });
+    </script>
+</body>
+</html>
